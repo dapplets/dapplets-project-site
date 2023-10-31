@@ -1,10 +1,14 @@
 "use client";
 import styles from "./Header.module.scss";
 export interface HeaderProps {
-  setDarkMode: any;
   isDarkMode: boolean;
 }
-export function Header({ setDarkMode, isDarkMode }: HeaderProps) {
+export function Header({ isDarkMode }: HeaderProps) {
+  function toggleDarkMode() {
+    isDarkMode = !isDarkMode;
+    const root = window.document.documentElement;
+    root.classList.toggle("dark");
+  }
   return (
     <div className={styles.wrapper}>
       <div>Logo</div>
@@ -12,7 +16,7 @@ export function Header({ setDarkMode, isDarkMode }: HeaderProps) {
       <div>About</div>
       <div>Documentation</div>
       <div>Search</div>
-      <div onClick={setDarkMode}>DarkMode</div>
+      <div onClick={toggleDarkMode}>DarkMode</div>
     </div>
   );
 }

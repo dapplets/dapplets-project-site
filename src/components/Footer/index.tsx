@@ -1,4 +1,3 @@
-"use client";
 import styles from "./Footer.module.scss";
 export interface FooterProps {}
 export function Footer() {
