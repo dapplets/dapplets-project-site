@@ -1,12 +1,10 @@
 "use client";
 import styles from "./Header.module.scss";
-export interface HeaderProps
- {
-    setDarkMode: any
-    isDarkMode: boolean
- 
+export interface HeaderProps {
+  setDarkMode: any;
+  isDarkMode: boolean;
 }
-export  function  Header({ setDarkMode, isDarkMode }: HeaderProps) {
+export function Header({ setDarkMode, isDarkMode }: HeaderProps) {
   return (
     <div className={styles.wrapper}>
       <div>Logo</div>
