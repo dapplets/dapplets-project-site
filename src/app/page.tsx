@@ -1,12 +1,12 @@
 // import Image from 'next/image'
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { LinkBlock } from "@/components/LinkBlock";
-import { getStartedLinks } from "@/constants/constants";
+import { Footer } from "@/app/components/Footer";
+import { Header } from "@/app/components/Header";
+import { LinkBlock } from "@/app/components/LinkBlock";
+import { getStartedLinks } from "@/constants/constantsText";
 import React from "react";
-
-export default function Home() {
+import { Home } from "@/app/pages/home/Home";
+export default function Page() {
   let darkMode = false;
 
   return (
@@ -27,12 +27,8 @@ export default function Home() {
           priority
         />
       </div> */}
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        {getStartedLinks.map((x, i) => (
-          <LinkBlock key={i} content={x} />
-        ))}
-      </div>
+<Home isDarkMode={darkMode}/>
+   
 
       <Footer />
     </main>
