@@ -19,7 +19,7 @@ const config: Config = {
         sm: '320px',
         md: '768px',
         lg: '976px',
-        xl: '1440px',
+        xl: '1300px',
       },
       colors: {
         'dark-bg': '#1B1B1B',
@@ -42,6 +42,8 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+
+  ],
 }
 export default config

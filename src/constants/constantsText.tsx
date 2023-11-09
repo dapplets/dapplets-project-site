@@ -1,3 +1,6 @@
+import power_1 from '../assets/img/home/power-1-dark.png'
+import power_2 from '../assets/img/home/power-2-dark.png'
+import power_3 from '../assets/img/home/power-3-dark.png'
 export const unicode = "\u0027";
 export const getStartedMessage = {
   title: "Get started",
@@ -62,16 +65,19 @@ export const HowItWorksItems = [
 export const PowerDapplets = [
   {
     id: "1",
+    icon:power_1,
     title: "Paywall",
     text: `The Paywall Dapplet seamlessly integrates with Twitter, utilizing the NEAR Protocol and NEAR BOS to display paid content.`,
   },
   {
     id: "2",
+    icon:power_2,
     title: "Community Tools",
     text: `Enhance user experience on third-party websites like Twitter and Github by displaying NEAR community badges to increase their visibility among users.`,
   },
   {
     id: "3",
+    icon:power_3,
     title: "Swarm Search",
     text: `The set of modules augmenting Google and YouTube search pages with data from OpenSearch-compatible engines.`,
   },

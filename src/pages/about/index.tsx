@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
-import styles from "./Header.module.scss";
-export interface HeaderProps {
+import styles from "./About.module.scss";
+export interface AboutProps {
   isDarkMode: boolean;
 }
-export function Header({ isDarkMode }: HeaderProps) {
+ function About({ isDarkMode }: AboutProps) {
   function toggleDarkMode() {
     isDarkMode = !isDarkMode;
     const root = window.document.documentElement;
@@ -12,7 +12,7 @@ export function Header({ isDarkMode }: HeaderProps) {
   }
   return (
     <div className={styles.wrapper}>
-      <Link href="/">  <div>Logo</div></Link>
+      <Link href="/home">  <div>Logo</div></Link>
       <div>Logo</div>
       <Link href="/about">  <div>About</div></Link>
    
@@ -23,3 +23,4 @@ export function Header({ isDarkMode }: HeaderProps) {
     </div>
   );
 }
+export default About;

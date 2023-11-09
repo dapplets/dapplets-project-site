@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
-const path = require("path");
 const nextConfig = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-  },
+  reactStrictMode: false,
+  swcMinify: true,
+  output: "standalone",
+  redirects: async () => [
+    {
+      source: "/",
+      destination: "/home",
+      permanent: false,
+    },
+  ],
 };
 
 module.exports = nextConfig;
