@@ -35,10 +35,16 @@ const config: Config = {
       spacing: {
         '128': '32rem',
         '144': '36rem',
+        '15': '15px',
       },
       borderRadius: {
         '6xl': '10px',
         '50xl': '50%',
+      },
+      width: {
+        '277': '277px',
+        '571': '571px',
+        '193': '193px',
       }
     },
   },

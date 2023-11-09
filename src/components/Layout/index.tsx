@@ -25,6 +25,7 @@ export const Layout: FC<LayoutProps> = ({
   return (
     <div className={darkMode ? "dark" : "ligth"}>
       <Header toggleDarkMode={toggleDarkMode} isDarkMode={darkMode} />
+      <div className={darkMode ? styles.delimeterDark : styles.delimeterDarkLigth}></div>
       {children}
 
       <Footer />

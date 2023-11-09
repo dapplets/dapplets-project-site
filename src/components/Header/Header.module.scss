@@ -1,5 +1,24 @@
-.wrapper {
-  width: 100%;
-  justify-content: space-between;
-  display: flex;
+
+
+.linkBlock{
+flex: 1 1 auto;
+max-width: 277px;
+}
+
+.linkHover{
+  transition: all 0.2s ease;
+  &:hover{
+
+    transition: all 0.2s ease;
+    transform: scale(1.2);
+  }
+}
+.mode{
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover{
+
+    transition: all 0.2s ease;
+    transform: scale(1.2);
+  }
 }
