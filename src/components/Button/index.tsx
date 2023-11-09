@@ -23,11 +23,19 @@ export function Button({
             [styles.buttonPrimary]: isPrimary,
             [styles.buttonOutline]: isOutline,
           })}
-          rel="noopener noreferrer"
           target="_blank"
-          href="link"
+          rel="noopener noreferrer"
+          href={link}
         >
-          {icon ? <Image className={cn(styles.img)} width={24} height={24} alt="" src={icon} /> : null}
+          {icon ? (
+            <Image
+              className={cn(styles.img)}
+              width={24}
+              height={24}
+              alt=""
+              src={icon}
+            />
+          ) : null}
           {text}
         </a>
       ) : (
@@ -37,7 +45,7 @@ export function Button({
             [styles.buttonOutline]: isOutline,
           })}
         >
-          {icon ? <Image width={24} height={24} alt="" src={icon} /> : null}
+          {icon ? <Image  className={cn(styles.img)} width={24} height={24} alt="" src={icon} /> : null}
           {text}
         </button>
       )}

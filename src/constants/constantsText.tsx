@@ -65,7 +65,7 @@ export const PowerDapplets = [
     id: "1",
     icon:power_1,
     title: "Paywall",
-    text: `The Paywall Dapplet seamlessly integrates with Twitter, utilizing the NEAR Protocol and NEAR BOS to display paid content.`,
+    text: `Paywall Dapplet introduces a new feature to Twitter's UX giving any user the ability to sell their content.`,
   },
   {
     id: "2",
@@ -103,7 +103,7 @@ export const PlatformFeatures = [
     ],
   },
   {
-    id: "User Interface and Customization",
+    id: "Built-in UI components",
     features: [
       {
         title: "Built-in Widgets",
@@ -122,7 +122,7 @@ export const PlatformFeatures = [
     ],
   },
   {
-    id: "Blockchain Integration",
+    id: "Decentralized services",
     features: [
       {
         title: "Registry on smart contracts",

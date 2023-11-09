@@ -26,3 +26,158 @@
   width: 406px;
   flex: 1 1 auto;
 }
+.supportedBlock {
+  padding: 10px 0;
+}
+.howWrapper {
+  padding: 76px 0 43px 0;
+}
+
+.howTitle {
+  font-size: 48px;
+
+  font-weight: 600;
+  line-height: 100%;
+  padding-bottom: 26px;
+}
+.howSubitle {
+  flex: 1 1 auto;
+  max-width: 600px;
+}
+
+.exampleWrapper {
+  padding: 100px 0;
+  width: 100%;
+}
+.exampleTitle {
+  font-size: 48px;
+
+  font-weight: 600;
+  line-height: 100%;
+  padding-bottom: 40px;
+}
+.exampleTitleColor {
+  color: #db504a;
+}
+
+.powerItem {
+  max-width: 407px;
+}
+.powerImg {
+  padding-bottom: 10px;
+}
+.powerTitle {
+  padding: 20px;
+  padding-bottom: 0;
+  text-decoration: underline;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 100%;
+}
+.powerText {
+  padding: 20px;
+}
+.feature1 {
+  padding-bottom: 40px;
+  .exampleTitle {
+    padding-bottom: 0;
+  }
+}
+.featureWrapper {
+  padding-top: 100px;
+}
+
+.featureTextBlock {
+  width: 406px;
+  margin-left: 40px;
+}
+.featureText {
+  width: 308px;
+
+  font-size: 16px;
+
+  font-weight: 400;
+  line-height: 149%;
+}
+
+.featureLink {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  transition: all 0.2s ease;
+  &:hover {
+    transition: all 0.2s ease;
+    transform: scale(1.2);
+  }
+}
+.featureId {
+  width: 406px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 36px;
+
+  font-weight: 600;
+  line-height: 149%;
+  height: 240px;
+}
+.featureItem {
+  width: 406px;
+  padding: 20px;
+  height: 240px;
+}
+.featureItemTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 100%;
+  padding-bottom: 20px;
+  position: relative;
+  padding-left: 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 8px;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    display: block;
+    background: #db504a;
+  }
+}
+
+.featureImg {
+  width: 406px !important;
+}
+.featureItemsBlock {
+  flex-wrap: wrap;
+}
+.feature2 {
+  .featureItemsBlock {
+    width: 66%;
+  }
+}
+
+.feature3 {
+  .featureItemsBlock {
+    width: 406px;
+  }
+}
+
+.feature4 {
+  .featureItemsBlock {
+    width: 66%;
+  }
+}
+
+.featureGet{
+  padding: 100px 0;
+  width: 100%;
+}
+.getTitle{
+  padding-bottom: 40px;
+}
+.getSubtitle{
+  width: 295px;
+}
