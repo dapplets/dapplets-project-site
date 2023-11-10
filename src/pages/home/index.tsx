@@ -24,6 +24,7 @@ import swarmLight from "@/assets/icon/home/swarm.svg";
 import bossLight from "@/assets/icon/home/boss.svg";
 import hackLight from "@/assets/icon/home/hack.svg";
 import encode from "@/assets/icon/home/encode-dark.svg";
+import encodeLight from "@/assets/icon/home/encode.svg";
 import download from "@/assets/icon/button/download_dark.svg";
 import github from "@/assets/icon/button/github_dark.svg";
 import Image from "next/image";
@@ -63,9 +64,19 @@ function Home({}: NextPage) {
   }
 
   return (
-    <Layout isMatches={isMatches} darkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+    <Layout
+      isMatches={isMatches}
+      darkMode={isDarkMode}
+      toggleDarkMode={toggleDarkMode}
+    >
       <div className="flex flex-col fonts container-xl mx-auto ">
-        <div className={cn(styles.titleWrapper, "flex flex-col")}>
+        <div className={cn(
+         isMatches && isDarkMode
+         ? styles.titleWrapper
+         : !isMatches && isDarkMode
+         ? styles.titleWrapper
+         : styles.titleWrapperLigth
+          , "flex flex-col")}>
           <div
             className={cn(
               styles.titleBlock,
@@ -87,7 +98,12 @@ function Home({}: NextPage) {
           <div
             className={cn(styles.titleButtons, "flex justify-between mx-auto")}
           >
-            <Button link="https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj" text="Get started" isPrimary icon={download} />
+            <Button
+              link="https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj"
+              text="Get started"
+              isPrimary
+              icon={download}
+            />
             <Button
               text="Visit Github"
               isOutline
@@ -175,23 +191,20 @@ function Home({}: NextPage) {
                     : hackLight
                 }
               />
-              {isMatches && isDarkMode ? (
-                <Image
-                  className={cn(styles.supportedBlockIcon)}
-                  width={168}
-                  height={63}
-                  alt="encode"
-                  src={encode}
-                />
-              ) : !isMatches && isDarkMode ? (
-                <Image
-                  className={cn(styles.supportedBlockIcon)}
-                  width={168}
-                  height={63}
-                  alt="encode"
-                  src={encode}
-                />
-              ) : null}
+
+              <Image
+                className={cn(styles.supportedBlockIcon)}
+                width={168}
+                height={63}
+                alt="encode"
+                src={
+                  isMatches && isDarkMode
+                    ? encode
+                    : !isMatches && isDarkMode
+                    ? encode
+                    : encodeLight
+                }
+              />
             </div>
           </div>
         </div>
@@ -246,13 +259,18 @@ function Home({}: NextPage) {
             {PowerDapplets.map((x, i) => (
               <div className={cn(styles.powerItem, "flex flex-col")} key={i}>
                 <div className={cn(styles.powerImg, "")}>
-                  <Image width={407} height={407} alt="power" src={
-                   isMatches && isDarkMode
-                   ? x.icon
-                   : !isMatches && isDarkMode
-                   ? x.icon
-                   : powerIconLight[i]
-                  } />
+                  <Image
+                    width={407}
+                    height={407}
+                    alt="power"
+                    src={
+                      isMatches && isDarkMode
+                        ? x.icon
+                        : !isMatches && isDarkMode
+                        ? x.icon
+                        : powerIconLight[i]
+                    }
+                  />
                 </div>
                 <div className={cn(styles.powerTitle, "fonts")}>{x.title}</div>
                 <div
@@ -442,7 +460,12 @@ function Home({}: NextPage) {
             </div>
           </div>
           {getStartedLinks.map((x, i) => (
-            <LinkBlock isMatches={isMatches}  isDarkMode={isDarkMode} key={i} content={x} />
+            <LinkBlock
+              isMatches={isMatches}
+              isDarkMode={isDarkMode}
+              key={i}
+              content={x}
+            />
           ))}
         </div>
       </div>
