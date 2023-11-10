@@ -56,4 +56,19 @@ main{
     background-color: #1b1b1b;
     color: #fff;
   }
+  .ligth{
+    background-color: #E7ECEF;
+    color: #222;
+}
+}
+
+@media (prefers-color-scheme: dark){
+  .ligth{
+      background-color: #E7ECEF!important;
+      color: #222!important;
+  }
+  .dark{
+    background-color: #1b1b1b;
+    color: #fff;
+   }
 }

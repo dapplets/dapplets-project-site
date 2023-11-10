@@ -1,13 +1,22 @@
 .wrapper {
-padding: 20px 0;
-
+  padding: 20px 0;
 }
-.copy{
+.copy {
   width: 306px;
 }
-.copyUnderline{
+.copyUnderline {
   text-decoration: underline;
 }
-.links{
+.links {
   width: 360px;
+}
+
+.img {
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transition: all 0.2s ease;
+    transform: scale(1.2);
+  }
 }

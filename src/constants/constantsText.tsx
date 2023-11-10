@@ -1,6 +1,9 @@
-import power_1 from '../assets/img/home/power-1-dark.png'
-import power_2 from '../assets/img/home/power-2-dark.png'
-import power_3 from '../assets/img/home/power-3-dark.png'
+import power_1 from "../assets/img/home/power-1-dark.png";
+import power_2 from "../assets/img/home/power-2-dark.png";
+import power_3 from "../assets/img/home/power-3-dark.png";
+import power_1Light from "../assets/img/home/power-1.png";
+import power_2Light from "../assets/img/home/power-2.png";
+import power_3Light from "../assets/img/home/power-3.png";
 export const unicode = "\u0027";
 export const getStartedMessage = {
   title: "Get started",
@@ -10,21 +13,21 @@ export const getStartedMessage = {
 export const getStartedLinks = [
   {
     id: "1",
-    link: "",
+    link: "https://docs.dapplets.org/docs/get-started",
     title: "Run your own dapplet",
     content:
       "Visit the documentation to learn how to create your own dapplet in just a few minutes.",
   },
   {
     id: "2",
-    link: "",
+    link: "https://t.me/dapplets",
     title: "Book a demo",
     content:
       "Schedule a 1:1 session with an expert from our team to learn more.",
   },
   {
     id: "3",
-    link: "",
+    link: "https://discord.com/invite/YcxbkcyjMV",
     title: "Join our community",
     content: "of developers on Discord",
   },
@@ -63,19 +66,19 @@ export const HowItWorksItems = [
 export const PowerDapplets = [
   {
     id: "1",
-    icon:power_1,
+    icon: power_1,
     title: "Paywall",
     text: `Paywall Dapplet introduces a new feature to Twitter's UX giving any user the ability to sell their content.`,
   },
   {
     id: "2",
-    icon:power_2,
+    icon: power_2,
     title: "Community Tools",
     text: `Enhance user experience on third-party websites like Twitter and Github by displaying NEAR community badges to increase their visibility among users.`,
   },
   {
     id: "3",
-    icon:power_3,
+    icon: power_3,
     title: "Swarm Search",
     text: `The set of modules augmenting Google and YouTube search pages with data from OpenSearch-compatible engines.`,
   },
@@ -139,3 +142,5 @@ export const PlatformFeatures = [
     ],
   },
 ];
+
+export const powerIconLight = [power_1Light, power_2Light, power_3Light];

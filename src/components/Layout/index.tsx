@@ -5,13 +5,14 @@ import styles from "./Layout.module.scss";
 
 import { Header } from "../Header";
 import { Footer } from "../Footer";
-
+import cn from "classnames";
 interface LayoutProps extends PropsWithChildren {
   className?: string;
   title?: string | ReactNode;
   setTitle?: any;
   darkMode: boolean;
   toggleDarkMode: any;
+  isMatches: boolean;
 }
 
 export const Layout: FC<LayoutProps> = ({
@@ -21,15 +22,37 @@ export const Layout: FC<LayoutProps> = ({
   setTitle,
   darkMode,
   toggleDarkMode,
+  isMatches,
 }) => {
+  // 'dark:dark',
   return (
-    <div className={darkMode ? "dark" : "ligth"}>
-      <Header toggleDarkMode={toggleDarkMode} isDarkMode={darkMode} />
-      <div className={darkMode ? styles.delimeterDark : styles.delimeterDarkLigth}></div>
+    <div className={cn(darkMode ? "dark" : "ligth")}>
+      <Header
+        isMatches={isMatches}
+        toggleDarkMode={toggleDarkMode}
+        isDarkMode={darkMode}
+      />
+      <div
+        className={
+          isMatches && darkMode
+            ? styles.delimeterDark
+            : !isMatches && darkMode
+            ? styles.delimeterDark
+            : styles.delimeterDarkLigth
+        }
+      ></div>
       {children}
-      <div className={darkMode ? styles.delimeterDark : styles.delimeterDarkLigth}></div>
+      <div
+        className={
+          isMatches && darkMode
+            ? styles.delimeterDark
+            : !isMatches && darkMode
+            ? styles.delimeterDark
+            : styles.delimeterDarkLigth
+        }
+      ></div>
 
-      <Footer />
+      <Footer isMatches={isMatches} isDarkMode={darkMode} />
     </div>
   );
 };

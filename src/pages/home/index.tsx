@@ -10,6 +10,7 @@ import {
   PowerDapplets,
   getStartedLinks,
   getStartedMessage,
+  powerIconLight,
 } from "@/constants/constantsText";
 import { LinkBlock } from "@/components/LinkBlock";
 import near from "@/assets/icon/home/near-dark.svg";
@@ -17,14 +18,23 @@ import proxy from "@/assets/icon/home/proxy-dark.svg";
 import swarm from "@/assets/icon/home/swarm-dark.svg";
 import boss from "@/assets/icon/home/boss-dark.svg";
 import hack from "@/assets/icon/home/hack-dark.svg";
+import nearLight from "@/assets/icon/home/near.svg";
+import proxyLight from "@/assets/icon/home/proxy.svg";
+import swarmLight from "@/assets/icon/home/swarm.svg";
+import bossLight from "@/assets/icon/home/boss.svg";
+import hackLight from "@/assets/icon/home/hack.svg";
 import encode from "@/assets/icon/home/encode-dark.svg";
 import download from "@/assets/icon/button/download_dark.svg";
 import github from "@/assets/icon/button/github_dark.svg";
 import Image from "next/image";
 import how from "@/assets/icon/home/big-how-dark.svg";
+import howLight from "@/assets/icon/home/big-how.svg";
 import feature1 from "@/assets/icon/home/feature-1-dark.svg";
 import feature2 from "@/assets/icon/home/feature-2-dark.svg";
 import feature3 from "@/assets/icon/home/feature-3-dark.svg";
+import feature1Light from "@/assets/icon/home/feature-1.svg";
+import feature2Light from "@/assets/icon/home/feature-2.svg";
+import feature3Light from "@/assets/icon/home/feature-3.svg";
 import arrow from "@/assets/icon/link/arrow-dark.svg";
 import { Button } from "@/components/Button";
 import { Layout } from "@/components/Layout";
@@ -34,17 +44,26 @@ import { useEffect, useState } from "react";
 export interface HomeProps {
   isDarkMode: boolean;
 }
-function Home({}: NextPage) {
-  const [isDarkMode, setDarkMode] = useState(false);
 
+function Home({}: NextPage) {
+  const [isDarkMode, setDarkMode] = useState(true);
+  const [isMatches, setMatches] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setMatches(true);
+      }
+    }
+  }, [isMatches]);
   useEffect(() => {}, [isDarkMode]);
   function toggleDarkMode() {
     setDarkMode(!isDarkMode);
     const root = window.document.documentElement;
     root.classList.toggle("dark");
   }
+
   return (
-    <Layout darkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+    <Layout isMatches={isMatches} darkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
       <div className="flex flex-col fonts container-xl mx-auto ">
         <div className={cn(styles.titleWrapper, "flex flex-col")}>
           <div
@@ -68,7 +87,7 @@ function Home({}: NextPage) {
           <div
             className={cn(styles.titleButtons, "flex justify-between mx-auto")}
           >
-            <Button text="Get started" isPrimary icon={download} />
+            <Button link="https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj" text="Get started" isPrimary icon={download} />
             <Button
               text="Visit Github"
               isOutline
@@ -96,43 +115,83 @@ function Home({}: NextPage) {
                 width={168}
                 height={63}
                 alt="near"
-                src={near}
+                src={
+                  isMatches && isDarkMode
+                    ? near
+                    : !isMatches && isDarkMode
+                    ? near
+                    : nearLight
+                }
               />
               <Image
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt="proxy"
-                src={proxy}
+                src={
+                  isMatches && isDarkMode
+                    ? proxy
+                    : !isMatches && isDarkMode
+                    ? proxy
+                    : proxyLight
+                }
               />
               <Image
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt="swarm"
-                src={swarm}
+                src={
+                  isMatches && isDarkMode
+                    ? swarm
+                    : !isMatches && isDarkMode
+                    ? swarm
+                    : swarmLight
+                }
               />
               <Image
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt="boss"
-                src={boss}
+                src={
+                  isMatches && isDarkMode
+                    ? boss
+                    : !isMatches && isDarkMode
+                    ? boss
+                    : bossLight
+                }
               />
               <Image
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt="hack"
-                src={hack}
+                src={
+                  isMatches && isDarkMode
+                    ? hack
+                    : !isMatches && isDarkMode
+                    ? hack
+                    : hackLight
+                }
               />
-              <Image
-                className={cn(styles.supportedBlockIcon)}
-                width={168}
-                height={63}
-                alt="encode"
-                src={encode}
-              />
+              {isMatches && isDarkMode ? (
+                <Image
+                  className={cn(styles.supportedBlockIcon)}
+                  width={168}
+                  height={63}
+                  alt="encode"
+                  src={encode}
+                />
+              ) : !isMatches && isDarkMode ? (
+                <Image
+                  className={cn(styles.supportedBlockIcon)}
+                  width={168}
+                  height={63}
+                  alt="encode"
+                  src={encode}
+                />
+              ) : null}
             </div>
           </div>
         </div>
@@ -161,7 +220,18 @@ function Home({}: NextPage) {
             ))}
           </div> */}
 
-            <Image width={1300} height={511} alt="how" src={how} />
+            <Image
+              width={1300}
+              height={511}
+              alt="how"
+              src={
+                isMatches && isDarkMode
+                  ? how
+                  : !isMatches && isDarkMode
+                  ? how
+                  : howLight
+              }
+            />
           </div>
           {/* <div>points</div> */}
         </div>
@@ -176,7 +246,13 @@ function Home({}: NextPage) {
             {PowerDapplets.map((x, i) => (
               <div className={cn(styles.powerItem, "flex flex-col")} key={i}>
                 <div className={cn(styles.powerImg, "")}>
-                  <Image width={407} height={407} alt="power" src={x.icon} />
+                  <Image width={407} height={407} alt="power" src={
+                   isMatches && isDarkMode
+                   ? x.icon
+                   : !isMatches && isDarkMode
+                   ? x.icon
+                   : powerIconLight[i]
+                  } />
                 </div>
                 <div className={cn(styles.powerTitle, "fonts")}>{x.title}</div>
                 <div
@@ -216,7 +292,18 @@ function Home({}: NextPage) {
           </div>
           <div className={cn(styles.feature2, "flex items-center gap-x-40")}>
             <div className={cn(styles.featureImg, "flex")}>
-              <Image width={407} height={520} alt="power" src={feature1} />
+              <Image
+                width={407}
+                height={520}
+                alt="power"
+                src={
+                  isMatches && isDarkMode
+                    ? feature1
+                    : !isMatches && isDarkMode
+                    ? feature1
+                    : feature1Light
+                }
+              />
             </div>
             <div className={cn(styles.featureItemsBlock, "flex")}>
               <div className={cn(styles.featureId, "flex fonts")}>
@@ -230,7 +317,12 @@ function Home({}: NextPage) {
                   <div className={cn(styles.featureItemTitle, "flex fonts")}>
                     {x.title}
                   </div>
-                  <div className={cn(styles.featureItemText, "flex opacity-70 text-base fonts")}>
+                  <div
+                    className={cn(
+                      styles.featureItemText,
+                      "flex opacity-70 text-base fonts"
+                    )}
+                  >
                     {x.text}
                   </div>
                 </div>
@@ -246,13 +338,29 @@ function Home({}: NextPage) {
                 <div className={cn(styles.featureItemTitle, "flex fonts")}>
                   {PlatformFeatures[1].features[0].title}
                 </div>
-                <div className={cn(styles.featureItemText, "flex opacity-70 text-base fonts")}>
+                <div
+                  className={cn(
+                    styles.featureItemText,
+                    "flex opacity-70 text-base fonts"
+                  )}
+                >
                   {PlatformFeatures[1].features[0].text}
                 </div>
               </div>
             </div>
             <div className={cn(styles.featureImg, "flex")}>
-              <Image width={407} height={520} alt="power" src={feature2} />
+              <Image
+                width={407}
+                height={520}
+                alt="power"
+                src={
+                  isMatches && isDarkMode
+                    ? feature2
+                    : !isMatches && isDarkMode
+                    ? feature2
+                    : feature2Light
+                }
+              />
             </div>
             <div className={cn(styles.featureItemsBlock, "flex")}>
               {PlatformFeatures[1].features
@@ -265,7 +373,12 @@ function Home({}: NextPage) {
                     <div className={cn(styles.featureItemTitle, "flex fonts")}>
                       {x.title}
                     </div>
-                    <div className={cn(styles.featureItemText, "flex opacity-70 text-base fonts")}>
+                    <div
+                      className={cn(
+                        styles.featureItemText,
+                        "flex opacity-70 text-base fonts"
+                      )}
+                    >
                       {x.text}
                     </div>
                   </div>
@@ -274,7 +387,18 @@ function Home({}: NextPage) {
           </div>
           <div className={cn(styles.feature4, "flex items-center gap-x-40")}>
             <div className={cn(styles.featureImg, "flex")}>
-              <Image width={407} height={520} alt="power" src={feature3} />
+              <Image
+                width={407}
+                height={520}
+                alt="power"
+                src={
+                  isMatches && isDarkMode
+                    ? feature3
+                    : !isMatches && isDarkMode
+                    ? feature3
+                    : feature3Light
+                }
+              />
             </div>
             <div className={cn(styles.featureItemsBlock, "flex")}>
               <div className={cn(styles.featureId, "flex fonts")}>
@@ -288,7 +412,12 @@ function Home({}: NextPage) {
                   <div className={cn(styles.featureItemTitle, "flex fonts")}>
                     {x.title}
                   </div>
-                  <div className={cn(styles.featureItemText, "flex opacity-70 text-base fonts")}>
+                  <div
+                    className={cn(
+                      styles.featureItemText,
+                      "flex opacity-70 text-base fonts"
+                    )}
+                  >
                     {x.text}
                   </div>
                 </div>
@@ -297,12 +426,23 @@ function Home({}: NextPage) {
           </div>
         </div>
         <div className={cn(styles.featureGet, "flex mx-auto justify-between")}>
-          <div className={cn( "flex flex-col")}>
-            <div  className={cn(styles.howTitle, styles.getTitle, "flex flex-col")}>{getStartedMessage.title}</div>
-            <div className={cn(styles.getSubtitle,"flex fonts text-base flex-col opacity-70")}>{getStartedMessage.content}</div>
+          <div className={cn("flex flex-col")}>
+            <div
+              className={cn(styles.howTitle, styles.getTitle, "flex flex-col")}
+            >
+              {getStartedMessage.title}
+            </div>
+            <div
+              className={cn(
+                styles.getSubtitle,
+                "flex fonts text-base flex-col opacity-70"
+              )}
+            >
+              {getStartedMessage.content}
+            </div>
           </div>
           {getStartedLinks.map((x, i) => (
-            <LinkBlock key={i} content={x} />
+            <LinkBlock isMatches={isMatches}  isDarkMode={isDarkMode} key={i} content={x} />
           ))}
         </div>
       </div>

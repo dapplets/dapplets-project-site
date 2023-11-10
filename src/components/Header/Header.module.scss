@@ -16,9 +16,10 @@ max-width: 277px;
 .mode{
   cursor: pointer;
   transition: all 0.2s ease;
+  transform: scale(1.2);
   &:hover{
 
     transition: all 0.2s ease;
-    transform: scale(1.2);
+    transform: scale(1.4);
   }
 }
