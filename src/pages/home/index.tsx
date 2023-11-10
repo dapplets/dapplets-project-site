@@ -70,13 +70,16 @@ function Home({}: NextPage) {
       toggleDarkMode={toggleDarkMode}
     >
       <div className="flex flex-col fonts container-xl mx-auto ">
-        <div className={cn(
-         isMatches && isDarkMode
-         ? styles.titleWrapper
-         : !isMatches && isDarkMode
-         ? styles.titleWrapper
-         : styles.titleWrapperLigth
-          , "flex flex-col")}>
+        <div
+          className={cn(
+            isMatches && isDarkMode
+              ? styles.titleWrapper
+              : !isMatches && isDarkMode
+              ? styles.titleWrapper
+              : styles.titleWrapperLigth,
+            "flex flex-col"
+          )}
+        >
           <div
             className={cn(
               styles.titleBlock,
@@ -111,7 +114,7 @@ function Home({}: NextPage) {
               link="https://github.com/dapplets"
             />
           </div>
-          <div className="flex flex-col">
+          <div className={cn(styles.supportedLableBlock, "flex flex-col")}>
             <div
               className={cn(
                 styles.supportedLable,
@@ -308,7 +311,12 @@ function Home({}: NextPage) {
               </Link>
             </div>
           </div>
-          <div className={cn(styles.feature2, "flex items-center gap-x-40")}>
+          <div
+            className={cn(
+              styles.feature2,
+              "flex items-center gap-y-40 gap-x-40"
+            )}
+          >
             <div className={cn(styles.featureImg, "flex")}>
               <Image
                 width={407}
@@ -323,17 +331,81 @@ function Home({}: NextPage) {
                 }
               />
             </div>
-            <div className={cn(styles.featureItemsBlock, "flex")}>
-              <div className={cn(styles.featureId, "flex fonts")}>
+            <div
+              className={cn(styles.featureItemsBlock, "flex gap-y-40 gap-x-40")}
+            >
+              <div
+                className={cn(
+                  isMatches && isDarkMode
+                    ? styles.featureId
+                    : !isMatches && isDarkMode
+                    ? styles.featureId
+                    : styles.featureIdLight,
+                  "flex fonts"
+                )}
+              >
                 {PlatformFeatures[0].id}
               </div>
               {PlatformFeatures[0].features.map((x, i) => (
+                <Link key={i} target="_blank" href={x.link}>
+                  <div
+                    className={cn(
+                      isMatches && isDarkMode
+                        ? styles.featureItem
+                        : !isMatches && isDarkMode
+                        ? styles.featureItem
+                        : styles.featureItemLight,
+                      "flex flex-col"
+                    )}
+                  >
+                    <div className={cn(styles.featureItemTitle, "flex fonts")}>
+                      {x.title}
+                    </div>
+                    <div
+                      className={cn(
+                        styles.featureItemText,
+                        "flex opacity-70 text-base fonts"
+                      )}
+                    >
+                      {x.text}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div
+            className={cn(
+              styles.feature3,
+              "flex items-center gap-y-40  gap-x-40"
+            )}
+          >
+            <div className={cn(styles.featureItemsBlock, "flex gap-y-40 ")}>
+              <div
+                className={cn(
+                  isMatches && isDarkMode
+                    ? styles.featureId
+                    : !isMatches && isDarkMode
+                    ? styles.featureId
+                    : styles.featureIdLight,
+                  "flex fonts"
+                )}
+              >
+                {PlatformFeatures[1].id}
+              </div>
+              <Link target="_blank" href={PlatformFeatures[1].features[0].link}>
                 <div
-                  className={cn(styles.featureItem, "flex flex-col")}
-                  key={i}
+                  className={cn(
+                    isMatches && isDarkMode
+                      ? styles.featureItem
+                      : !isMatches && isDarkMode
+                      ? styles.featureItem
+                      : styles.featureItemLight,
+                    "flex flex-col"
+                  )}
                 >
                   <div className={cn(styles.featureItemTitle, "flex fonts")}>
-                    {x.title}
+                    {PlatformFeatures[1].features[0].title}
                   </div>
                   <div
                     className={cn(
@@ -341,30 +413,10 @@ function Home({}: NextPage) {
                       "flex opacity-70 text-base fonts"
                     )}
                   >
-                    {x.text}
+                    {PlatformFeatures[1].features[0].text}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className={cn(styles.feature3, "flex items-center gap-x-20")}>
-            <div className={cn(styles.featureItemsBlock, "flex")}>
-              <div className={cn(styles.featureId, "flex fonts")}>
-                {PlatformFeatures[1].id}
-              </div>
-              <div className={cn(styles.featureItem, "flex flex-col")}>
-                <div className={cn(styles.featureItemTitle, "flex fonts")}>
-                  {PlatformFeatures[1].features[0].title}
-                </div>
-                <div
-                  className={cn(
-                    styles.featureItemText,
-                    "flex opacity-70 text-base fonts"
-                  )}
-                >
-                  {PlatformFeatures[1].features[0].text}
-                </div>
-              </div>
+              </Link>
             </div>
             <div className={cn(styles.featureImg, "flex")}>
               <Image
@@ -384,26 +436,42 @@ function Home({}: NextPage) {
               {PlatformFeatures[1].features
                 .filter((x, i) => i !== 1)
                 .map((x, i) => (
-                  <div
-                    className={cn(styles.featureItem, "flex flex-col")}
-                    key={i}
-                  >
-                    <div className={cn(styles.featureItemTitle, "flex fonts")}>
-                      {x.title}
-                    </div>
+                  <Link key={i} target="_blank" href={x.link}>
+                    {" "}
                     <div
                       className={cn(
-                        styles.featureItemText,
-                        "flex opacity-70 text-base fonts"
+                        isMatches && isDarkMode
+                          ? styles.featureItem
+                          : !isMatches && isDarkMode
+                          ? styles.featureItem
+                          : styles.featureItemLight,
+                        "flex flex-col"
                       )}
                     >
-                      {x.text}
+                      <div
+                        className={cn(styles.featureItemTitle, "flex fonts")}
+                      >
+                        {x.title}
+                      </div>
+                      <div
+                        className={cn(
+                          styles.featureItemText,
+                          "flex opacity-70 text-base fonts"
+                        )}
+                      >
+                        {x.text}
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
             </div>
           </div>
-          <div className={cn(styles.feature4, "flex items-center gap-x-40")}>
+          <div
+            className={cn(
+              styles.feature4,
+              "flex items-center gap-y-40  gap-x-40"
+            )}
+          >
             <div className={cn(styles.featureImg, "flex")}>
               <Image
                 width={407}
@@ -418,32 +486,63 @@ function Home({}: NextPage) {
                 }
               />
             </div>
-            <div className={cn(styles.featureItemsBlock, "flex")}>
-              <div className={cn(styles.featureId, "flex fonts")}>
+            <div
+              className={cn(
+                styles.featureItemsBlock,
+                "flex gap-y-40  gap-x-40"
+              )}
+            >
+              <div
+                className={cn(
+                  isMatches && isDarkMode
+                    ? styles.featureId
+                    : !isMatches && isDarkMode
+                    ? styles.featureId
+                    : styles.featureIdLight,
+                  "flex fonts"
+                )}
+              >
                 {PlatformFeatures[2].id}
               </div>
               {PlatformFeatures[2].features.map((x, i) => (
-                <div
-                  className={cn(styles.featureItem, "flex flex-col")}
-                  key={i}
-                >
-                  <div className={cn(styles.featureItemTitle, "flex fonts")}>
-                    {x.title}
-                  </div>
+                <Link key={i} target="_blank" href={x.link}>
                   <div
                     className={cn(
-                      styles.featureItemText,
-                      "flex opacity-70 text-base fonts"
+                      isMatches && isDarkMode
+                        ? styles.featureItem
+                        : !isMatches && isDarkMode
+                        ? styles.featureItem
+                        : styles.featureItemLight,
+                      "flex flex-col"
                     )}
                   >
-                    {x.text}
+                    <div className={cn(styles.featureItemTitle, "flex fonts")}>
+                      {x.title}
+                    </div>
+                    <div
+                      className={cn(
+                        styles.featureItemText,
+                        "flex opacity-70 text-base fonts"
+                      )}
+                    >
+                      {x.text}
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
         </div>
-        <div className={cn(styles.featureGet, "flex mx-auto justify-between")}>
+        <div
+          className={cn(
+            isMatches && isDarkMode
+              ? styles.featureGet
+              : !isMatches && isDarkMode
+              ? styles.featureGet
+              : styles.featureGetLigth,
+            "flex mx-auto justify-between"
+          )}
+        >
           <div className={cn("flex flex-col")}>
             <div
               className={cn(styles.howTitle, styles.getTitle, "flex flex-col")}

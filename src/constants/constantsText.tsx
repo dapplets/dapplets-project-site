@@ -92,14 +92,17 @@ export const PlatformFeatures = [
     id: "Integration and Adaptation",
     features: [
       {
+        link: "https://docs.dapplets.org/docs/using-adapters/",
         title: "Adapters system",
         text: `Enable developers to еmbed dapplets into existing websites. Use the adapters already available (Twitter, GitHub, Youtube, Google) or make your own.`,
       },
       {
+        link: "https://docs.dapplets.org/docs/config/#configuration",
         title: "Live Parsing",
         text: `Parse web pages using configuration JSON files with CSS and XPath queries prepared for different websites. Work with valuable data without worrying about the internals of web pages.`,
       },
       {
+        link: "https://docs.dapplets.org/docs/whitepapers/technological-overview/#the-general-idea-of-a-content-augmentation-can-be-applied-to-web-content-as-well",
         title: "Support for dynamic webpages",
         text: `Handle embedding widgets into dynamically created DOM-elements with Mutation Observer.`,
       },
@@ -109,16 +112,19 @@ export const PlatformFeatures = [
     id: "Built-in UI components",
     features: [
       {
+        link: "https://docs.dapplets.org/docs/using-widgets",
         title: "Built-in Widgets",
         text: `Insert UI components into any website.
         The platform automatically loads community-provided CSS styles depending on the webpage context.`,
       },
       {
+        link: "https://docs.dapplets.org/docs/overlays",
         title: "Overlay",
         text: `Use overlaid sidebar for displaying complex web pages when the site context is not enough, which includes: function forwarding, shared state,
         and RxJS-based widget state binding.`,
       },
       {
+        link: "https://docs.dapplets.org/docs/dark-theme-support",
         title: "Themes",
         text: `Widgets can be styled according to the chosen theme supporting consistent embedding even on dark themes.`,
       },
@@ -128,14 +134,17 @@ export const PlatformFeatures = [
     id: "Decentralized services",
     features: [
       {
+        link: "https://docs.dapplets.org/docs/overlay-login",
         title: "Registry on smart contracts",
         text: `Get your application and adapters will all metadata needed from a decentralized false-proof registry built on the Ethereum blockchain.`,
       },
       {
+        link: "https://docs.dapplets.org/docs/publishing",
         title: "Decentralized repositories",
         text: `Publish your executable code in Ethereum Swarm and IPFS.`,
       },
       {
+        link: "https://docs.dapplets.org/docs/core-login",
         title: "Wallets and smart contracts",
         text: `Apply user interfaces for connecting NEAR and Ethereum wallets and creating sessions that are already implemented at the extension level.`,
       },

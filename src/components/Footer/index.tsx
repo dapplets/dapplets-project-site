@@ -29,19 +29,19 @@ export function Footer({ isDarkMode, isMatches }: FooterProps) {
         "fonts container-xl mx-auto flex justify-between"
       )}
     >
-      <div className={cn(styles.copy, "flex content-center justify-between")}>
-        <div className={cn(styles.copyText, "flex fonts text-base")}>
+      <div className={cn(styles.copy, "flex items-center justify-between")}>
+        <div className={cn(styles.copyText, "flex items-center fonts text-base")}>
           © 2019—2023
         </div>
-        <div className={cn(styles.copyImg, "flex")}>
+        <div className={cn(styles.copyImg, "flex items-center")}>
           <Image width={36} height={36} alt="" src={heart} />
         </div>
-        <div className={cn(styles.copyText, "flex fonts text-base")}>by</div>
-        <div className={cn(styles.copyUnderline, "flex fonts text-base")}>
+        <div className={cn(styles.copyText, "flex items-center fonts text-base")}>by</div>
+        <div className={cn(styles.copyUnderline, "flex items-center fonts text-base")}>
           Dapplets Project
         </div>
       </div>
-      <div className={cn(styles.links, "flex justify-between content-center")}>
+      <div className={cn(styles.links, "flex justify-between items-center")}>
         <Link target="_blank" href="https://github.com/dapplets">
           <Image
             className={cn(styles.img, "")}

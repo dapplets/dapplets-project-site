@@ -18,7 +18,12 @@ export function LinkBlock({ content, isMatches, isDarkMode }: LinkBlockProps) {
           : !isMatches && isDarkMode
           ? 'hover:border-neutral-700 hover:bg-neutral-800/30"'
           : "hover:bg-gray-100 hover:border-gray-300",
-        "flex flex-col group rounded-lg border border-transparent px-5 py-4 transition-colors "
+        "flex flex-col group rounded-lg border border-transparent px-5 py-4 transition-colors ",
+        isMatches && isDarkMode
+          ? ''
+          : !isMatches && isDarkMode
+          ? ''
+          :  styles.linkLight,
       )}
       target="_blank"
       rel="noopener noreferrer"
