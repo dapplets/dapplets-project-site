@@ -1,16 +1,16 @@
-import Link from "next/link";
-import styles from "./Search.module.scss";
-import search from "@/assets/icon/header/search-dark.svg";
-import searchLight from "@/assets/icon/header/search.svg";
-import cn from "classnames";
-import Image from "next/image";
+import Link from 'next/link';
+import styles from './Search.module.scss';
+import search from '@/assets/icon/header/search-dark.svg';
+import searchLight from '@/assets/icon/header/search.svg';
+import cn from 'classnames';
+import Image from 'next/image';
 export interface SearchProps {
   isLight: boolean;
 }
 export function Search({ isLight }: SearchProps) {
   return (
     <div
-      className={cn(styles.wrapper, "flex justify-between", {
+      className={cn(styles.wrapper, 'flex justify-between', {
         [styles.wrapperLight]: isLight,
       })}
     >
@@ -18,16 +18,16 @@ export function Search({ isLight }: SearchProps) {
         className={cn(styles.inputImg)}
         width={16}
         height={16}
-        alt="logo"
-        src={isLight?searchLight:search}
+        alt='logo'
+        src={isLight ? searchLight : search}
       />
 
       <input
-        className={cn(styles.input, "text-base")}
-        type="text"
+        className={cn(styles.input, 'text-base')}
+        type='text'
         readOnly
-        placeholder="Search documentation..."
-        value=""
+        placeholder='Search documentation...'
+        value=''
       />
     </div>
   );

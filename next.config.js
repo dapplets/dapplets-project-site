@@ -2,14 +2,17 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  output: "standalone",
+  output: 'standalone',
   redirects: async () => [
     {
-      source: "/",
-      destination: "/home",
+      source: '/',
+      destination: '/home',
       permanent: false,
     },
   ],
+  eslint: {
+    dirs: ['/'],
+  },
 };
 
 module.exports = nextConfig;

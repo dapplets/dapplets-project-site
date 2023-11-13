@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { FC, PropsWithChildren, ReactNode } from "react";
+import { FC, PropsWithChildren, ReactNode } from 'react';
 
-import styles from "./Layout.module.scss";
+import styles from './Layout.module.scss';
 
-import { Header } from "../Header";
-import { Footer } from "../Footer";
-import cn from "classnames";
+import { Header } from '../Header';
+import { Footer } from '../Footer';
+import cn from 'classnames';
 interface LayoutProps extends PropsWithChildren {
   className?: string;
   title?: string | ReactNode;
@@ -16,7 +16,7 @@ interface LayoutProps extends PropsWithChildren {
 }
 
 export const Layout: FC<LayoutProps> = ({
-  className = "",
+  className = '',
   title,
   children,
   setTitle,
@@ -26,7 +26,7 @@ export const Layout: FC<LayoutProps> = ({
 }) => {
   // 'dark:dark',
   return (
-    <div className={cn(darkMode ? "dark" : "ligth")}>
+    <div className={cn(darkMode ? 'dark' : 'ligth')}>
       <Header
         isMatches={isMatches}
         toggleDarkMode={toggleDarkMode}
@@ -37,8 +37,8 @@ export const Layout: FC<LayoutProps> = ({
           isMatches && darkMode
             ? styles.delimeterDark
             : !isMatches && darkMode
-            ? styles.delimeterDark
-            : styles.delimeterDarkLigth
+              ? styles.delimeterDark
+              : styles.delimeterDarkLigth
         }
       ></div>
       {children}
@@ -47,8 +47,8 @@ export const Layout: FC<LayoutProps> = ({
           isMatches && darkMode
             ? styles.delimeterDark
             : !isMatches && darkMode
-            ? styles.delimeterDark
-            : styles.delimeterDarkLigth
+              ? styles.delimeterDark
+              : styles.delimeterDarkLigth
         }
       ></div>
 

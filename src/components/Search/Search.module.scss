@@ -4,37 +4,35 @@
   flex: 1 1 auto;
   align-items: center;
   border-radius: 6px;
-background: #303030;
-padding: 0 10px;
-height: 34px;
+  background: #303030;
+  padding: 0 10px;
+  height: 34px;
 }
-.inputImg{
+.inputImg {
   transition: all 0.2s ease;
   cursor: pointer;
-  &:hover{
-
+  &:hover {
     transition: all 0.2s ease;
     transform: scale(1.2);
   }
 }
-.input{
+.input {
   outline: none;
-  border:none;
+  border: none;
   background: inherit;
   display: inline-block;
   width: 100%;
- padding-left: 10px;
- height: 100%;
- color: #fff;
- opacity: 0.6;
+  padding-left: 10px;
+  height: 100%;
+  color: #fff;
+  opacity: 0.6;
 }
 
-.wrapperLight{
- 
-    background: inherit;
-    border: 1px solid  #C1C6CE;
+.wrapperLight {
+  background: inherit;
+  border: 1px solid #c1c6ce;
 
-    .input{
-      color: #222;
-    }
+  .input {
+    color: #222;
+  }
 }

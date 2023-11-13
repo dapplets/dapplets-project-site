@@ -1,6 +1,6 @@
-import styles from "./Button.module.scss";
-import Image from "next/image";
-import cn from "classnames";
+import styles from './Button.module.scss';
+import Image from 'next/image';
+import cn from 'classnames';
 export interface ButtonProps {
   text: string;
   link?: string;
@@ -19,12 +19,12 @@ export function Button({
     <div className={cn(styles.wrapper)}>
       {link ? (
         <a
-          className={cn(styles.buttonDefault, "fonts", {
+          className={cn(styles.buttonDefault, 'fonts', {
             [styles.buttonPrimary]: isPrimary,
             [styles.buttonOutline]: isOutline,
           })}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
           href={link}
         >
           {icon ? (
@@ -32,7 +32,7 @@ export function Button({
               className={cn(styles.img)}
               width={24}
               height={24}
-              alt=""
+              alt=''
               src={icon}
             />
           ) : null}
@@ -40,12 +40,20 @@ export function Button({
         </a>
       ) : (
         <button
-          className={cn(styles.buttonDefault, "fonts", {
+          className={cn(styles.buttonDefault, 'fonts', {
             [styles.buttonPrimary]: isPrimary,
             [styles.buttonOutline]: isOutline,
           })}
         >
-          {icon ? <Image  className={cn(styles.img)} width={24} height={24} alt="" src={icon} /> : null}
+          {icon ? (
+            <Image
+              className={cn(styles.img)}
+              width={24}
+              height={24}
+              alt=''
+              src={icon}
+            />
+          ) : null}
           {text}
         </button>
       )}

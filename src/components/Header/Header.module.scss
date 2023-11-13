@@ -1,24 +1,20 @@
-
-
-.linkBlock{
-flex: 1 1 auto;
-max-width: 277px;
+.linkBlock {
+  flex: 1 1 auto;
+  max-width: 277px;
 }
 
-.linkHover{
+.linkHover {
   transition: all 0.2s ease;
-  &:hover{
-
+  &:hover {
     transition: all 0.2s ease;
     transform: scale(1.2);
   }
 }
-.mode{
+.mode {
   cursor: pointer;
   transition: all 0.2s ease;
   transform: scale(1.2);
-  &:hover{
-
+  &:hover {
     transition: all 0.2s ease;
     transform: scale(1.4);
   }

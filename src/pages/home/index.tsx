@@ -1,6 +1,6 @@
-"use client";
-import Link from "next/link";
-import styles from "./Home.module.scss";
+'use client';
+import Link from 'next/link';
+import styles from './Home.module.scss';
 import {
   HomeTitle,
   HowItWorks,
@@ -11,37 +11,37 @@ import {
   getStartedLinks,
   getStartedMessage,
   powerIconLight,
-} from "@/constants/constantsText";
-import { LinkBlock } from "@/components/LinkBlock";
-import near from "@/assets/icon/home/near-dark.svg";
-import proxy from "@/assets/icon/home/proxy-dark.svg";
-import swarm from "@/assets/icon/home/swarm-dark.svg";
-import boss from "@/assets/icon/home/boss-dark.svg";
-import hack from "@/assets/icon/home/hack-dark.svg";
-import nearLight from "@/assets/icon/home/near.svg";
-import proxyLight from "@/assets/icon/home/proxy.svg";
-import swarmLight from "@/assets/icon/home/swarm.svg";
-import bossLight from "@/assets/icon/home/boss.svg";
-import hackLight from "@/assets/icon/home/hack.svg";
-import encode from "@/assets/icon/home/encode-dark.svg";
-import encodeLight from "@/assets/icon/home/encode.svg";
-import download from "@/assets/icon/button/download_dark.svg";
-import github from "@/assets/icon/button/github_dark.svg";
-import Image from "next/image";
-import how from "@/assets/icon/home/big-how-dark.svg";
-import howLight from "@/assets/icon/home/big-how.svg";
-import feature1 from "@/assets/icon/home/feature-1-dark.svg";
-import feature2 from "@/assets/icon/home/feature-2-dark.svg";
-import feature3 from "@/assets/icon/home/feature-3-dark.svg";
-import feature1Light from "@/assets/icon/home/feature-1.svg";
-import feature2Light from "@/assets/icon/home/feature-2.svg";
-import feature3Light from "@/assets/icon/home/feature-3.svg";
-import arrow from "@/assets/icon/link/arrow-dark.svg";
-import { Button } from "@/components/Button";
-import { Layout } from "@/components/Layout";
-import { NextPage } from "next";
-import cn from "classnames";
-import { useEffect, useState } from "react";
+} from '@/constants/constantsText';
+import { LinkBlock } from '@/components/LinkBlock';
+import near from '@/assets/icon/home/near-dark.svg';
+import proxy from '@/assets/icon/home/proxy-dark.svg';
+import swarm from '@/assets/icon/home/swarm-dark.svg';
+import boss from '@/assets/icon/home/boss-dark.svg';
+import hack from '@/assets/icon/home/hack-dark.svg';
+import nearLight from '@/assets/icon/home/near.svg';
+import proxyLight from '@/assets/icon/home/proxy.svg';
+import swarmLight from '@/assets/icon/home/swarm.svg';
+import bossLight from '@/assets/icon/home/boss.svg';
+import hackLight from '@/assets/icon/home/hack.svg';
+import encode from '@/assets/icon/home/encode-dark.svg';
+import encodeLight from '@/assets/icon/home/encode.svg';
+import download from '@/assets/icon/button/download_dark.svg';
+import github from '@/assets/icon/button/github_dark.svg';
+import Image from 'next/image';
+import how from '@/assets/icon/home/big-how-dark.svg';
+import howLight from '@/assets/icon/home/big-how.svg';
+import feature1 from '@/assets/icon/home/feature-1-dark.svg';
+import feature2 from '@/assets/icon/home/feature-2-dark.svg';
+import feature3 from '@/assets/icon/home/feature-3-dark.svg';
+import feature1Light from '@/assets/icon/home/feature-1.svg';
+import feature2Light from '@/assets/icon/home/feature-2.svg';
+import feature3Light from '@/assets/icon/home/feature-3.svg';
+import arrow from '@/assets/icon/link/arrow-dark.svg';
+import { Button } from '@/components/Button';
+import { Layout } from '@/components/Layout';
+import { NextPage } from 'next';
+import cn from 'classnames';
+import { useEffect, useState } from 'react';
 export interface HomeProps {
   isDarkMode: boolean;
 }
@@ -50,8 +50,8 @@ function Home({}: NextPage) {
   const [isDarkMode, setDarkMode] = useState(true);
   const [isMatches, setMatches] = useState(false);
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    if (typeof window !== 'undefined') {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         setMatches(true);
       }
     }
@@ -60,7 +60,7 @@ function Home({}: NextPage) {
   function toggleDarkMode() {
     setDarkMode(!isDarkMode);
     const root = window.document.documentElement;
-    root.classList.toggle("dark");
+    root.classList.toggle('dark');
   }
 
   return (
@@ -69,56 +69,56 @@ function Home({}: NextPage) {
       darkMode={isDarkMode}
       toggleDarkMode={toggleDarkMode}
     >
-      <div className="flex flex-col fonts container-xl mx-auto ">
+      <div className='fonts container-xl mx-auto flex flex-col '>
         <div
           className={cn(
             isMatches && isDarkMode
               ? styles.titleWrapper
               : !isMatches && isDarkMode
-              ? styles.titleWrapper
-              : styles.titleWrapperLigth,
-            "flex flex-col"
+                ? styles.titleWrapper
+                : styles.titleWrapperLigth,
+            'flex flex-col'
           )}
         >
           <div
             className={cn(
               styles.titleBlock,
-              "flex flex-col  mx-auto items-center fonts"
+              'fonts mx-auto  flex flex-col items-center'
             )}
           >
-            <div className={cn(styles.titleBlockTitle, "fonts flex")}>
+            <div className={cn(styles.titleBlockTitle, 'fonts flex')}>
               {HomeTitle.title}
             </div>
             <div
               className={cn(
                 styles.titleBlockSubtitle,
-                "fonts opacity-70 flex text-base"
+                'fonts flex text-base opacity-70'
               )}
             >
               {HomeTitle.subtitle}
             </div>
           </div>
           <div
-            className={cn(styles.titleButtons, "flex justify-between mx-auto")}
+            className={cn(styles.titleButtons, 'mx-auto flex justify-between')}
           >
             <Button
-              link="https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj"
-              text="Get started"
+              link='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
+              text='Get started'
               isPrimary
               icon={download}
             />
             <Button
-              text="Visit Github"
+              text='Visit Github'
               isOutline
               icon={github}
-              link="https://github.com/dapplets"
+              link='https://github.com/dapplets'
             />
           </div>
-          <div className={cn(styles.supportedLableBlock, "flex flex-col")}>
+          <div className={cn(styles.supportedLableBlock, 'flex flex-col')}>
             <div
               className={cn(
                 styles.supportedLable,
-                "opacity-70 flex text-base fonts"
+                'fonts flex text-base opacity-70'
               )}
             >
               Supported by:
@@ -126,72 +126,72 @@ function Home({}: NextPage) {
             <div
               className={cn(
                 styles.supportedBlock,
-                "opacity-70 items-center flex justify-between"
+                'flex items-center justify-between opacity-70'
               )}
             >
               <Image
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
-                alt="near"
+                alt='near'
                 src={
                   isMatches && isDarkMode
                     ? near
                     : !isMatches && isDarkMode
-                    ? near
-                    : nearLight
+                      ? near
+                      : nearLight
                 }
               />
               <Image
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
-                alt="proxy"
+                alt='proxy'
                 src={
                   isMatches && isDarkMode
                     ? proxy
                     : !isMatches && isDarkMode
-                    ? proxy
-                    : proxyLight
+                      ? proxy
+                      : proxyLight
                 }
               />
               <Image
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
-                alt="swarm"
+                alt='swarm'
                 src={
                   isMatches && isDarkMode
                     ? swarm
                     : !isMatches && isDarkMode
-                    ? swarm
-                    : swarmLight
+                      ? swarm
+                      : swarmLight
                 }
               />
               <Image
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
-                alt="boss"
+                alt='boss'
                 src={
                   isMatches && isDarkMode
                     ? boss
                     : !isMatches && isDarkMode
-                    ? boss
-                    : bossLight
+                      ? boss
+                      : bossLight
                 }
               />
               <Image
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
-                alt="hack"
+                alt='hack'
                 src={
                   isMatches && isDarkMode
                     ? hack
                     : !isMatches && isDarkMode
-                    ? hack
-                    : hackLight
+                      ? hack
+                      : hackLight
                 }
               />
 
@@ -199,34 +199,34 @@ function Home({}: NextPage) {
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
-                alt="encode"
+                alt='encode'
                 src={
                   isMatches && isDarkMode
                     ? encode
                     : !isMatches && isDarkMode
-                    ? encode
-                    : encodeLight
+                      ? encode
+                      : encodeLight
                 }
               />
             </div>
           </div>
         </div>
-        <div className={cn(styles.howWrapper, "flex flex-col")}>
-          <div className="flex flex-col mx-auto fonts justify-center">
-            <div className={cn(styles.howTitle, "flex justify-center fonts")}>
+        <div className={cn(styles.howWrapper, 'flex flex-col')}>
+          <div className='fonts mx-auto flex flex-col justify-center'>
+            <div className={cn(styles.howTitle, 'fonts flex justify-center')}>
               {HowItWorks.title}
             </div>
             <div
               className={cn(
                 styles.howSubitle,
-                "text-base opacity-70 flex justify-center text-center fonts"
+                'fonts flex justify-center text-center text-base opacity-70'
               )}
             >
               {HowItWorks.subtitle}
             </div>
           </div>
           {/* todo: remove whem will animation */}
-          <div className="flex">
+          <div className='flex'>
             {/* <div>
             {HowItWorksItems.map((x, i) => (
               <div className="flex flex-col" key={i}>
@@ -239,45 +239,45 @@ function Home({}: NextPage) {
             <Image
               width={1300}
               height={511}
-              alt="how"
+              alt='how'
               src={
                 isMatches && isDarkMode
                   ? how
                   : !isMatches && isDarkMode
-                  ? how
-                  : howLight
+                    ? how
+                    : howLight
               }
             />
           </div>
           {/* <div>points</div> */}
         </div>
-        <div className={cn(styles.exampleWrapper, "flex flex-col mx-auto")}>
-          <div className={cn(styles.exampleTitle, "flex fonts")}>
-            Dapplets{" "}
-            <div className={cn(styles.exampleTitleColor, "flex fonts")}>
+        <div className={cn(styles.exampleWrapper, 'mx-auto flex flex-col')}>
+          <div className={cn(styles.exampleTitle, 'fonts flex')}>
+            Dapplets{' '}
+            <div className={cn(styles.exampleTitleColor, 'fonts flex')}>
               &nbsp;example
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className='flex justify-between'>
             {PowerDapplets.map((x, i) => (
-              <div className={cn(styles.powerItem, "flex flex-col")} key={i}>
-                <div className={cn(styles.powerImg, "")}>
+              <div className={cn(styles.powerItem, 'flex flex-col')} key={i}>
+                <div className={cn(styles.powerImg, '')}>
                   <Image
                     width={407}
                     height={407}
-                    alt="power"
+                    alt='power'
                     src={
                       isMatches && isDarkMode
                         ? x.icon
                         : !isMatches && isDarkMode
-                        ? x.icon
-                        : powerIconLight[i]
+                          ? x.icon
+                          : powerIconLight[i]
                     }
                   />
                 </div>
-                <div className={cn(styles.powerTitle, "fonts")}>{x.title}</div>
+                <div className={cn(styles.powerTitle, 'fonts')}>{x.title}</div>
                 <div
-                  className={cn(styles.powerText, "opacity-70 fonts text-base")}
+                  className={cn(styles.powerText, 'fonts text-base opacity-70')}
                 >
                   {x.text}
                 </div>
@@ -285,86 +285,86 @@ function Home({}: NextPage) {
             ))}
           </div>
         </div>
-        <div className={cn(styles.featureWrapper, "flex flex-col mx-auto")}>
-          <div className={cn(styles.feature1, "flex items-center")}>
-            <div className={cn(styles.exampleTitle, "items-center flex fonts")}>
+        <div className={cn(styles.featureWrapper, 'mx-auto flex flex-col')}>
+          <div className={cn(styles.feature1, 'flex items-center')}>
+            <div className={cn(styles.exampleTitle, 'fonts flex items-center')}>
               platform
-              <div className={cn(styles.exampleTitleColor, "flex fonts")}>
+              <div className={cn(styles.exampleTitleColor, 'fonts flex')}>
                 &nbsp;features
               </div>
             </div>
             <div
               className={cn(
                 styles.featureTextBlock,
-                "flex items-center justify-between  fonts"
+                'fonts flex items-center  justify-between'
               )}
             >
-              <div className={cn(styles.featureText, "opacity-70")}>
+              <div className={cn(styles.featureText, 'opacity-70')}>
                 {PlatformFeaturesMessage}
               </div>
               <Link
-                className={cn(styles.featureLink, "")}
-                target="_blank"
-                href="https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj"
+                className={cn(styles.featureLink, '')}
+                target='_blank'
+                href='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
               >
-                <Image width={50} height={50} alt="power" src={arrow} />
+                <Image width={50} height={50} alt='power' src={arrow} />
               </Link>
             </div>
           </div>
           <div
             className={cn(
               styles.feature2,
-              "flex items-center gap-y-40 gap-x-40"
+              'flex items-center gap-x-40 gap-y-40'
             )}
           >
-            <div className={cn(styles.featureImg, "flex")}>
+            <div className={cn(styles.featureImg, 'flex')}>
               <Image
                 width={407}
                 height={520}
-                alt="power"
+                alt='power'
                 src={
                   isMatches && isDarkMode
                     ? feature1
                     : !isMatches && isDarkMode
-                    ? feature1
-                    : feature1Light
+                      ? feature1
+                      : feature1Light
                 }
               />
             </div>
             <div
-              className={cn(styles.featureItemsBlock, "flex gap-y-40 gap-x-40")}
+              className={cn(styles.featureItemsBlock, 'flex gap-x-40 gap-y-40')}
             >
               <div
                 className={cn(
                   isMatches && isDarkMode
                     ? styles.featureId
                     : !isMatches && isDarkMode
-                    ? styles.featureId
-                    : styles.featureIdLight,
-                  "flex fonts"
+                      ? styles.featureId
+                      : styles.featureIdLight,
+                  'fonts flex'
                 )}
               >
                 {PlatformFeatures[0].id}
               </div>
               {PlatformFeatures[0].features.map((x, i) => (
-                <Link key={i} target="_blank" href={x.link}>
+                <Link key={i} target='_blank' href={x.link}>
                   <div
                     className={cn(
                       isMatches && isDarkMode
                         ? styles.featureItem
                         : !isMatches && isDarkMode
-                        ? styles.featureItem
-                        : styles.featureItemLight,
-                      "flex flex-col"
+                          ? styles.featureItem
+                          : styles.featureItemLight,
+                      'flex flex-col'
                     )}
                   >
-                    <div className={cn(styles.featureItemTitle, "flex fonts")}>
+                    <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                       {x.title}
                     </div>
                     <div
                       className={cn(
                         styles.featureItemText,
-                        "flex opacity-70 text-base fonts"
+                        'fonts flex text-base opacity-70'
                       )}
                     >
                       {x.text}
@@ -377,40 +377,40 @@ function Home({}: NextPage) {
           <div
             className={cn(
               styles.feature3,
-              "flex items-center gap-y-40  gap-x-40"
+              'flex items-center gap-x-40  gap-y-40'
             )}
           >
-            <div className={cn(styles.featureItemsBlock, "flex gap-y-40 ")}>
+            <div className={cn(styles.featureItemsBlock, 'flex gap-y-40 ')}>
               <div
                 className={cn(
                   isMatches && isDarkMode
                     ? styles.featureId
                     : !isMatches && isDarkMode
-                    ? styles.featureId
-                    : styles.featureIdLight,
-                  "flex fonts"
+                      ? styles.featureId
+                      : styles.featureIdLight,
+                  'fonts flex'
                 )}
               >
                 {PlatformFeatures[1].id}
               </div>
-              <Link target="_blank" href={PlatformFeatures[1].features[0].link}>
+              <Link target='_blank' href={PlatformFeatures[1].features[0].link}>
                 <div
                   className={cn(
                     isMatches && isDarkMode
                       ? styles.featureItem
                       : !isMatches && isDarkMode
-                      ? styles.featureItem
-                      : styles.featureItemLight,
-                    "flex flex-col"
+                        ? styles.featureItem
+                        : styles.featureItemLight,
+                    'flex flex-col'
                   )}
                 >
-                  <div className={cn(styles.featureItemTitle, "flex fonts")}>
+                  <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                     {PlatformFeatures[1].features[0].title}
                   </div>
                   <div
                     className={cn(
                       styles.featureItemText,
-                      "flex opacity-70 text-base fonts"
+                      'fonts flex text-base opacity-70'
                     )}
                   >
                     {PlatformFeatures[1].features[0].text}
@@ -418,45 +418,45 @@ function Home({}: NextPage) {
                 </div>
               </Link>
             </div>
-            <div className={cn(styles.featureImg, "flex")}>
+            <div className={cn(styles.featureImg, 'flex')}>
               <Image
                 width={407}
                 height={520}
-                alt="power"
+                alt='power'
                 src={
                   isMatches && isDarkMode
                     ? feature2
                     : !isMatches && isDarkMode
-                    ? feature2
-                    : feature2Light
+                      ? feature2
+                      : feature2Light
                 }
               />
             </div>
-            <div className={cn(styles.featureItemsBlock, "flex")}>
+            <div className={cn(styles.featureItemsBlock, 'flex')}>
               {PlatformFeatures[1].features
                 .filter((x, i) => i !== 1)
                 .map((x, i) => (
-                  <Link key={i} target="_blank" href={x.link}>
-                    {" "}
+                  <Link key={i} target='_blank' href={x.link}>
+                    {' '}
                     <div
                       className={cn(
                         isMatches && isDarkMode
                           ? styles.featureItem
                           : !isMatches && isDarkMode
-                          ? styles.featureItem
-                          : styles.featureItemLight,
-                        "flex flex-col"
+                            ? styles.featureItem
+                            : styles.featureItemLight,
+                        'flex flex-col'
                       )}
                     >
                       <div
-                        className={cn(styles.featureItemTitle, "flex fonts")}
+                        className={cn(styles.featureItemTitle, 'fonts flex')}
                       >
                         {x.title}
                       </div>
                       <div
                         className={cn(
                           styles.featureItemText,
-                          "flex opacity-70 text-base fonts"
+                          'fonts flex text-base opacity-70'
                         )}
                       >
                         {x.text}
@@ -469,27 +469,27 @@ function Home({}: NextPage) {
           <div
             className={cn(
               styles.feature4,
-              "flex items-center gap-y-40  gap-x-40"
+              'flex items-center gap-x-40  gap-y-40'
             )}
           >
-            <div className={cn(styles.featureImg, "flex")}>
+            <div className={cn(styles.featureImg, 'flex')}>
               <Image
                 width={407}
                 height={520}
-                alt="power"
+                alt='power'
                 src={
                   isMatches && isDarkMode
                     ? feature3
                     : !isMatches && isDarkMode
-                    ? feature3
-                    : feature3Light
+                      ? feature3
+                      : feature3Light
                 }
               />
             </div>
             <div
               className={cn(
                 styles.featureItemsBlock,
-                "flex gap-y-40  gap-x-40"
+                'flex gap-x-40  gap-y-40'
               )}
             >
               <div
@@ -497,32 +497,32 @@ function Home({}: NextPage) {
                   isMatches && isDarkMode
                     ? styles.featureId
                     : !isMatches && isDarkMode
-                    ? styles.featureId
-                    : styles.featureIdLight,
-                  "flex fonts"
+                      ? styles.featureId
+                      : styles.featureIdLight,
+                  'fonts flex'
                 )}
               >
                 {PlatformFeatures[2].id}
               </div>
               {PlatformFeatures[2].features.map((x, i) => (
-                <Link key={i} target="_blank" href={x.link}>
+                <Link key={i} target='_blank' href={x.link}>
                   <div
                     className={cn(
                       isMatches && isDarkMode
                         ? styles.featureItem
                         : !isMatches && isDarkMode
-                        ? styles.featureItem
-                        : styles.featureItemLight,
-                      "flex flex-col"
+                          ? styles.featureItem
+                          : styles.featureItemLight,
+                      'flex flex-col'
                     )}
                   >
-                    <div className={cn(styles.featureItemTitle, "flex fonts")}>
+                    <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                       {x.title}
                     </div>
                     <div
                       className={cn(
                         styles.featureItemText,
-                        "flex opacity-70 text-base fonts"
+                        'fonts flex text-base opacity-70'
                       )}
                     >
                       {x.text}
@@ -538,21 +538,21 @@ function Home({}: NextPage) {
             isMatches && isDarkMode
               ? styles.featureGet
               : !isMatches && isDarkMode
-              ? styles.featureGet
-              : styles.featureGetLigth,
-            "flex mx-auto justify-between"
+                ? styles.featureGet
+                : styles.featureGetLigth,
+            'mx-auto flex justify-between'
           )}
         >
-          <div className={cn("flex flex-col")}>
+          <div className={cn('flex flex-col')}>
             <div
-              className={cn(styles.howTitle, styles.getTitle, "flex flex-col")}
+              className={cn(styles.howTitle, styles.getTitle, 'flex flex-col')}
             >
               {getStartedMessage.title}
             </div>
             <div
               className={cn(
                 styles.getSubtitle,
-                "flex fonts text-base flex-col opacity-70"
+                'fonts flex flex-col text-base opacity-70'
               )}
             >
               {getStartedMessage.content}
