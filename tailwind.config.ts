@@ -6,7 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'media',
+  darkMode: 'class',
   theme: {
     extend: {
       // backgroundImage: {
@@ -21,6 +21,8 @@ const config: Config = {
         xl: '1300px',
       },
       colors: {
+        'dpl-white': '#e7ecef',
+        'dpl-black': '#1b1b1b',
         'dark-bg': '#1B1B1B',
         content: '#FFFFFF',
         pureWhite: '#FFFFFF',

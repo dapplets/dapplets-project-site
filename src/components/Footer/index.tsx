@@ -15,13 +15,9 @@ import xLight from '@/assets/icon/footer/x.svg';
 import mailLight from '@/assets/icon/footer/mail.svg';
 import cn from 'classnames';
 import Link from 'next/link';
-export interface FooterProps {
-  isDarkMode: boolean;
+import { ThemeImage } from '../ThemeImage';
 
-  isMatches: boolean;
-}
-
-export function Footer({ isDarkMode, isMatches }: FooterProps) {
+export function Footer() {
   return (
     <div
       className={cn(
@@ -54,98 +50,68 @@ export function Footer({ isDarkMode, isMatches }: FooterProps) {
       </div>
       <div className={cn(styles.links, 'flex items-center justify-between')}>
         <Link target='_blank' href='https://github.com/dapplets'>
-          <Image
+          <ThemeImage
             className={cn(styles.img, '')}
             width={36}
             height={36}
             alt='github'
-            src={
-              isMatches && isDarkMode
-                ? github
-                : !isMatches && isDarkMode
-                  ? github
-                  : githubLight
-            }
+            srcDark={github}
+            srcLight={githubLight}
           />
         </Link>
 
         <Link target='_blank' href='https://discord.gg/YcxbkcyjMV'>
-          <Image
+          <ThemeImage
             className={cn(styles.img, '')}
             width={36}
             height={36}
             alt='discord'
-            src={
-              isMatches && isDarkMode
-                ? discord
-                : !isMatches && isDarkMode
-                  ? discord
-                  : discordLight
-            }
+            srcDark={discord}
+            srcLight={discordLight}
           />
         </Link>
 
         <Link target='_blank' href='https://t.me/dapplets'>
-          <Image
+          <ThemeImage
             className={cn(styles.img, '')}
             width={36}
             height={36}
             alt='tg'
-            src={
-              isMatches && isDarkMode
-                ? tg
-                : !isMatches && isDarkMode
-                  ? tg
-                  : tgLight
-            }
+            srcDark={tg}
+            srcLight={tgLight}
           />
         </Link>
 
         <Link target='_blank' href='https://medium.com/@dapplets'>
-          <Image
+          <ThemeImage
             className={cn(styles.img, '')}
             width={36}
             height={36}
             alt='medium'
-            src={
-              isMatches && isDarkMode
-                ? medium
-                : !isMatches && isDarkMode
-                  ? medium
-                  : mediumLight
-            }
+            srcDark={medium}
+            srcLight={mediumLight}
           />
         </Link>
 
         <Link target='_blank' href='https://twitter.com/dapplets_org'>
-          <Image
+          <ThemeImage
             className={cn(styles.img, '')}
             width={36}
             height={36}
             alt='x'
-            src={
-              isMatches && isDarkMode
-                ? x
-                : !isMatches && isDarkMode
-                  ? x
-                  : xLight
-            }
+            srcDark={x}
+            srcLight={xLight}
           />
         </Link>
 
         <Link target='_blank' href='mailto:business@dapplets.org'>
-          <Image
+          <ThemeImage
             className={cn(styles.img, '')}
             width={36}
             height={36}
             alt='mail'
-            src={
-              isMatches && isDarkMode
-                ? mail
-                : !isMatches && isDarkMode
-                  ? mail
-                  : mailLight
-            }
+            srcDark={mail}
+            srcLight={mailLight}
           />
         </Link>
       </div>

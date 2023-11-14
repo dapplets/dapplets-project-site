@@ -1,25 +1,29 @@
-import Link from 'next/link';
 import styles from './Search.module.scss';
 import search from '@/assets/icon/header/search-dark.svg';
 import searchLight from '@/assets/icon/header/search.svg';
 import cn from 'classnames';
 import Image from 'next/image';
-export interface SearchProps {
-  isLight: boolean;
-}
-export function Search({ isLight }: SearchProps) {
+import { useTheme } from 'next-themes';
+import { ThemeImage } from '../ThemeImage';
+
+export interface SearchProps {}
+
+export function Search({}: SearchProps) {
+  const { resolvedTheme } = useTheme();
+
   return (
     <div
       className={cn(styles.wrapper, 'flex justify-between', {
-        [styles.wrapperLight]: isLight,
+        [styles.wrapperLight]: resolvedTheme === 'light',
       })}
     >
-      <Image
+      <ThemeImage
         className={cn(styles.inputImg)}
         width={16}
         height={16}
         alt='logo'
-        src={isLight ? searchLight : search}
+        srcDark={search}
+        srcLight={searchLight}
       />
 
       <input

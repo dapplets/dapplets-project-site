@@ -2,28 +2,25 @@ import styles from './LinkBlock.module.scss';
 import cn from 'classnames';
 import Image from 'next/image';
 import arrow from '@/assets/icon/link/arrow-dark.svg';
+import { useTheme } from 'next-themes';
+
 export interface LinkBlockProps {
   content: any;
-  isMatches: boolean;
-  isDarkMode: boolean;
 }
-export function LinkBlock({ content, isMatches, isDarkMode }: LinkBlockProps) {
+
+export function LinkBlock({ content }: LinkBlockProps) {
+  const { resolvedTheme } = useTheme();
+
   return (
     <a
       href={content.link}
       className={cn(
         styles.link,
-        isMatches && isDarkMode
+        resolvedTheme === 'dark'
           ? 'hover:bg-neutral-800/30" hover:border-neutral-700'
-          : !isMatches && isDarkMode
-            ? 'hover:bg-neutral-800/30" hover:border-neutral-700'
-            : 'hover:border-gray-300 hover:bg-gray-100',
+          : 'hover:border-gray-300 hover:bg-gray-100',
         'group flex flex-col rounded-lg border border-transparent px-5 py-4 transition-colors ',
-        isMatches && isDarkMode
-          ? ''
-          : !isMatches && isDarkMode
-            ? ''
-            : styles.linkLight
+        resolvedTheme === 'dark' ? '' : styles.linkLight
       )}
       target='_blank'
       rel='noopener noreferrer'

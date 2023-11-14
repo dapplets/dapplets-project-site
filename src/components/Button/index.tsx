@@ -1,6 +1,7 @@
 import styles from './Button.module.scss';
 import Image from 'next/image';
 import cn from 'classnames';
+
 export interface ButtonProps {
   text: string;
   link?: string;
@@ -8,6 +9,7 @@ export interface ButtonProps {
   isPrimary?: boolean;
   isOutline?: boolean;
 }
+
 export function Button({
   text,
   link,

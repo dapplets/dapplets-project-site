@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import styles from './Home.module.scss';
 import {
@@ -27,7 +26,7 @@ import encode from '@/assets/icon/home/encode-dark.svg';
 import encodeLight from '@/assets/icon/home/encode.svg';
 import download from '@/assets/icon/button/download_dark.svg';
 import github from '@/assets/icon/button/github_dark.svg';
-import Image from 'next/image';
+import { ThemeImage } from '@/components/ThemeImage';
 import how from '@/assets/icon/home/big-how-dark.svg';
 import howLight from '@/assets/icon/home/big-how.svg';
 import feature1 from '@/assets/icon/home/feature-1-dark.svg';
@@ -39,44 +38,21 @@ import feature3Light from '@/assets/icon/home/feature-3.svg';
 import arrow from '@/assets/icon/link/arrow-dark.svg';
 import { Button } from '@/components/Button';
 import { Layout } from '@/components/Layout';
-import { NextPage } from 'next';
 import cn from 'classnames';
-import { useEffect, useState } from 'react';
-export interface HomeProps {
-  isDarkMode: boolean;
-}
+import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
-function Home({}: NextPage) {
-  const [isDarkMode, setDarkMode] = useState(true);
-  const [isMatches, setMatches] = useState(false);
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setMatches(true);
-      }
-    }
-  }, [isMatches]);
-  useEffect(() => {}, [isDarkMode]);
-  function toggleDarkMode() {
-    setDarkMode(!isDarkMode);
-    const root = window.document.documentElement;
-    root.classList.toggle('dark');
-  }
+function Home() {
+  const { resolvedTheme } = useTheme();
 
   return (
-    <Layout
-      isMatches={isMatches}
-      darkMode={isDarkMode}
-      toggleDarkMode={toggleDarkMode}
-    >
+    <Layout>
       <div className='fonts container-xl mx-auto flex flex-col '>
         <div
           className={cn(
-            isMatches && isDarkMode
+            resolvedTheme === 'dark'
               ? styles.titleWrapper
-              : !isMatches && isDarkMode
-                ? styles.titleWrapper
-                : styles.titleWrapperLigth,
+              : styles.titleWrapperLight,
             'flex flex-col'
           )}
         >
@@ -129,84 +105,54 @@ function Home({}: NextPage) {
                 'flex items-center justify-between opacity-70'
               )}
             >
-              <Image
+              <ThemeImage
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt='near'
-                src={
-                  isMatches && isDarkMode
-                    ? near
-                    : !isMatches && isDarkMode
-                      ? near
-                      : nearLight
-                }
+                srcDark={near}
+                srcLight={nearLight}
               />
-              <Image
+              <ThemeImage
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt='proxy'
-                src={
-                  isMatches && isDarkMode
-                    ? proxy
-                    : !isMatches && isDarkMode
-                      ? proxy
-                      : proxyLight
-                }
+                srcDark={proxy}
+                srcLight={proxyLight}
               />
-              <Image
+              <ThemeImage
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt='swarm'
-                src={
-                  isMatches && isDarkMode
-                    ? swarm
-                    : !isMatches && isDarkMode
-                      ? swarm
-                      : swarmLight
-                }
+                srcDark={swarm}
+                srcLight={swarmLight}
               />
-              <Image
+              <ThemeImage
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt='boss'
-                src={
-                  isMatches && isDarkMode
-                    ? boss
-                    : !isMatches && isDarkMode
-                      ? boss
-                      : bossLight
-                }
+                srcDark={boss}
+                srcLight={bossLight}
               />
-              <Image
+              <ThemeImage
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt='hack'
-                src={
-                  isMatches && isDarkMode
-                    ? hack
-                    : !isMatches && isDarkMode
-                      ? hack
-                      : hackLight
-                }
+                srcDark={hack}
+                srcLight={hackLight}
               />
 
-              <Image
+              <ThemeImage
                 className={cn(styles.supportedBlockIcon)}
                 width={168}
                 height={63}
                 alt='encode'
-                src={
-                  isMatches && isDarkMode
-                    ? encode
-                    : !isMatches && isDarkMode
-                      ? encode
-                      : encodeLight
-                }
+                srcDark={encode}
+                srcLight={encodeLight}
               />
             </div>
           </div>
@@ -236,17 +182,12 @@ function Home({}: NextPage) {
             ))}
           </div> */}
 
-            <Image
+            <ThemeImage
               width={1300}
               height={511}
               alt='how'
-              src={
-                isMatches && isDarkMode
-                  ? how
-                  : !isMatches && isDarkMode
-                    ? how
-                    : howLight
-              }
+              srcDark={how}
+              srcLight={howLight}
             />
           </div>
           {/* <div>points</div> */}
@@ -262,17 +203,12 @@ function Home({}: NextPage) {
             {PowerDapplets.map((x, i) => (
               <div className={cn(styles.powerItem, 'flex flex-col')} key={i}>
                 <div className={cn(styles.powerImg, '')}>
-                  <Image
+                  <ThemeImage
                     width={407}
                     height={407}
                     alt='power'
-                    src={
-                      isMatches && isDarkMode
-                        ? x.icon
-                        : !isMatches && isDarkMode
-                          ? x.icon
-                          : powerIconLight[i]
-                    }
+                    srcDark={x.icon}
+                    srcLight={powerIconLight[i]}
                   />
                 </div>
                 <div className={cn(styles.powerTitle, 'fonts')}>{x.title}</div>
@@ -318,17 +254,12 @@ function Home({}: NextPage) {
             )}
           >
             <div className={cn(styles.featureImg, 'flex')}>
-              <Image
+              <ThemeImage
                 width={407}
                 height={520}
                 alt='power'
-                src={
-                  isMatches && isDarkMode
-                    ? feature1
-                    : !isMatches && isDarkMode
-                      ? feature1
-                      : feature1Light
-                }
+                srcDark={feature1}
+                srcLight={feature1Light}
               />
             </div>
             <div
@@ -336,11 +267,9 @@ function Home({}: NextPage) {
             >
               <div
                 className={cn(
-                  isMatches && isDarkMode
+                  resolvedTheme === 'dark'
                     ? styles.featureId
-                    : !isMatches && isDarkMode
-                      ? styles.featureId
-                      : styles.featureIdLight,
+                    : styles.featureIdLight,
                   'fonts flex'
                 )}
               >
@@ -350,11 +279,9 @@ function Home({}: NextPage) {
                 <Link key={i} target='_blank' href={x.link}>
                   <div
                     className={cn(
-                      isMatches && isDarkMode
+                      resolvedTheme === 'dark'
                         ? styles.featureItem
-                        : !isMatches && isDarkMode
-                          ? styles.featureItem
-                          : styles.featureItemLight,
+                        : styles.featureItemLight,
                       'flex flex-col'
                     )}
                   >
@@ -383,11 +310,9 @@ function Home({}: NextPage) {
             <div className={cn(styles.featureItemsBlock, 'flex gap-y-40 ')}>
               <div
                 className={cn(
-                  isMatches && isDarkMode
+                  resolvedTheme === 'dark'
                     ? styles.featureId
-                    : !isMatches && isDarkMode
-                      ? styles.featureId
-                      : styles.featureIdLight,
+                    : styles.featureIdLight,
                   'fonts flex'
                 )}
               >
@@ -396,11 +321,9 @@ function Home({}: NextPage) {
               <Link target='_blank' href={PlatformFeatures[1].features[0].link}>
                 <div
                   className={cn(
-                    isMatches && isDarkMode
+                    resolvedTheme === 'dark'
                       ? styles.featureItem
-                      : !isMatches && isDarkMode
-                        ? styles.featureItem
-                        : styles.featureItemLight,
+                      : styles.featureItemLight,
                     'flex flex-col'
                   )}
                 >
@@ -419,17 +342,12 @@ function Home({}: NextPage) {
               </Link>
             </div>
             <div className={cn(styles.featureImg, 'flex')}>
-              <Image
+              <ThemeImage
                 width={407}
                 height={520}
                 alt='power'
-                src={
-                  isMatches && isDarkMode
-                    ? feature2
-                    : !isMatches && isDarkMode
-                      ? feature2
-                      : feature2Light
-                }
+                srcDark={feature2}
+                srcLight={feature2Light}
               />
             </div>
             <div className={cn(styles.featureItemsBlock, 'flex')}>
@@ -440,11 +358,9 @@ function Home({}: NextPage) {
                     {' '}
                     <div
                       className={cn(
-                        isMatches && isDarkMode
+                        resolvedTheme === 'dark'
                           ? styles.featureItem
-                          : !isMatches && isDarkMode
-                            ? styles.featureItem
-                            : styles.featureItemLight,
+                          : styles.featureItemLight,
                         'flex flex-col'
                       )}
                     >
@@ -473,17 +389,12 @@ function Home({}: NextPage) {
             )}
           >
             <div className={cn(styles.featureImg, 'flex')}>
-              <Image
+              <ThemeImage
                 width={407}
                 height={520}
                 alt='power'
-                src={
-                  isMatches && isDarkMode
-                    ? feature3
-                    : !isMatches && isDarkMode
-                      ? feature3
-                      : feature3Light
-                }
+                srcDark={feature3}
+                srcLight={feature3Light}
               />
             </div>
             <div
@@ -494,11 +405,9 @@ function Home({}: NextPage) {
             >
               <div
                 className={cn(
-                  isMatches && isDarkMode
+                  resolvedTheme === 'dark'
                     ? styles.featureId
-                    : !isMatches && isDarkMode
-                      ? styles.featureId
-                      : styles.featureIdLight,
+                    : styles.featureIdLight,
                   'fonts flex'
                 )}
               >
@@ -508,11 +417,9 @@ function Home({}: NextPage) {
                 <Link key={i} target='_blank' href={x.link}>
                   <div
                     className={cn(
-                      isMatches && isDarkMode
+                      resolvedTheme === 'dark'
                         ? styles.featureItem
-                        : !isMatches && isDarkMode
-                          ? styles.featureItem
-                          : styles.featureItemLight,
+                        : styles.featureItemLight,
                       'flex flex-col'
                     )}
                   >
@@ -535,11 +442,9 @@ function Home({}: NextPage) {
         </div>
         <div
           className={cn(
-            isMatches && isDarkMode
+            resolvedTheme === 'dark'
               ? styles.featureGet
-              : !isMatches && isDarkMode
-                ? styles.featureGet
-                : styles.featureGetLigth,
+              : styles.featureGetLight,
             'mx-auto flex justify-between'
           )}
         >
@@ -559,12 +464,7 @@ function Home({}: NextPage) {
             </div>
           </div>
           {getStartedLinks.map((x, i) => (
-            <LinkBlock
-              isMatches={isMatches}
-              isDarkMode={isDarkMode}
-              key={i}
-              content={x}
-            />
+            <LinkBlock key={i} content={x} />
           ))}
         </div>
       </div>
