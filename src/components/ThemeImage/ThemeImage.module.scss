@@ -1,9 +1,23 @@
 :global(.light) {
   .imgLight {
     display: unset;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transition: all 0.2s ease;
+      transform: scale(1.2);
+    }
   }
   .imgDark {
     display: none;
+  }
+  .noTransition {
+    cursor: default;
+    &:hover {
+      transition: all 0.2s ease;
+      transform: none;
+    }
   }
 }
 
@@ -13,5 +27,26 @@
   }
   .imgDark {
     display: unset;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transition: all 0.2s ease;
+      transform: scale(1.2);
+    }
+  }
+  .noTransition {
+    cursor: default;
+    &:hover {
+      transition: all 0.2s ease;
+      transform: none;
+    }
+  }
+}
+.noTransition {
+  cursor: default;
+  &:hover {
+    transition: all 0.2s ease;
+    transform: none;
   }
 }

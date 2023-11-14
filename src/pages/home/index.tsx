@@ -48,7 +48,7 @@ function Home() {
         <div
           className={cn(
             styles.titleWrapper,
-            'max-md:padding-global flex flex-col'
+            'max-md:padding-global max-xl:no-bg flex flex-col'
           )}
         >
           <div
@@ -102,58 +102,64 @@ function Home() {
             <div
               className={cn(
                 styles.supportedBlock,
-                'max-lg:padding-global-x-mobile flex items-center justify-between opacity-70  max-xl:flex-wrap max-sm:flex-col'
+                'max-lg:padding-global-x-mobile flex items-center justify-between opacity-70  max-xl:flex-wrap max-xl:justify-around max-sm:flex-col max-sm:gap-y-40'
                 //
               )}
             >
               <ThemeImage
-                className={cn(styles.supportedBlockIcon)}
+                className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
                 alt='near'
                 srcDark={near}
                 srcLight={nearLight}
+                style={{ transform: 'none', cursor: 'default' }}
               />
               <ThemeImage
-                className={cn(styles.supportedBlockIcon)}
+                className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
                 alt='proxy'
                 srcDark={proxy}
                 srcLight={proxyLight}
+                style={{ transform: 'none', cursor: 'default' }}
               />
               <ThemeImage
-                className={cn(styles.supportedBlockIcon)}
+                className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
                 alt='swarm'
                 srcDark={swarm}
                 srcLight={swarmLight}
+                style={{ transform: 'none', cursor: 'default' }}
               />
               <ThemeImage
-                className={cn(styles.supportedBlockIcon)}
+                className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
                 alt='boss'
                 srcDark={boss}
                 srcLight={bossLight}
+                style={{ transform: 'none', cursor: 'default' }}
               />
               <ThemeImage
-                className={cn(styles.supportedBlockIcon)}
+                className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
                 alt='hack'
                 srcDark={hack}
                 srcLight={hackLight}
+                style={{ transform: 'none', cursor: 'default' }}
               />
 
               <ThemeImage
-                className={cn(styles.supportedBlockIcon)}
+                className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
                 alt='encode'
                 srcDark={encode}
                 srcLight={encodeLight}
+                style={{ transform: 'none', cursor: 'default' }}
               />
             </div>
           </div>
@@ -189,12 +195,13 @@ function Home() {
           </div> */}
 
             <ThemeImage
-              className='max-xl:container-100'
+              className={cn('noTransition', 'max-xl:container-100')}
               width={1300}
               height={511}
               alt='how'
               srcDark={how}
               srcLight={howLight}
+              style={{ transform: 'none', cursor: 'default' }}
             />
           </div>
           {/* <div>points</div> */}
@@ -222,12 +229,13 @@ function Home() {
               >
                 <div className={cn(styles.powerImg, '')}>
                   <ThemeImage
-                    className='max-md:global-w-80'
+                    className={cn('noTransition', 'max-md:global-w-80')}
                     width={407}
                     height={407}
                     alt='power'
                     srcDark={x.icon}
                     srcLight={powerIconLight[i]}
+                    style={{ transform: 'none', cursor: 'default' }}
                   />
                 </div>
                 <div className={cn(styles.powerTitle, 'fonts')}>{x.title}</div>
@@ -294,6 +302,8 @@ function Home() {
                 alt='power'
                 srcDark={feature1}
                 srcLight={feature1Light}
+                className={'noTransition'}
+                style={{ transform: 'none', cursor: 'default' }}
               />
             </div>
             <div
@@ -304,20 +314,6 @@ function Home() {
             >
               <div className={cn(styles.featureId, 'fonts flex')}>
                 {PlatformFeatures[0].id}
-              </div>
-              <div
-                className={cn(
-                  styles.featureImgXl,
-                  'flex max-md:hidden xl:hidden'
-                )}
-              >
-                <ThemeImage
-                  width={407}
-                  height={240}
-                  alt='power'
-                  srcDark={feature1}
-                  srcLight={feature1Light}
-                />
               </div>
 
               {PlatformFeatures[0].features.map((x, i) => (
@@ -377,6 +373,8 @@ function Home() {
                 alt='power'
                 srcDark={feature2}
                 srcLight={feature2Light}
+                className={'noTransition'}
+                style={{ transform: 'none', cursor: 'default' }}
               />
             </div>
             <div
@@ -422,6 +420,8 @@ function Home() {
                 alt='power'
                 srcDark={feature3}
                 srcLight={feature3Light}
+                className={'noTransition'}
+                style={{ transform: 'none', cursor: 'default' }}
               />
             </div>
             <div
@@ -456,7 +456,7 @@ function Home() {
         <div
           className={cn(
             styles.featureGet,
-            'max-xl:container-auto max-xl:padding-y max-md:padding-global max-sm:sm-padding-top-0 mx-auto flex justify-between max-xl:flex-wrap'
+            'max-xl:container-auto max-xl:padding-y max-md:padding-global max-sm:sm-padding-top-0 mx-auto flex justify-between max-xl:flex-wrap max-xl:gap-y-40'
           )}
         >
           <div className={cn('flex flex-col')}>

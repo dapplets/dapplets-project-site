@@ -65,6 +65,10 @@ main {
   .container-100 {
     max-width: 100% !important;
   }
+  .container-max-auto {
+    max-width: none !important;
+  }
+
   .container-auto {
     width: auto !important;
   }
@@ -118,5 +122,14 @@ main {
   }
   .sm-global-w {
     width: 70% !important;
+  }
+  .no-bg {
+    background: none;
+  }
+  .header-link-sm {
+    width: 50%;
+  }
+  .logo-sm {
+    width: 100px;
   }
 }

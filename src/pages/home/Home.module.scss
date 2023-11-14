@@ -11,6 +11,9 @@
 
 :global(.light) .titleWrapper {
   background: url('../../assets/icon/home/bg-title.svg');
+  background-size: 142%;
+  background-position-x: -275px;
+  background-position-y: -30px;
 }
 
 .titleBlock {
@@ -157,6 +160,7 @@
     0px 1px 1px 0px rgba(0, 0, 0, 0);
   backdrop-filter: blur(20px);
   background: #e3e8eb;
+  border: none;
 }
 
 .featureItem {
