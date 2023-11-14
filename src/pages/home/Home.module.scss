@@ -229,6 +229,17 @@
 .featureImg {
   width: 406px !important;
 }
+
+.featureImgXl {
+  width: auto !important;
+  max-width: 200px !important;
+  height: 240px;
+  overflow: hidden;
+  display: flex;
+  margin-left: auto;
+  padding-top: 50px;
+}
+
 .featureItemsBlock {
   flex-wrap: wrap;
 }
@@ -268,4 +279,49 @@
 }
 .getSubtitle {
   width: 295px;
+}
+@media not all and (min-width: 904px) {
+  .featureImgXl {
+    display: none;
+  }
+  .featureItem {
+    width: 320px;
+  }
+  .featureId {
+    width: 320px;
+  }
+  .featureIdLight {
+    width: 320px;
+  }
+}
+
+@media not all and (min-width: 720px) {
+  .featureItem {
+    width: 100%;
+  }
+  .featureId {
+    width: 100%;
+  }
+  .featureIdLight {
+    width: 100%;
+  }
+  .titleButtons{
+    flex-direction: column;
+    align-items: center;
+  }
+  .exampleTitle{
+font-size: 34px;
+  }
+  .feature1{
+    width: 80%;
+  }
+  .feature2{
+    width: 80%;
+  }
+  .feature3{
+    width: 80%;
+  }
+  .feature4{
+    width: 80%;
+  }
 }

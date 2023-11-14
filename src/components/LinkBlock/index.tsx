@@ -16,6 +16,7 @@ export function LinkBlock({ content }: LinkBlockProps) {
       href={content.link}
       className={cn(
         styles.link,
+        'max-sm:width-100-mobile',
         resolvedTheme === 'dark'
           ? 'hover:bg-neutral-800/30" hover:border-neutral-700'
           : 'hover:border-gray-300 hover:bg-gray-100',

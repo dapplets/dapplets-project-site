@@ -22,7 +22,7 @@ export function Footer() {
     <div
       className={cn(
         styles.wrapper,
-        'fonts container-xl mx-auto flex justify-between'
+        'fonts container-xl max-xl:container-lg max-md:padding-global mx-auto flex justify-between max-sm:flex-col max-sm:items-center'
       )}
     >
       <div className={cn(styles.copy, 'flex items-center justify-between')}>
@@ -48,7 +48,12 @@ export function Footer() {
           Dapplets Project
         </div>
       </div>
-      <div className={cn(styles.links, 'flex items-center justify-between')}>
+      <div
+        className={cn(
+          styles.links,
+          'max-sm:sm-padding-top-20 flex items-center justify-between'
+        )}
+      >
         <Link target='_blank' href='https://github.com/dapplets'>
           <ThemeImage
             className={cn(styles.img, '')}

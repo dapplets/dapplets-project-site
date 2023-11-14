@@ -4,6 +4,7 @@ import styles from './Layout.module.scss';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useTheme } from 'next-themes';
+import cn from 'classnames';
 
 interface LayoutProps extends PropsWithChildren {
   title?: string | ReactNode;
@@ -14,7 +15,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
   const { resolvedTheme } = useTheme();
 
   return (
-    <div className='bg-dpl-white dark:bg-dpl-black'>
+    <div className={cn(resolvedTheme, 'max-xl:overflow-x-hidden')}>
       <Header />
       <div
         className={

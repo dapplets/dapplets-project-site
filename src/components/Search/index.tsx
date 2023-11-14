@@ -13,9 +13,13 @@ export function Search({}: SearchProps) {
 
   return (
     <div
-      className={cn(styles.wrapper, 'flex justify-between', {
-        [styles.wrapperLight]: resolvedTheme === 'light',
-      })}
+      className={cn(
+        styles.wrapper,
+        'max-xl:padding-global max-sm:sm-padding-x flex justify-between',
+        {
+          [styles.wrapperLight]: resolvedTheme === 'light',
+        }
+      )}
     >
       <ThemeImage
         className={cn(styles.inputImg)}

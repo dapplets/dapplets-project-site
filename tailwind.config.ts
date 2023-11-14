@@ -15,10 +15,10 @@ const config: Config = {
       //     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       // },
       screens: {
-        sm: '320px',
-        md: '768px',
-        lg: '976px',
-        xl: '1300px',
+        sm: '820px',
+        md: '904px',
+        lg: '1052px',
+        xl: '1380px',
       },
       colors: {
         'dpl-white': '#e7ecef',
