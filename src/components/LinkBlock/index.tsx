@@ -13,6 +13,7 @@ export function LinkBlock({ content, isMatches, isDarkMode }: LinkBlockProps) {
       href={content.link}
       className={cn(
         styles.link,
+        'max-sm:width-100-mobile',
         isMatches && isDarkMode
           ? 'hover:bg-neutral-800/30" hover:border-neutral-700'
           : !isMatches && isDarkMode

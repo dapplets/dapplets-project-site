@@ -69,7 +69,7 @@ function Home({}: NextPage) {
       darkMode={isDarkMode}
       toggleDarkMode={toggleDarkMode}
     >
-      <div className='fonts container-xl mx-auto flex flex-col '>
+      <div className='fonts container-xl max-xl:container-lg mx-auto flex flex-col max-xl:gap-y-40 '>
         <div
           className={cn(
             isMatches && isDarkMode
@@ -77,7 +77,7 @@ function Home({}: NextPage) {
               : !isMatches && isDarkMode
                 ? styles.titleWrapper
                 : styles.titleWrapperLigth,
-            'flex flex-col'
+            'max-md:padding-global flex flex-col'
           )}
         >
           <div
@@ -86,7 +86,12 @@ function Home({}: NextPage) {
               'fonts mx-auto  flex flex-col items-center'
             )}
           >
-            <div className={cn(styles.titleBlockTitle, 'fonts flex')}>
+            <div
+              className={cn(
+                styles.titleBlockTitle,
+                'fonts max-lg:fonts-title-mobile  flex'
+              )}
+            >
               {HomeTitle.title}
             </div>
             <div
@@ -126,7 +131,8 @@ function Home({}: NextPage) {
             <div
               className={cn(
                 styles.supportedBlock,
-                'flex items-center justify-between opacity-70'
+                'max-lg:padding-global-x-mobile flex items-center justify-between opacity-70  max-xl:flex-wrap max-sm:flex-col'
+                //
               )}
             >
               <Image
@@ -211,7 +217,12 @@ function Home({}: NextPage) {
             </div>
           </div>
         </div>
-        <div className={cn(styles.howWrapper, 'flex flex-col')}>
+        <div
+          className={cn(
+            styles.howWrapper,
+            'max-md:padding-global max-sm:sm-padding-top-0 flex flex-col'
+          )}
+        >
           <div className='fonts mx-auto flex flex-col justify-center'>
             <div className={cn(styles.howTitle, 'fonts flex justify-center')}>
               {HowItWorks.title}
@@ -237,6 +248,7 @@ function Home({}: NextPage) {
           </div> */}
 
             <Image
+              className='max-xl:container-100'
               width={1300}
               height={511}
               alt='how'
@@ -251,18 +263,30 @@ function Home({}: NextPage) {
           </div>
           {/* <div>points</div> */}
         </div>
-        <div className={cn(styles.exampleWrapper, 'mx-auto flex flex-col')}>
+        <div
+          className={cn(
+            styles.exampleWrapper,
+            'max-md:padding-global max-md:padding-y max-md:container-100 max-sm:sm-padding-top-0 mx-auto flex flex-col max-md:items-center'
+          )}
+        >
           <div className={cn(styles.exampleTitle, 'fonts flex')}>
             Dapplets{' '}
             <div className={cn(styles.exampleTitleColor, 'fonts flex')}>
               &nbsp;example
             </div>
           </div>
-          <div className='flex justify-between'>
+          <div className='flex justify-between max-xl:flex-wrap max-xl:gap-y-40 max-md:flex-col max-md:items-center '>
             {PowerDapplets.map((x, i) => (
-              <div className={cn(styles.powerItem, 'flex flex-col')} key={i}>
+              <div
+                className={cn(
+                  styles.powerItem,
+                  'max-md:container-100 flex flex-col'
+                )}
+                key={i}
+              >
                 <div className={cn(styles.powerImg, '')}>
                   <Image
+                    className='max-md:global-w-80'
                     width={407}
                     height={407}
                     alt='power'
@@ -285,8 +309,18 @@ function Home({}: NextPage) {
             ))}
           </div>
         </div>
-        <div className={cn(styles.featureWrapper, 'mx-auto flex flex-col')}>
-          <div className={cn(styles.feature1, 'flex items-center')}>
+        <div
+          className={cn(
+            styles.featureWrapper,
+            'max-xl:padding-y max-md:padding-global mx-auto flex flex-col'
+          )}
+        >
+          <div
+            className={cn(
+              styles.feature1,
+              'max-md:width-100-mobile flex items-center max-md:flex-wrap'
+            )}
+          >
             <div className={cn(styles.exampleTitle, 'fonts flex items-center')}>
               platform
               <div className={cn(styles.exampleTitleColor, 'fonts flex')}>
@@ -296,10 +330,15 @@ function Home({}: NextPage) {
             <div
               className={cn(
                 styles.featureTextBlock,
-                'fonts flex items-center  justify-between'
+                'fonts max-md:width-100-mobile flex  items-center justify-between max-md:left-auto '
               )}
             >
-              <div className={cn(styles.featureText, 'opacity-70')}>
+              <div
+                className={cn(
+                  styles.featureText,
+                  'max-md:padding-y opacity-70 max-md:left-auto '
+                )}
+              >
                 {PlatformFeaturesMessage}
               </div>
               <Link
@@ -314,10 +353,10 @@ function Home({}: NextPage) {
           <div
             className={cn(
               styles.feature2,
-              'flex items-center gap-x-40 gap-y-40'
+              'flex items-center gap-x-40 gap-y-40 max-xl:flex-wrap'
             )}
           >
-            <div className={cn(styles.featureImg, 'flex')}>
+            <div className={cn(styles.featureImg, 'flex max-xl:hidden')}>
               <Image
                 width={407}
                 height={520}
@@ -332,7 +371,10 @@ function Home({}: NextPage) {
               />
             </div>
             <div
-              className={cn(styles.featureItemsBlock, 'flex gap-x-40 gap-y-40')}
+              className={cn(
+                styles.featureItemsBlock,
+                'max-xl:container-auto flex gap-x-40 gap-y-40 max-xl:flex-wrap'
+              )}
             >
               <div
                 className={cn(
@@ -346,6 +388,26 @@ function Home({}: NextPage) {
               >
                 {PlatformFeatures[0].id}
               </div>
+              <div
+                className={cn(
+                  styles.featureImgXl,
+                  'flex max-md:hidden xl:hidden'
+                )}
+              >
+                <Image
+                  width={407}
+                  height={240}
+                  alt='power'
+                  src={
+                    isMatches && isDarkMode
+                      ? feature1
+                      : !isMatches && isDarkMode
+                        ? feature1
+                        : feature1Light
+                  }
+                />
+              </div>
+
               {PlatformFeatures[0].features.map((x, i) => (
                 <Link key={i} target='_blank' href={x.link}>
                   <div
@@ -377,10 +439,15 @@ function Home({}: NextPage) {
           <div
             className={cn(
               styles.feature3,
-              'flex items-center gap-x-40  gap-y-40'
+              'flex items-center gap-x-40  gap-y-40  max-xl:flex-wrap'
             )}
           >
-            <div className={cn(styles.featureItemsBlock, 'flex gap-y-40 ')}>
+            <div
+              className={cn(
+                styles.featureItemsBlock,
+                'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap'
+              )}
+            >
               <div
                 className={cn(
                   isMatches && isDarkMode
@@ -432,7 +499,12 @@ function Home({}: NextPage) {
                 }
               />
             </div>
-            <div className={cn(styles.featureItemsBlock, 'flex')}>
+            <div
+              className={cn(
+                styles.featureItemsBlock,
+                'max-xl:container-auto flex max-xl:flex-wrap'
+              )}
+            >
               {PlatformFeatures[1].features
                 .filter((x, i) => i !== 1)
                 .map((x, i) => (
@@ -469,7 +541,7 @@ function Home({}: NextPage) {
           <div
             className={cn(
               styles.feature4,
-              'flex items-center gap-x-40  gap-y-40'
+              'flex items-center gap-x-40  gap-y-40  max-xl:flex-wrap'
             )}
           >
             <div className={cn(styles.featureImg, 'flex')}>
@@ -489,7 +561,7 @@ function Home({}: NextPage) {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                'flex gap-x-40  gap-y-40'
+                'max-xl:container-auto flex  gap-x-40 gap-y-40 max-xl:flex-wrap'
               )}
             >
               <div
@@ -540,7 +612,7 @@ function Home({}: NextPage) {
               : !isMatches && isDarkMode
                 ? styles.featureGet
                 : styles.featureGetLigth,
-            'mx-auto flex justify-between'
+            'max-xl:container-auto max-xl:padding-y max-md:padding-global max-sm:sm-padding-top-0 mx-auto flex justify-between max-xl:flex-wrap'
           )}
         >
           <div className={cn('flex flex-col')}>
@@ -552,7 +624,7 @@ function Home({}: NextPage) {
             <div
               className={cn(
                 styles.getSubtitle,
-                'fonts flex flex-col text-base opacity-70'
+                'fonts flex flex-col text-base opacity-70 '
               )}
             >
               {getStartedMessage.content}

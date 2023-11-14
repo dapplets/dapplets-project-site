@@ -10,9 +10,13 @@ export interface SearchProps {
 export function Search({ isLight }: SearchProps) {
   return (
     <div
-      className={cn(styles.wrapper, 'flex justify-between', {
-        [styles.wrapperLight]: isLight,
-      })}
+      className={cn(
+        styles.wrapper,
+        'max-xl:padding-global max-sm:sm-padding-x flex justify-between',
+        {
+          [styles.wrapperLight]: isLight,
+        }
+      )}
     >
       <Image
         className={cn(styles.inputImg)}

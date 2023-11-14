@@ -60,6 +60,72 @@ main {
     background-color: #e7ecef;
     color: #222;
   }
+  .container-lg {
+    width: auto;
+    max-width: 900px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .padding-global {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .container-100 {
+    max-width: 100% !important;
+  }
+  .container-auto {
+    width: auto !important;
+  }
+  .size-auto {
+    width: auto !important;
+    height: auto !important;
+  }
+  .padding-y {
+    padding-top: 0px;
+    padding: 50px 0 !important;
+  }
+
+  .padding-global-x-mobile {
+    padding: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .fonts-title-mobile {
+    font-size: 56px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .left-auto {
+    margin-left: auto;
+  }
+  .width-100-mobile {
+    width: 100% !important;
+  }
+  .right-auto {
+    margin-right: auto;
+  }
+
+  .sm-padding-top-0 {
+    padding-top: 0 !important;
+  }
+  .sm-padding-top-20 {
+    padding-top: 20px;
+  }
+  .sm-padding-x {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  .global-bottom {
+    padding-bottom: 10px;
+  }
+  .global-w-80 {
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
