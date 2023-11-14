@@ -1,18 +1,5 @@
 import styles from './Footer.module.scss';
 import Image from 'next/image';
-import github from '@/assets/icon/footer/github-dark.svg';
-import discord from '@/assets/icon/footer/diskord-dark.svg';
-import heart from '@/assets/icon/footer/heart.svg';
-import tg from '@/assets/icon/footer/tg-dark.svg';
-import medium from '@/assets/icon/footer/medium-dark.svg';
-import x from '@/assets/icon/footer/x-dark.svg';
-import mail from '@/assets/icon/footer/mail-dark.svg';
-import githubLight from '@/assets/icon/footer/github.svg';
-import discordLight from '@/assets/icon/footer/discord.svg';
-import tgLight from '@/assets/icon/footer/tg.svg';
-import mediumLight from '@/assets/icon/footer/medium.svg';
-import xLight from '@/assets/icon/footer/x.svg';
-import mailLight from '@/assets/icon/footer/mail.svg';
 import cn from 'classnames';
 import Link from 'next/link';
 import { ThemeImage } from '../ThemeImage';
@@ -29,10 +16,10 @@ export function Footer() {
         <div
           className={cn(styles.copyText, 'fonts flex items-center text-base')}
         >
-          © 2019—2023
+          © 2019—{new Date().getFullYear()}
         </div>
         <div className={cn(styles.copyImg, 'flex items-center')}>
-          <Image width={36} height={36} alt='' src={heart} />
+          <Image width={36} height={36} alt='' src='icons/footer/heart.svg' />
         </div>
         <div
           className={cn(styles.copyText, 'fonts flex items-center text-base')}
@@ -59,9 +46,8 @@ export function Footer() {
             className={cn(styles.img, '')}
             width={36}
             height={36}
-            alt='github'
-            srcDark={github}
-            srcLight={githubLight}
+            alt='GitHub'
+            src='icons/footer/github.svg'
           />
         </Link>
 
@@ -70,9 +56,8 @@ export function Footer() {
             className={cn(styles.img, '')}
             width={36}
             height={36}
-            alt='discord'
-            srcDark={discord}
-            srcLight={discordLight}
+            alt='Discord'
+            src='icons/footer/discord.svg'
           />
         </Link>
 
@@ -81,9 +66,8 @@ export function Footer() {
             className={cn(styles.img, '')}
             width={36}
             height={36}
-            alt='tg'
-            srcDark={tg}
-            srcLight={tgLight}
+            alt='Telegram'
+            src='icons/footer/tg.svg'
           />
         </Link>
 
@@ -92,9 +76,8 @@ export function Footer() {
             className={cn(styles.img, '')}
             width={36}
             height={36}
-            alt='medium'
-            srcDark={medium}
-            srcLight={mediumLight}
+            alt='Medium'
+            src='icons/footer/medium.svg'
           />
         </Link>
 
@@ -103,9 +86,8 @@ export function Footer() {
             className={cn(styles.img, '')}
             width={36}
             height={36}
-            alt='x'
-            srcDark={x}
-            srcLight={xLight}
+            alt='X (former Twitter)'
+            src='icons/footer/x.svg'
           />
         </Link>
 
@@ -114,9 +96,8 @@ export function Footer() {
             className={cn(styles.img, '')}
             width={36}
             height={36}
-            alt='mail'
-            srcDark={mail}
-            srcLight={mailLight}
+            alt='Email'
+            src='icons/footer/email.svg'
           />
         </Link>
       </div>

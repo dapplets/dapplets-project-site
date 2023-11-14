@@ -9,33 +9,9 @@ import {
   PowerDapplets,
   getStartedLinks,
   getStartedMessage,
-  powerIconLight,
 } from '@/constants/constantsText';
 import { LinkBlock } from '@/components/LinkBlock';
-import near from '@/assets/icon/home/near-dark.svg';
-import proxy from '@/assets/icon/home/proxy-dark.svg';
-import swarm from '@/assets/icon/home/swarm-dark.svg';
-import boss from '@/assets/icon/home/boss-dark.svg';
-import hack from '@/assets/icon/home/hack-dark.svg';
-import nearLight from '@/assets/icon/home/near.svg';
-import proxyLight from '@/assets/icon/home/proxy.svg';
-import swarmLight from '@/assets/icon/home/swarm.svg';
-import bossLight from '@/assets/icon/home/boss.svg';
-import hackLight from '@/assets/icon/home/hack.svg';
-import encode from '@/assets/icon/home/encode-dark.svg';
-import encodeLight from '@/assets/icon/home/encode.svg';
-import download from '@/assets/icon/button/download_dark.svg';
-import github from '@/assets/icon/button/github_dark.svg';
 import { ThemeImage } from '@/components/ThemeImage';
-import how from '@/assets/icon/home/big-how-dark.svg';
-import howLight from '@/assets/icon/home/big-how.svg';
-import feature1 from '@/assets/icon/home/feature-1-dark.svg';
-import feature2 from '@/assets/icon/home/feature-2-dark.svg';
-import feature3 from '@/assets/icon/home/feature-3-dark.svg';
-import feature1Light from '@/assets/icon/home/feature-1.svg';
-import feature2Light from '@/assets/icon/home/feature-2.svg';
-import feature3Light from '@/assets/icon/home/feature-3.svg';
-import arrow from '@/assets/icon/link/arrow-dark.svg';
 import { Button } from '@/components/Button';
 import { Layout } from '@/components/Layout';
 import cn from 'classnames';
@@ -81,12 +57,12 @@ function Home() {
               link='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
               text='Get started'
               isPrimary
-              icon={download}
+              icon='icons/button/download.svg'
             />
             <Button
               text='Visit Github'
               isOutline
-              icon={github}
+              icon='icons/button/github.svg'
               link='https://github.com/dapplets'
             />
           </div>
@@ -103,62 +79,54 @@ function Home() {
               className={cn(
                 styles.supportedBlock,
                 'max-lg:padding-global-x-mobile flex items-center justify-between opacity-70  max-xl:flex-wrap max-xl:justify-around max-sm:flex-col max-sm:gap-y-40'
-                //
               )}
             >
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
-                alt='near'
-                srcDark={near}
-                srcLight={nearLight}
+                alt='NEAR Foundation'
+                src='icons/home/near-foundation.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
-                alt='proxy'
-                srcDark={proxy}
-                srcLight={proxyLight}
+                alt='Proximity Labs'
+                src='icons/home/proximity-labs.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
-                alt='swarm'
-                srcDark={swarm}
-                srcLight={swarmLight}
+                alt='Ethereum Swarm'
+                src='icons/home/swarm.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
-                alt='boss'
-                srcDark={boss}
-                srcLight={bossLight}
+                alt='BOS HACKS Hackathon'
+                src='icons/home/bos-hacks.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
-                alt='hack'
-                srcDark={hack}
-                srcLight={hackLight}
+                alt='Web3Hackfest'
+                src='icons/home/web3hackfest.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
-
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
                 width={168}
                 height={63}
-                alt='encode'
-                srcDark={encode}
-                srcLight={encodeLight}
+                alt='Encode x NEAR Horizon Hackathon'
+                src='icons/home/encode-near-horizon.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
             </div>
@@ -198,9 +166,8 @@ function Home() {
               className={cn('noTransition', 'max-xl:container-100')}
               width={1300}
               height={511}
-              alt='how'
-              srcDark={how}
-              srcLight={howLight}
+              alt='How it works?'
+              src='icons/home/big-how.svg'
               style={{ transform: 'none', cursor: 'default' }}
             />
           </div>
@@ -219,7 +186,7 @@ function Home() {
             </div>
           </div>
           <div className='flex justify-between max-xl:flex-wrap max-xl:gap-y-40 max-md:flex-col max-md:items-center '>
-            {PowerDapplets.map((x, i) => (
+            {PowerDapplets.map((dapplet, i) => (
               <div
                 className={cn(
                   styles.powerItem,
@@ -233,16 +200,17 @@ function Home() {
                     width={407}
                     height={407}
                     alt='power'
-                    srcDark={x.icon}
-                    srcLight={powerIconLight[i]}
+                    src={dapplet.image}
                     style={{ transform: 'none', cursor: 'default' }}
                   />
                 </div>
-                <div className={cn(styles.powerTitle, 'fonts')}>{x.title}</div>
+                <div className={cn(styles.powerTitle, 'fonts')}>
+                  {dapplet.title}
+                </div>
                 <div
                   className={cn(styles.powerText, 'fonts text-base opacity-70')}
                 >
-                  {x.text}
+                  {dapplet.text}
                 </div>
               </div>
             ))}
@@ -285,7 +253,12 @@ function Home() {
                 target='_blank'
                 href='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
               >
-                <Image width={50} height={50} alt='power' src={arrow} />
+                <Image
+                  width={50}
+                  height={50}
+                  alt='power'
+                  src='icons/link/arrow.svg'
+                />
               </Link>
             </div>
           </div>
@@ -300,8 +273,7 @@ function Home() {
                 width={407}
                 height={520}
                 alt='power'
-                srcDark={feature1}
-                srcLight={feature1Light}
+                src='icons/home/feature-1.svg'
                 className={'noTransition'}
                 style={{ transform: 'none', cursor: 'default' }}
               />
@@ -371,8 +343,7 @@ function Home() {
                 width={407}
                 height={520}
                 alt='power'
-                srcDark={feature2}
-                srcLight={feature2Light}
+                src='icons/home/feature-2.svg'
                 className={'noTransition'}
                 style={{ transform: 'none', cursor: 'default' }}
               />
@@ -418,8 +389,7 @@ function Home() {
                 width={407}
                 height={520}
                 alt='power'
-                srcDark={feature3}
-                srcLight={feature3Light}
+                src='icons/home/feature-3.svg'
                 className={'noTransition'}
                 style={{ transform: 'none', cursor: 'default' }}
               />

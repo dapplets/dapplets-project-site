@@ -1,7 +1,6 @@
 import styles from './LinkBlock.module.scss';
 import cn from 'classnames';
 import Image from 'next/image';
-import arrow from '@/assets/icon/link/arrow-dark.svg';
 
 export interface LinkBlockProps {
   content: any;
@@ -27,7 +26,7 @@ export function LinkBlock({ content }: LinkBlockProps) {
           'inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'
         )}
       >
-        <Image width={50} height={50} alt='arrow' src={arrow} />
+        <Image width={50} height={50} alt='arrow' src='icons/link/arrow.svg' />
       </div>
       <div className={cn(styles.linkTitle, `fonts`)}>{content.title}</div>
       <div className={cn(styles.linkContent, `fonts text-base opacity-70`)}>

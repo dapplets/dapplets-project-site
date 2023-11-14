@@ -1,10 +1,6 @@
 import Link from 'next/link';
 import styles from './Header.module.scss';
 import cn from 'classnames';
-import logo from '@/assets/icon/header/logo-dark.svg';
-import logoLight from '@/assets/icon/header/logo.svg';
-import moon from '@/assets/icon/header/moon_dark.svg';
-import sun from '@/assets/icon/header/sun.svg';
 import { useTheme } from 'next-themes';
 import { ThemeImage } from '../ThemeImage';
 
@@ -25,8 +21,7 @@ export function Header() {
           width={178}
           height={50}
           alt='logo'
-          srcDark={logo}
-          srcLight={logoLight}
+          src='icons/header/logo.svg'
           className='max-sm:logo-sm'
         />
       </Link>
@@ -52,8 +47,7 @@ export function Header() {
           width={34}
           height={34}
           alt='darkMode'
-          srcDark={sun}
-          srcLight={moon}
+          src='icons/header/theme-switcher.svg'
         />
       </div>
     </div>

@@ -1,15 +1,11 @@
-import power_1 from '../assets/img/home/power-1-dark.png';
-import power_2 from '../assets/img/home/power-2-dark.png';
-import power_3 from '../assets/img/home/power-3-dark.png';
-import power_1Light from '../assets/img/home/power-1.png';
-import power_2Light from '../assets/img/home/power-2.png';
-import power_3Light from '../assets/img/home/power-3.png';
 export const unicode = '\u0027';
+
 export const getStartedMessage = {
   title: 'Get started',
   content: `The best dapps may receive grants
       from the platform to support further development.`,
 };
+
 export const getStartedLinks = [
   {
     id: '1',
@@ -32,6 +28,7 @@ export const getStartedLinks = [
     content: 'of developers on Discord',
   },
 ];
+
 export const HomeTitle = {
   title: 'The Home of Augmented Web',
   subtitle: `Dapplets - open-source platform which empowers developers to create a community-driven internet, giving users and developers the ability to take control of the UX/UI on any existing websites.`,
@@ -66,19 +63,19 @@ export const HowItWorksItems = [
 export const PowerDapplets = [
   {
     id: '1',
-    icon: power_1,
+    image: 'images/power-1.png',
     title: 'Paywall',
     text: `Paywall Dapplet introduces a new feature to Twitter's UX giving any user the ability to sell their content.`,
   },
   {
     id: '2',
-    icon: power_2,
+    image: 'images/power-2.png',
     title: 'Community Tools',
     text: `Enhance user experience on third-party websites like Twitter and Github by displaying NEAR community badges to increase their visibility among users.`,
   },
   {
     id: '3',
-    icon: power_3,
+    image: 'images/power-3.png',
     title: 'Swarm Search',
     text: `The set of modules augmenting Google and YouTube search pages with data from OpenSearch-compatible engines.`,
   },
@@ -151,5 +148,3 @@ export const PlatformFeatures = [
     ],
   },
 ];
-
-export const powerIconLight = [power_1Light, power_2Light, power_3Light];

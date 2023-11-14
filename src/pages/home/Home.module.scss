@@ -3,14 +3,14 @@
 
 .titleWrapper {
   padding: 100px 0 60px 0;
-  background: url('../../assets/icon/home/bg-title-dark.svg');
+  background: url('/themes/dark/icons/home/bg-title.svg');
   background-size: 142%;
   background-position-x: -275px;
   background-position-y: -30px;
 }
 
 :global(.light) .titleWrapper {
-  background: url('../../assets/icon/home/bg-title.svg');
+  background: url('/themes/light/icons/home/bg-title.svg');
   background-size: 142%;
   background-position-x: -275px;
   background-position-y: -30px;
@@ -255,11 +255,11 @@
 .featureGet {
   padding: 100px 0;
   width: 100%;
-  // background-image: url('../../assets/icon//home/net.svg');
+  // background: url('/themes/dark/icons/home/bg-get.svg');
 }
 
 :global(.light) .featureGet {
-  background-image: url('../../assets/icon/home/bgGet.svg');
+  background: url('/themes/light/icons/home/bg-get.svg');
   background-size: 100%;
   background-position-x: -20px;
   background-position-y: -180px;
