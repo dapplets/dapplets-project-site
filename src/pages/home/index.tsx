@@ -318,7 +318,7 @@ function Home({}: NextPage) {
           <div
             className={cn(
               styles.feature1,
-              'max-md:width-100-mobile flex items-center max-md:flex-wrap'
+              'max-md:width-100-mobile flex items-center max-md:flex-wrap max-sm:sm-global-w'
             )}
           >
             <div className={cn(styles.exampleTitle, 'fonts flex items-center')}>

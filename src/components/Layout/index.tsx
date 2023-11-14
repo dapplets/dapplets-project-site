@@ -26,7 +26,7 @@ export const Layout: FC<LayoutProps> = ({
 }) => {
   // 'dark:dark',
   return (
-    <div className={cn(darkMode ? 'dark' : 'ligth')}>
+    <div className={cn(darkMode ? 'dark' : 'ligth','max-xl:overflow-x-hidden')}>
       <Header
         isMatches={isMatches}
         toggleDarkMode={toggleDarkMode}

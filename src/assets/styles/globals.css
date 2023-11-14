@@ -126,6 +126,9 @@ main {
     margin-left: auto;
     margin-right: auto;
   }
+  .sm-global-w{
+    width: 70% !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
