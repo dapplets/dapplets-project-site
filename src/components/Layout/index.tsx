@@ -12,7 +12,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div
       className={
-        'bg-dpl-white dark:bg-dpl-black min-h-screen max-xl:overflow-x-hidden'
+        'min-h-screen bg-dpl-white dark:bg-dpl-black max-xl:overflow-x-hidden'
       }
     >
       <Header />
