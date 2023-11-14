@@ -39,20 +39,15 @@ import arrow from '@/assets/icon/link/arrow-dark.svg';
 import { Button } from '@/components/Button';
 import { Layout } from '@/components/Layout';
 import cn from 'classnames';
-import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
 function Home() {
-  const { resolvedTheme } = useTheme();
-
   return (
     <Layout>
       <div className='fonts container-xl max-xl:container-lg mx-auto flex flex-col max-xl:gap-y-40 '>
         <div
           className={cn(
-            resolvedTheme === 'dark'
-              ? styles.titleWrapper
-              : styles.titleWrapperLigth,
+            styles.titleWrapper,
             'max-md:padding-global flex flex-col'
           )}
         >
@@ -307,14 +302,7 @@ function Home() {
                 'max-xl:container-auto flex gap-x-40 gap-y-40 max-xl:flex-wrap'
               )}
             >
-              <div
-                className={cn(
-                  resolvedTheme === 'dark'
-                    ? styles.featureId
-                    : styles.featureIdLight,
-                  'fonts flex'
-                )}
-              >
+              <div className={cn(styles.featureId, 'fonts flex')}>
                 {PlatformFeatures[0].id}
               </div>
               <div
@@ -334,14 +322,7 @@ function Home() {
 
               {PlatformFeatures[0].features.map((x, i) => (
                 <Link key={i} target='_blank' href={x.link}>
-                  <div
-                    className={cn(
-                      resolvedTheme === 'dark'
-                        ? styles.featureItem
-                        : styles.featureItemLight,
-                      'flex flex-col'
-                    )}
-                  >
+                  <div className={cn(styles.featureItem, 'flex flex-col')}>
                     <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                       {x.title}
                     </div>
@@ -370,25 +351,11 @@ function Home() {
                 'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap'
               )}
             >
-              <div
-                className={cn(
-                  resolvedTheme === 'dark'
-                    ? styles.featureId
-                    : styles.featureIdLight,
-                  'fonts flex'
-                )}
-              >
+              <div className={cn(styles.featureId, 'fonts flex')}>
                 {PlatformFeatures[1].id}
               </div>
               <Link target='_blank' href={PlatformFeatures[1].features[0].link}>
-                <div
-                  className={cn(
-                    resolvedTheme === 'dark'
-                      ? styles.featureItem
-                      : styles.featureItemLight,
-                    'flex flex-col'
-                  )}
-                >
+                <div className={cn(styles.featureItem, 'flex flex-col')}>
                   <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                     {PlatformFeatures[1].features[0].title}
                   </div>
@@ -423,14 +390,7 @@ function Home() {
                 .map((x, i) => (
                   <Link key={i} target='_blank' href={x.link}>
                     {' '}
-                    <div
-                      className={cn(
-                        resolvedTheme === 'dark'
-                          ? styles.featureItem
-                          : styles.featureItemLight,
-                        'flex flex-col'
-                      )}
-                    >
+                    <div className={cn(styles.featureItem, 'flex flex-col')}>
                       <div
                         className={cn(styles.featureItemTitle, 'fonts flex')}
                       >
@@ -470,26 +430,12 @@ function Home() {
                 'max-xl:container-auto flex  gap-x-40 gap-y-40 max-xl:flex-wrap'
               )}
             >
-              <div
-                className={cn(
-                  resolvedTheme === 'dark'
-                    ? styles.featureId
-                    : styles.featureIdLight,
-                  'fonts flex'
-                )}
-              >
+              <div className={cn(styles.featureId, 'fonts flex')}>
                 {PlatformFeatures[2].id}
               </div>
               {PlatformFeatures[2].features.map((x, i) => (
                 <Link key={i} target='_blank' href={x.link}>
-                  <div
-                    className={cn(
-                      resolvedTheme === 'dark'
-                        ? styles.featureItem
-                        : styles.featureItemLight,
-                      'flex flex-col'
-                    )}
-                  >
+                  <div className={cn(styles.featureItem, 'flex flex-col')}>
                     <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                       {x.title}
                     </div>
@@ -509,9 +455,7 @@ function Home() {
         </div>
         <div
           className={cn(
-            resolvedTheme === 'dark'
-              ? styles.featureGet
-              : styles.featureGetLigth,
+            styles.featureGet,
             'max-xl:container-auto max-xl:padding-y max-md:padding-global max-sm:sm-padding-top-0 mx-auto flex justify-between max-xl:flex-wrap'
           )}
         >

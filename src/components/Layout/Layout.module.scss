@@ -1,12 +1,12 @@
-.delimeterDark {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #303030;
-}
-.delimeterDarkLight {
+.delimeter {
   display: block;
   width: 100%;
   height: 1px;
   background: #c1c6ce;
+}
+
+:global(.dark) {
+  .delimeter {
+    background: #303030;
+  }
 }

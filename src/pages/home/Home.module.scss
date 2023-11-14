@@ -1,5 +1,6 @@
 .wrapper {
 }
+
 .titleWrapper {
   padding: 100px 0 60px 0;
   background: url('../../assets/icon/home/bg-title-dark.svg');
@@ -7,13 +8,11 @@
   background-position-x: -275px;
   background-position-y: -30px;
 }
-.titleWrapperLight {
-  padding: 100px 0 60px 0;
+
+:global(.light) .titleWrapper {
   background: url('../../assets/icon/home/bg-title.svg');
-  background-size: 142%;
-  background-position-x: -275px;
-  background-position-y: -30px;
 }
+
 .titleBlock {
   max-width: 900px;
   padding-bottom: 80px;
@@ -143,18 +142,8 @@
   border-radius: 10px;
   border: 1px solid rgba(48, 48, 48, 0.8);
 }
-.featureIdLight {
-  width: 406px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  font-size: 36px;
 
-  font-weight: 600;
-  line-height: 149%;
-  height: 240px;
-  border-radius: 10px;
+:global(.light) .featureId {
   background: radial-gradient(
     66.37% 55.29% at 49.88% 40.83%,
     rgba(255, 255, 255, 0.02) 0%,
@@ -169,11 +158,13 @@
   backdrop-filter: blur(20px);
   background: #e3e8eb;
 }
+
 .featureItem {
   width: 406px;
   padding: 20px;
   height: 240px;
   cursor: pointer;
+
   &:hover {
     border-radius: 10px;
     border: 1px solid rgba(48, 48, 48, 0);
@@ -194,17 +185,13 @@
   }
 }
 
-.featureItemLight {
-  width: 406px;
-  padding: 20px;
-  height: 240px;
-  cursor: pointer;
+:global(.light) .featureItem {
   &:hover {
-    border-radius: 10px;
     border: 1px solid rgba(48, 48, 48, 0);
     background: #e3e8eb;
   }
 }
+
 .featureItemTitle {
   font-size: 24px;
   font-weight: 600;
@@ -266,14 +253,14 @@
   width: 100%;
   // background-image: url('../../assets/icon//home/net.svg');
 }
-.featureGetLight {
-  padding: 100px 0;
-  width: 100%;
+
+:global(.light) .featureGet {
   background-image: url('../../assets/icon/home/bgGet.svg');
   background-size: 100%;
   background-position-x: -20px;
   background-position-y: -180px;
 }
+
 .getTitle {
   padding-bottom: 40px;
 }
@@ -290,9 +277,6 @@
   .featureId {
     width: 320px;
   }
-  .featureIdLight {
-    width: 320px;
-  }
 }
 
 @media not all and (min-width: 720px) {
@@ -302,26 +286,23 @@
   .featureId {
     width: 100%;
   }
-  .featureIdLight {
-    width: 100%;
-  }
-  .titleButtons{
+  .titleButtons {
     flex-direction: column;
     align-items: center;
   }
-  .exampleTitle{
-font-size: 34px;
+  .exampleTitle {
+    font-size: 34px;
   }
-  .feature1{
+  .feature1 {
     width: 80%;
   }
-  .feature2{
+  .feature2 {
     width: 80%;
   }
-  .feature3{
+  .feature3 {
     width: 80%;
   }
-  .feature4{
+  .feature4 {
     width: 80%;
   }
 }

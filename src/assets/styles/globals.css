@@ -35,6 +35,7 @@
     )
     rgb(var(--background-start-rgb));
 } */
+
 main {
   width: 100%;
   height: 100%;
@@ -49,18 +50,6 @@ main {
     padding: 0;
   }
 
-  .dark {
-    background-color: #1b1b1b;
-    color: #fff;
-  }
-  .dark-bg {
-    background-color: #1b1b1b;
-    color: #fff;
-  }
-  .light {
-    background-color: #e7ecef;
-    color: #222;
-  }
   .container-lg {
     width: auto;
     max-width: 900px;
@@ -129,16 +118,5 @@ main {
   }
   .sm-global-w{
     width: 70% !important;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .light {
-    background-color: #e7ecef !important;
-    color: #222 !important;
-  }
-  .dark {
-    background-color: #1b1b1b;
-    color: #fff;
   }
 }

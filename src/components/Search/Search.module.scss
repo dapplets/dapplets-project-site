@@ -8,6 +8,18 @@
   padding: 0 10px;
   height: 34px;
 }
+
+:global(.light) {
+  .wrapper {
+    background: inherit;
+    border: 1px solid #c1c6ce;
+
+    .input {
+      color: #222;
+    }
+  }
+}
+
 .inputImg {
   transition: all 0.2s ease;
   cursor: pointer;
@@ -16,6 +28,7 @@
     transform: scale(1.2);
   }
 }
+
 .input {
   outline: none;
   border: none;
@@ -26,13 +39,4 @@
   height: 100%;
   color: #fff;
   opacity: 0.6;
-}
-
-.wrapperLight {
-  background: inherit;
-  border: 1px solid #c1c6ce;
-
-  .input {
-    color: #222;
-  }
 }
