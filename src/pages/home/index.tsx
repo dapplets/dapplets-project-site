@@ -272,7 +272,7 @@ function Home() {
             <div className={cn(styles.featureImg, 'flex max-xl:hidden')}>
               <ThemeImage
                 width={407}
-                height={520}
+                height={275}
                 alt='power'
                 src='icons/home/feature-1.svg'
                 className={'noTransition'}
@@ -342,7 +342,7 @@ function Home() {
             <div className={cn(styles.featureImg, 'flex')}>
               <ThemeImage
                 width={407}
-                height={520}
+                height={275}
                 alt='power'
                 src='icons/home/feature-2.svg'
                 className={'noTransition'}
@@ -388,7 +388,7 @@ function Home() {
             <div className={cn(styles.featureImg, 'flex')}>
               <ThemeImage
                 width={407}
-                height={520}
+                height={275}
                 alt='power'
                 src='icons/home/feature-3.svg'
                 className={'noTransition'}
