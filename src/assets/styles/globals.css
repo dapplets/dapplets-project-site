@@ -8,17 +8,35 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('../fonts/Selawik-Reg.woff') format('woff'), url('../fonts/Selawik-Reg.ttf') format('ttf') ;
+  src: url('../fonts/Selawik-Reg.woff') format('woff'), url('../fonts/Selawik-Reg.woff2') format('woff2') ;
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
     U+FE2E-FE2F;
 }
 
 @font-face {
-  font-family: SelawikSB, sans-serif;
+  font-family: Selawik, sans-serif;
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  src: url('../fonts/Selawik-SB.woff') format('woff'), url('../fonts/Selawik-SB.ttf') format('ttf') ;
+  src: url('../fonts/Selawik-SB.woff') format('woff'), url('../fonts/Selawik-SB.woff2') format('woff2') ;
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: Selawik, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Selawik-Bol.woff') format('woff'), url('../fonts/Selawik-Bol.woff2') format('woff2') ;
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: Selawik, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Selawik-Lig.woff') format('woff'), url('../fonts/Selawik-Lig.woff2') format('woff2') ;
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
     U+FE2E-FE2F;
 }
