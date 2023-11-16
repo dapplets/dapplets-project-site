@@ -22,7 +22,6 @@
 }
 .titleBlockTitle {
   font-size: 96px;
-  font-family: Selawik, sans-serif;
   font-weight: 600;
   line-height: 100%;
   text-align: center;
@@ -57,7 +56,6 @@
 
 .howTitle {
   font-size: 48px;
-  font-family: Selawik, sans-serif;
   font-weight: 600;
   line-height: 100%;
   padding-bottom: 26px;
@@ -73,7 +71,6 @@
 }
 .exampleTitle {
   font-size: 48px;
-  font-family: Selawik, sans-serif;
   font-weight: 600;
   line-height: 100%;
   padding-bottom: 40px;
@@ -90,11 +87,10 @@
 }
 .powerTitle {
   padding: 20px;
-    padding-top: 35px;
+  padding-top: 35px;
   padding-bottom: 0;
   text-decoration: underline;
   font-size: 24px;
-  font-family: Selawik, sans-serif;
   font-weight: 600;
   line-height: 100%;
 }
@@ -141,7 +137,6 @@
   align-items: center;
   justify-self: center;
   font-size: 36px;
-  font-family: Selawik, sans-serif;
   font-weight: 600;
   line-height: 149%;
   height: 240px;
@@ -201,7 +196,6 @@
 
 .featureItemTitle {
   font-size: 24px;
-  font-family: Selawik, sans-serif;
   font-weight: 600;
   line-height: 100%;
   padding-bottom: 20px;
@@ -224,10 +218,10 @@
 .featureImg {
   width: 406px !important;
   position: relative;
-  &::after{
+  &::after {
     display: block;
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: 50%;
     bottom: 50px;
@@ -238,23 +232,19 @@
     backdrop-filter: blur(1px);
     margin: -5%;
     z-index: 100;
-    
   }
 }
-
-
 
 .featureItemsBlock {
   flex-wrap: wrap;
 }
 .feature2 {
- 
   .featureItemsBlock {
     width: 66%;
   }
 }
 .feature1 {
-  .featureImg{
+  .featureImg {
     margin-bottom: 110px;
   }
 }
@@ -293,7 +283,6 @@
   width: 295px;
 }
 @media not all and (min-width: 904px) {
-
   .featureItem {
     width: 320px;
   }
@@ -330,12 +319,12 @@
   }
 }
 
-.howImg{
+.howImg {
   position: relative;
-  &::after{
+  &::after {
     display: block;
     position: absolute;
-    content: "";
+    content: '';
     width: 66%;
     height: 60%;
     bottom: 290px;
@@ -347,6 +336,5 @@
     backdrop-filter: blur(2px);
     margin: -5%;
     z-index: 100;
-    
   }
 }

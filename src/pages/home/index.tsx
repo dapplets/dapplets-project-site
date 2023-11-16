@@ -153,7 +153,7 @@ function Home() {
             </div>
           </div>
           {/* todo: remove whem will animation */}
-          <div className={cn(styles.howImg,'flex')}>
+          <div className={cn(styles.howImg, 'flex')}>
             {/* <div>
             {HowItWorksItems.map((x, i) => (
               <div className="flex flex-col" key={i}>
@@ -352,7 +352,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                'max-xl:container-auto flex max-xl:flex-wrap gap-y-40'
+                'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap'
               )}
             >
               {PlatformFeatures[1].features
