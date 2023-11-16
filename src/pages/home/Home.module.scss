@@ -2,23 +2,23 @@
 }
 
 .titleWrapper {
-  padding: 100px 0 60px 0;
+  padding: 120px 0 60px 0;
   background: url('/themes/dark/icons/home/bg-title.svg');
   background-size: 142%;
   background-position-x: -275px;
-  background-position-y: -30px;
+  background-position-y: 5px;
 }
 
 :global(.light) .titleWrapper {
   background: url('/themes/light/icons/home/bg-title.svg');
   background-size: 142%;
   background-position-x: -275px;
-  background-position-y: -30px;
+  background-position-y: 5px;
 }
 
 .titleBlock {
   max-width: 900px;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 }
 .titleBlockTitle {
   font-size: 96px;
@@ -45,18 +45,17 @@
 .titleButtons {
   width: 406px;
   flex: 1 1 auto;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
 }
 .supportedBlock {
   padding: 10px 0;
 }
 .howWrapper {
-  padding: 76px 0 43px 0;
+  padding: 80px 0 43px 0;
 }
 
 .howTitle {
   font-size: 48px;
-
   font-weight: 600;
   line-height: 100%;
   padding-bottom: 26px;
@@ -72,7 +71,6 @@
 }
 .exampleTitle {
   font-size: 48px;
-
   font-weight: 600;
   line-height: 100%;
   padding-bottom: 40px;
@@ -89,6 +87,7 @@
 }
 .powerTitle {
   padding: 20px;
+  padding-top: 35px;
   padding-bottom: 0;
   text-decoration: underline;
   font-size: 24px;
@@ -99,18 +98,18 @@
   padding: 20px;
 }
 .feature1 {
-  padding-bottom: 40px;
+  padding-bottom: 55px;
   .exampleTitle {
     padding-bottom: 0;
   }
 }
 .featureWrapper {
-  padding-top: 100px;
+  padding-top: 85px;
 }
 
 .featureTextBlock {
-  width: 406px;
-  margin-left: 40px;
+  width: 380px;
+  margin-left: 70px;
 }
 .featureText {
   width: 308px;
@@ -138,7 +137,6 @@
   align-items: center;
   justify-self: center;
   font-size: 36px;
-
   font-weight: 600;
   line-height: 149%;
   height: 240px;
@@ -219,16 +217,22 @@
 
 .featureImg {
   width: 406px !important;
-}
-
-.featureImgXl {
-  width: auto !important;
-  max-width: 200px !important;
-  height: 240px;
-  overflow: hidden;
-  display: flex;
-  margin-left: auto;
-  padding-top: 50px;
+  position: relative;
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50%;
+    bottom: 50px;
+    border-radius: 50%;
+    left: 0;
+    background: inherit;
+    /* filter: blur(10px); */
+    backdrop-filter: blur(1px);
+    margin: -5%;
+    z-index: 100;
+  }
 }
 
 .featureItemsBlock {
@@ -239,14 +243,21 @@
     width: 66%;
   }
 }
+.feature1 {
+  .featureImg {
+    margin-bottom: 110px;
+  }
+}
 
 .feature3 {
+  padding-top: 50px;
   .featureItemsBlock {
     width: 406px;
   }
 }
 
 .feature4 {
+  padding-top: 40px;
   .featureItemsBlock {
     width: 66%;
   }
@@ -272,9 +283,6 @@
   width: 295px;
 }
 @media not all and (min-width: 904px) {
-  .featureImgXl {
-    display: none;
-  }
   .featureItem {
     width: 320px;
   }
@@ -308,5 +316,25 @@
   }
   .feature4 {
     width: 80%;
+  }
+}
+
+.howImg {
+  position: relative;
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 66%;
+    height: 60%;
+    bottom: 290px;
+    border-radius: 50%;
+    right: 0;
+    background: inherit;
+    /* filter: blur(10px); */
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
+    margin: -5%;
+    z-index: 100;
   }
 }

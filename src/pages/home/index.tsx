@@ -39,7 +39,8 @@ function Home() {
                 'fonts max-lg:fonts-title-mobile  flex'
               )}
             >
-              {HomeTitle.title}
+              The Home <br />
+              of Augmented Web
             </div>
             <div
               className={cn(
@@ -152,7 +153,7 @@ function Home() {
             </div>
           </div>
           {/* todo: remove whem will animation */}
-          <div className='flex'>
+          <div className={cn(styles.howImg, 'flex')}>
             {/* <div>
             {HowItWorksItems.map((x, i) => (
               <div className="flex flex-col" key={i}>
@@ -271,7 +272,7 @@ function Home() {
             <div className={cn(styles.featureImg, 'flex max-xl:hidden')}>
               <ThemeImage
                 width={407}
-                height={520}
+                height={275}
                 alt='power'
                 src='icons/home/feature-1.svg'
                 className={'noTransition'}
@@ -341,7 +342,7 @@ function Home() {
             <div className={cn(styles.featureImg, 'flex')}>
               <ThemeImage
                 width={407}
-                height={520}
+                height={275}
                 alt='power'
                 src='icons/home/feature-2.svg'
                 className={'noTransition'}
@@ -351,11 +352,11 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                'max-xl:container-auto flex max-xl:flex-wrap'
+                'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap'
               )}
             >
               {PlatformFeatures[1].features
-                .filter((x, i) => i !== 1)
+                .filter((x, i) => i !== 0)
                 .map((x, i) => (
                   <Link key={i} target='_blank' href={x.link}>
                     {' '}
@@ -387,7 +388,7 @@ function Home() {
             <div className={cn(styles.featureImg, 'flex')}>
               <ThemeImage
                 width={407}
-                height={520}
+                height={275}
                 alt='power'
                 src='icons/home/feature-3.svg'
                 className={'noTransition'}

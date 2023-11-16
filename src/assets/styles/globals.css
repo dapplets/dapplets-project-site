@@ -2,39 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Segoe UI Regular */
+/* Selawik */
 @font-face {
-  font-family: SegoeUIRegular, sans-serif;
+  font-family: Selawik, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('../fonts/Segoe_UI.ttf') format('ttf');
+  src: url('../fonts/Selawik-Reg.woff2') format('woff2')
+    url('../fonts/Selawik-Reg.woff') format('woff');
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
     U+FE2E-FE2F;
 }
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-} */
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb:#1D1D1D;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+@font-face {
+  font-family: Selawik, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Selawik-SB.woff2') format('woff2')
+    url('../fonts/Selawik-SB.woff') format('woff');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: Selawik, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Selawik-Bol.woff2') format('woff2')
+    url('../fonts/Selawik-Bol.woff') format('woff');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: Selawik, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Selawik-Lig.woff2') format('woff2')
+    url('../fonts/Selawik-Lig.woff') format('woff');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+body {
+  font-family: Selawik, sans-serif;
+}
 
 main {
   width: 100%;
@@ -42,9 +55,6 @@ main {
 }
 
 @layer components {
-  .fonts {
-    font-family: SegoeUIRegular, sans-serif;
-  }
   .container-xl {
     width: 1300px;
     padding: 0;
@@ -124,7 +134,7 @@ main {
     width: 70% !important;
   }
   .no-bg {
-    background: none!important;
+    background: none !important;
   }
   .header-link-sm {
     width: 50%;
