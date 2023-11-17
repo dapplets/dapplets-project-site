@@ -24,7 +24,7 @@ function Home() {
         <div
           className={cn(
             styles.titleWrapper,
-            'max-md:padding-global max-xl:no-bg flex flex-col'
+            'max-md:padding-global max-xl:no-bg max-xl:padding-y flex flex-col'
           )}
         >
           <div
@@ -136,7 +136,7 @@ function Home() {
         <div
           className={cn(
             styles.howWrapper,
-            'max-md:padding-global max-sm:sm-padding-top-0 flex flex-col'
+            'max-md:padding-global max-xl:padding-y  max-sm:sm-padding-top-0 flex flex-col'
           )}
         >
           <div className='fonts mx-auto flex flex-col justify-center'>
@@ -177,7 +177,7 @@ function Home() {
         <div
           className={cn(
             styles.exampleWrapper,
-            'max-md:padding-global max-md:padding-y max-md:container-100 max-sm:sm-padding-top-0 mx-auto flex flex-col max-md:items-center'
+            'max-xl:padding-y max-md:padding-global max-md:padding-y max-md:container-100 max-sm:sm-padding-top-0 mx-auto flex flex-col max-md:items-center'
           )}
         >
           <div className={cn(styles.exampleTitle, 'fonts flex')}>
@@ -198,8 +198,8 @@ function Home() {
                 <div className={cn(styles.powerImg, '')}>
                   <ThemeImage
                     className={cn('noTransition', 'max-md:global-w-80')}
-                    width={407}
-                    height={407}
+                    width={400}
+                    height={400}
                     alt='power'
                     src={dapplet.image}
                     style={{ transform: 'none', cursor: 'default' }}
@@ -235,33 +235,34 @@ function Home() {
                 &nbsp;features
               </div>
             </div>
-            <div
-              className={cn(
-                styles.featureTextBlock,
-                'fonts max-md:width-100-mobile flex  items-center justify-between max-md:left-auto '
-              )}
+            <Link
+              target='_blank'
+              href='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
             >
               <div
                 className={cn(
-                  styles.featureText,
-                  'max-md:padding-y opacity-70 max-md:left-auto '
+                  styles.featureTextBlock,
+                  'fonts max-md:width-100-mobile flex  items-center justify-between max-md:left-auto '
                 )}
               >
-                {PlatformFeaturesMessage}
-              </div>
-              <Link
-                className={cn(styles.featureLink, '')}
-                target='_blank'
-                href='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
-              >
+                <div
+                  className={cn(
+                    styles.featureText,
+                    'max-md:padding-y opacity-70 max-md:left-auto '
+                  )}
+                >
+                  {PlatformFeaturesMessage}
+                </div>
+
                 <Image
+                  className={cn(styles.featureLink, '')}
                   width={50}
                   height={50}
                   alt='power'
                   src='icons/link/arrow.svg'
                 />
-              </Link>
-            </div>
+              </div>{' '}
+            </Link>
           </div>
           <div
             className={cn(
@@ -271,7 +272,7 @@ function Home() {
           >
             <div className={cn(styles.featureImg, 'flex max-xl:hidden')}>
               <ThemeImage
-                width={407}
+                width={395}
                 height={275}
                 alt='power'
                 src='icons/home/feature-1.svg'
@@ -317,14 +318,14 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap'
+                'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap max-xl:gap-x-40'
               )}
             >
               <div className={cn(styles.featureId, 'fonts flex')}>
                 {PlatformFeatures[1].id}
               </div>
               <Link target='_blank' href={PlatformFeatures[1].features[0].link}>
-                <div className={cn(styles.featureItem, 'flex flex-col')}>
+                <div className={cn(styles.featureItem, 'flex flex-col ')}>
                   <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                     {PlatformFeatures[1].features[0].title}
                   </div>
@@ -339,9 +340,9 @@ function Home() {
                 </div>
               </Link>
             </div>
-            <div className={cn(styles.featureImg, 'flex')}>
+            <div className={cn(styles.featureImg, 'flex max-xl:hidden')}>
               <ThemeImage
-                width={407}
+                width={395}
                 height={275}
                 alt='power'
                 src='icons/home/feature-2.svg'
@@ -352,7 +353,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap'
+                'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap max-xl:gap-x-40'
               )}
             >
               {PlatformFeatures[1].features
@@ -385,9 +386,9 @@ function Home() {
               'flex items-center gap-x-40  gap-y-40  max-xl:flex-wrap'
             )}
           >
-            <div className={cn(styles.featureImg, 'flex')}>
+            <div className={cn(styles.featureImg, 'flex max-xl:hidden')}>
               <ThemeImage
-                width={407}
+                width={395}
                 height={275}
                 alt='power'
                 src='icons/home/feature-3.svg'
@@ -406,7 +407,12 @@ function Home() {
               </div>
               {PlatformFeatures[2].features.map((x, i) => (
                 <Link key={i} target='_blank' href={x.link}>
-                  <div className={cn(styles.featureItem, 'flex flex-col')}>
+                  <div
+                    className={cn(
+                      styles.featureItem,
+                      'flex flex-col max-xl:gap-x-40'
+                    )}
+                  >
                     <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                       {x.title}
                     </div>
