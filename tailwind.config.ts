@@ -26,7 +26,7 @@ const config: Config = {
         'dark-bg': '#1B1B1B',
         content: '#FFFFFF',
         pureWhite: '#FFFFFF',
-        'background-dark': '#1D1D1D',
+        backgroundDark: '#1D1D1D',
         stroke: '#303030',
         accent: '#DB504A',
         yellow: '#FFDC82',
