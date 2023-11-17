@@ -32,13 +32,13 @@ export function Header() {
         )}
       >
         <Link href='/'>
-          <div className={cn(styles.linkHover, 'text-base')}>Home</div>
+          <div className={cn(styles.linkHover, 'text-base max-sm:fonts-sm')}>Home</div>
         </Link>
         {/* <Link href="/about"> */}
-        <div className={cn(styles.linkHover, 'text-base')}>About</div>
+        <div className={cn(styles.linkHover, 'text-base max-sm:fonts-sm')}>About</div>
         {/* </Link> */}
         <Link target='_blank' href='https://docs.dapplets.org/docs/'>
-          <div className={cn(styles.linkHover, 'text-base')}>Documentation</div>
+          <div className={cn(styles.linkHover, 'text-base max-sm:fonts-sm')}>Documentation</div>
         </Link>
       </div>
 

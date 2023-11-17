@@ -142,4 +142,7 @@ main {
   .logo-sm {
     width: 100px;
   }
+ .fonts-sm{
+font-size: 10px;
+  }
 }
