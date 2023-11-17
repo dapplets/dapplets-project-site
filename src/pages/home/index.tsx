@@ -52,7 +52,7 @@ function Home() {
             </div>
           </div>
           <div
-            className={cn(styles.titleButtons, 'mx-auto flex justify-between')}
+            className={cn(styles.titleButtons, 'mx-auto flex justify-between max-sm:container-auto max-sm:gap-x-20')}
           >
             <Button
               link='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
