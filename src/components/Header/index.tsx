@@ -12,9 +12,9 @@ export function Header() {
   }
 
   return (
-    <div className='fonts container-xl max-xl:container-lg mx-auto flex items-center justify-between py-15'>
+    <div className={cn(styles.wrapper,'fonts container-xl  mx-auto flex items-center justify-between py-15')}>
       <Link
-        className={cn(styles.linkHover, 'max-xl:padding-global text-base')}
+        className={cn(styles.linkHover, ' text-base')}
         href='/'
       >
         <ThemeImage
@@ -22,23 +22,23 @@ export function Header() {
           height={50}
           alt='logo'
           src='icons/header/logo.svg'
-          className='max-sm:logo-sm'
+          className=''
         />
       </Link>
       <div
         className={cn(
           styles.linkBlock,
-          'grow-1 max-sm:container-max-auto max-sm:header-link-sm max-sm:padding-global flex justify-between max-sm:justify-around'
+          'grow-1  flex justify-between '
         )}
       >
         <Link href='/'>
-          <div className={cn(styles.linkHover, 'text-base max-sm:fonts-sm')}>Home</div>
+          <div className={cn(styles.linkHover, 'text-base ')}>Home</div>
         </Link>
         {/* <Link href="/about"> */}
-        <div className={cn(styles.linkHover, 'text-base max-sm:fonts-sm')}>About</div>
+        <div className={cn(styles.linkHover, 'text-base ')}>About</div>
         {/* </Link> */}
         <Link target='_blank' href='https://docs.dapplets.org/docs/'>
-          <div className={cn(styles.linkHover, 'text-base max-sm:fonts-sm')}>Documentation</div>
+          <div className={cn(styles.linkHover, 'text-base ')}>Documentation</div>
         </Link>
       </div>
 

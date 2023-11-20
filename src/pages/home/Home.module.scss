@@ -2,18 +2,18 @@
 }
 
 .titleWrapper {
-  padding: 120px 0 60px 0;
+  padding: 200px 0 60px 0;
   background: url('/themes/dark/icons/home/bg-title.svg');
-  background-size: 142%;
-  background-position-x: -275px;
-  background-position-y: 5px;
+  background-position-y: 70px;
+  background-position-x: center;
 }
 
 :global(.light) .titleWrapper {
+  padding: 200px 0 60px 0;
   background: url('/themes/light/icons/home/bg-title.svg');
-  background-size: 142%;
-  background-position-x: -275px;
-  background-position-y: 5px;
+
+  background-position-x: center;
+  background-position-y: 70px;
 }
 
 .titleBlock {
@@ -35,11 +35,9 @@
   max-width: 600px;
 }
 .supportedLableBlock {
-  padding: 0 20px 0 40px;
+  // padding: 0 20px 0 40px;
 }
 .supportedBlockIcon {
-  width: 168px;
-  height: 63px;
   object-fit: contain;
 }
 .titleButtons {
@@ -48,7 +46,7 @@
   padding-bottom: 70px;
 }
 .supportedBlock {
-  padding: 10px 0;
+  padding: 10px 30px;
 }
 .howWrapper {
   padding: 80px 0 43px 0;
@@ -88,8 +86,8 @@
 }
 .powerTitle {
   padding: 20px;
-  padding-top: 35px;
-  padding-bottom: 0;
+  padding-top: 45px;
+  padding-bottom: 10px;
   text-decoration: underline;
   font-size: 24px;
   font-weight: 600;
@@ -99,13 +97,13 @@
   padding: 20px;
 }
 .feature1 {
-  padding-bottom: 55px;
+  padding-bottom: 45px;
   .exampleTitle {
     padding-bottom: 0;
   }
 }
 .featureWrapper {
-  padding-top: 85px;
+  padding-top: 65px;
 }
 
 .featureTextBlock {
@@ -261,23 +259,8 @@
 }
 
 .featureImg {
-  width: 395px !important;
+  // width: 395px !important;
   position: relative;
-  &::after {
-    display: block;
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 50%;
-    bottom: 50px;
-    border-radius: 50%;
-    left: 0;
-    background: inherit;
-    /* filter: blur(10px); */
-    backdrop-filter: blur(1px);
-    margin: -5%;
-    z-index: 100;
-  }
 }
 
 .featureItemsBlock {
@@ -287,6 +270,11 @@
   .featureItemsBlock {
     width: 66%;
   }
+  .featureImg{
+    width: 34%;
+    margin-left: -30px;
+    height: 520px;
+  }
 }
 .feature1 {
   .featureImg {
@@ -295,21 +283,29 @@
 }
 
 .feature3 {
-  padding-top: 50px;
+  padding-top: 45px;
   .featureItemsBlock {
     width: 406px;
+  }
+  .featureImg {
+    margin-top: 70px;
+    padding-left: 20px;
   }
 }
 
 .feature4 {
   padding-top: 40px;
+
   .featureItemsBlock {
     width: 66%;
+  }
+  .featureImg {
+    margin-right: 5px;
   }
 }
 
 .featureGet {
-  padding: 100px 0;
+  padding: 110px 0 100px 0;
   width: 100%;
   // background: url('/themes/dark/icons/home/bg-get.svg');
 }
@@ -366,20 +362,4 @@
 
 .howImg {
   position: relative;
-  &::after {
-    display: block;
-    position: absolute;
-    content: '';
-    width: 66%;
-    height: 60%;
-    bottom: 290px;
-    border-radius: 50%;
-    right: 0;
-    background: inherit;
-    /* filter: blur(10px); */
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(2px);
-    margin: -5%;
-    z-index: 100;
-  }
 }

@@ -37,6 +37,7 @@ const config: Config = {
         '128': '32rem',
         '144': '36rem',
         '15': '15px',
+        '20': '20px',
       },
       borderRadius: {
         '6xl': '10px',
@@ -50,6 +51,7 @@ const config: Config = {
       gap: {
         '40': '35px',
         '20': '20px',
+        '32':'32px'
       },
     },
   },

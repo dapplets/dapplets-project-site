@@ -12,7 +12,7 @@ export function LinkBlock({ content }: LinkBlockProps) {
       href={content.link}
       className={cn(
         styles.link,
-        'max-sm:width-100-mobile',
+       
         'dark:hover:bg-neutral-800/30',
         'hover:border-gray-300 hover:bg-gray-100 dark:hover:border-neutral-700',
         'group flex flex-col rounded-lg border border-transparent px-5 py-4 transition-colors '

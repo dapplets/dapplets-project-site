@@ -1,3 +1,13 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: inherit;
+  z-index: 100;
+  border-bottom: 1px solid  #C1C6CE;
+
+}
 .delimeter {
   display: block;
   width: 100%;
@@ -11,3 +21,25 @@
     background: #303030;
   }
 }
+
+:global(.dark) .menu {
+  border-bottom: 1px solid  #303030;
+ 
+}
+
+// .wrapper {
+//   // padding: 120px 0 60px 0;
+//   background: url('/themes/dark/icons/home/bg-big.svg');
+//   background-repeat: no-repeat;
+//   // background-size: 142%;
+//   // background-position-x: -275px;
+//   // background-position-y: 5px;
+// }
+
+// :global(.light) .wrapper {
+//   background: url('/themes/light/icons/home/bg-big.svg');
+//   background-repeat: no-repeat;
+//   // background-size: 142%;
+//   // background-position-x: -275px;
+//   // background-position-y: 5px;
+// }

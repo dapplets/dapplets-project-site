@@ -21,24 +21,14 @@ function Home() {
   return (
     <Layout>
       <div className='fonts container-xl max-xl:container-lg mx-auto flex flex-col max-xl:gap-y-40 '>
-        <div
-          className={cn(
-            styles.titleWrapper,
-            'max-md:padding-global max-xl:no-bg max-xl:padding-y flex flex-col'
-          )}
-        >
+        <div className={cn(styles.titleWrapper, ' flex flex-col')}>
           <div
             className={cn(
               styles.titleBlock,
               'fonts mx-auto  flex flex-col items-center'
             )}
           >
-            <div
-              className={cn(
-                styles.titleBlockTitle,
-                'fonts max-lg:fonts-title-mobile  flex'
-              )}
-            >
+            <div className={cn(styles.titleBlockTitle, 'fonts   flex')}>
               The Home <br />
               of Augmented Web
             </div>
@@ -52,7 +42,7 @@ function Home() {
             </div>
           </div>
           <div
-            className={cn(styles.titleButtons, 'mx-auto flex justify-between max-sm:container-auto max-sm:gap-x-20')}
+            className={cn(styles.titleButtons, 'mx-auto flex justify-between ')}
           >
             <Button
               link='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
@@ -71,7 +61,7 @@ function Home() {
             <div
               className={cn(
                 styles.supportedLable,
-                'fonts flex text-base opacity-70'
+                'fonts ml-20 flex text-base opacity-70'
               )}
             >
               Supported by:
@@ -79,7 +69,7 @@ function Home() {
             <div
               className={cn(
                 styles.supportedBlock,
-                'max-lg:padding-global-x-mobile flex items-center justify-between opacity-70  max-xl:flex-wrap max-xl:justify-around max-sm:flex-col max-sm:gap-y-40'
+                ' flex items-center justify-between gap-y-32 opacity-70  '
               )}
             >
               <ThemeImage
@@ -92,7 +82,7 @@ function Home() {
               />
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
-                width={168}
+                width={163}
                 height={63}
                 alt='Proximity Labs'
                 src='icons/home/proximity-labs.svg'
@@ -100,7 +90,7 @@ function Home() {
               />
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
-                width={168}
+                width={167}
                 height={63}
                 alt='Ethereum Swarm'
                 src='icons/home/swarm.svg'
@@ -108,15 +98,15 @@ function Home() {
               />
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
-                width={168}
-                height={63}
+                width={233}
+                height={55}
                 alt='BOS HACKS Hackathon'
                 src='icons/home/bos-hacks.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
-                width={168}
+                width={223}
                 height={63}
                 alt='Web3Hackfest'
                 src='icons/home/web3hackfest.svg'
@@ -124,7 +114,7 @@ function Home() {
               />
               <ThemeImage
                 className={cn(styles.supportedBlockIcon, 'noTransition')}
-                width={168}
+                width={119}
                 height={63}
                 alt='Encode x NEAR Horizon Hackathon'
                 src='icons/home/encode-near-horizon.svg'
@@ -133,12 +123,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div
-          className={cn(
-            styles.howWrapper,
-            'max-md:padding-global max-xl:padding-y  max-sm:sm-padding-top-0 flex flex-col'
-          )}
-        >
+        <div className={cn(styles.howWrapper, ' flex flex-col')}>
           <div className='fonts mx-auto flex flex-col justify-center'>
             <div className={cn(styles.howTitle, 'fonts flex justify-center')}>
               {HowItWorks.title}
@@ -164,7 +149,7 @@ function Home() {
           </div> */}
 
             <ThemeImage
-              className={cn('noTransition', 'max-xl:container-100')}
+              className={cn('noTransition', '')}
               width={1300}
               height={511}
               alt='How it works?'
@@ -174,30 +159,19 @@ function Home() {
           </div>
           {/* <div>points</div> */}
         </div>
-        <div
-          className={cn(
-            styles.exampleWrapper,
-            'max-xl:padding-y max-md:padding-global max-md:padding-y max-md:container-100 max-sm:sm-padding-top-0 mx-auto flex flex-col max-md:items-center'
-          )}
-        >
+        <div className={cn(styles.exampleWrapper, ' mx-auto flex flex-col')}>
           <div className={cn(styles.exampleTitle, 'fonts flex')}>
             Dapplets{' '}
             <div className={cn(styles.exampleTitleColor, 'fonts flex')}>
               &nbsp;example
             </div>
           </div>
-          <div className='flex justify-between max-xl:flex-wrap max-xl:gap-y-40 max-md:flex-col max-md:items-center '>
+          <div className='flex justify-between'>
             {PowerDapplets.map((dapplet, i) => (
-              <div
-                className={cn(
-                  styles.powerItem,
-                  'max-md:container-100 flex flex-col'
-                )}
-                key={i}
-              >
+              <div className={cn(styles.powerItem, ' flex flex-col')} key={i}>
                 <div className={cn(styles.powerImg, '')}>
                   <ThemeImage
-                    className={cn('noTransition', 'max-md:global-w-80')}
+                    className={cn('noTransition', '')}
                     width={400}
                     height={400}
                     alt='power'
@@ -217,18 +191,8 @@ function Home() {
             ))}
           </div>
         </div>
-        <div
-          className={cn(
-            styles.featureWrapper,
-            'max-xl:padding-y max-md:padding-global mx-auto flex flex-col'
-          )}
-        >
-          <div
-            className={cn(
-              styles.feature1,
-              'max-md:width-100-mobile max-sm:sm-global-w flex items-center max-md:flex-wrap'
-            )}
-          >
+        <div className={cn(styles.featureWrapper, ' mx-auto flex flex-col')}>
+          <div className={cn(styles.feature1, ' flex items-center ')}>
             <div className={cn(styles.exampleTitle, 'fonts flex items-center')}>
               platform
               <div className={cn(styles.exampleTitleColor, 'fonts flex')}>
@@ -242,15 +206,10 @@ function Home() {
               <div
                 className={cn(
                   styles.featureTextBlock,
-                  'fonts max-md:width-100-mobile flex  items-center justify-between max-md:left-auto '
+                  'fonts  flex  items-center justify-between'
                 )}
               >
-                <div
-                  className={cn(
-                    styles.featureText,
-                    'max-md:padding-y opacity-70 max-md:left-auto '
-                  )}
-                >
+                <div className={cn(styles.featureText, 'opacity-70  ')}>
                   {PlatformFeaturesMessage}
                 </div>
 
@@ -267,13 +226,13 @@ function Home() {
           <div
             className={cn(
               styles.feature2,
-              'flex items-center gap-x-40 gap-y-40 max-xl:flex-wrap'
+              ' flex items-center gap-x-40 gap-y-40'
             )}
           >
-            <div className={cn(styles.featureImg, 'flex max-xl:hidden')}>
+            <div className={cn(styles.featureImg, 'flex ')}>
               <ThemeImage
-                width={395}
-                height={275}
+                width={405}
+                height={520}
                 alt='power'
                 src='icons/home/feature-1.svg'
                 className={'noTransition'}
@@ -283,7 +242,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                'max-xl:container-auto flex gap-x-40 gap-y-40 max-xl:flex-wrap'
+                ' flex gap-x-40 gap-y-40 '
               )}
             >
               <div className={cn(styles.featureId, 'fonts flex')}>
@@ -312,15 +271,10 @@ function Home() {
           <div
             className={cn(
               styles.feature3,
-              'flex items-center gap-x-40  gap-y-40  max-xl:flex-wrap'
+              'flex items-center gap-x-40  gap-y-40 '
             )}
           >
-            <div
-              className={cn(
-                styles.featureItemsBlock,
-                'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap max-xl:gap-x-40'
-              )}
-            >
+            <div className={cn(styles.featureItemsBlock, ' flex gap-y-40')}>
               <div className={cn(styles.featureId, 'fonts flex')}>
                 {PlatformFeatures[1].id}
               </div>
@@ -340,7 +294,7 @@ function Home() {
                 </div>
               </Link>
             </div>
-            <div className={cn(styles.featureImg, 'flex max-xl:hidden')}>
+            <div className={cn(styles.featureImg, 'flex ')}>
               <ThemeImage
                 width={395}
                 height={275}
@@ -350,12 +304,7 @@ function Home() {
                 style={{ transform: 'none', cursor: 'default' }}
               />
             </div>
-            <div
-              className={cn(
-                styles.featureItemsBlock,
-                'max-xl:container-auto flex gap-y-40 max-xl:flex-wrap max-xl:gap-x-40'
-              )}
-            >
+            <div className={cn(styles.featureItemsBlock, ' flex gap-x-40 gap-y-40')}>
               {PlatformFeatures[1].features
                 .filter((x, i) => i !== 0)
                 .map((x, i) => (
@@ -383,10 +332,10 @@ function Home() {
           <div
             className={cn(
               styles.feature4,
-              'flex items-center gap-x-40  gap-y-40  max-xl:flex-wrap'
+              'flex items-center gap-x-40  gap-y-40  '
             )}
           >
-            <div className={cn(styles.featureImg, 'flex max-xl:hidden')}>
+            <div className={cn(styles.featureImg, 'flex')}>
               <ThemeImage
                 width={395}
                 height={275}
@@ -399,7 +348,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                'max-xl:container-auto flex  gap-x-40 gap-y-40 max-xl:flex-wrap'
+                ' flex  gap-x-40 gap-y-40 '
               )}
             >
               <div className={cn(styles.featureId, 'fonts flex')}>
@@ -407,12 +356,7 @@ function Home() {
               </div>
               {PlatformFeatures[2].features.map((x, i) => (
                 <Link key={i} target='_blank' href={x.link}>
-                  <div
-                    className={cn(
-                      styles.featureItem,
-                      'flex flex-col max-xl:gap-x-40'
-                    )}
-                  >
+                  <div className={cn(styles.featureItem, 'flex flex-col ')}>
                     <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                       {x.title}
                     </div>
@@ -431,10 +375,7 @@ function Home() {
           </div>
         </div>
         <div
-          className={cn(
-            styles.featureGet,
-            'max-xl:container-auto max-xl:padding-y max-md:padding-global max-sm:sm-padding-top-0 mx-auto flex justify-between max-xl:flex-wrap max-xl:gap-y-40'
-          )}
+          className={cn(styles.featureGet, '  mx-auto flex justify-between')}
         >
           <div className={cn('flex flex-col')}>
             <div
