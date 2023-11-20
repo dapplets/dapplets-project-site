@@ -72,7 +72,10 @@ export const PowerDapplets = [
     id: '2',
     image: 'images/power-2.png',
     title: 'Community Tools',
-    text: `Enhance user experience on third-party websites like Twitter and Github by displaying NEAR community badges to increase their visibility among users.`,
+    text: `This Dapplet adds badges to profiles and avatars
+    on websites like Twitter and Github that reflect
+    a person's rating and contributions within
+    the NEAR community.`,
   },
   {
     id: '3',

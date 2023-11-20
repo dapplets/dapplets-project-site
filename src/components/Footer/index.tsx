@@ -9,7 +9,7 @@ export function Footer() {
     <div
       className={cn(
         styles.wrapper,
-        'fonts container-xl max-xl:container-lg max-md:padding-global mx-auto flex justify-between max-sm:flex-col max-sm:items-center'
+        'fonts container-xl  mx-auto flex justify-between '
       )}
     >
       <div className={cn(styles.copy, 'flex items-center justify-between')}>
@@ -19,7 +19,7 @@ export function Footer() {
           © 2019—{new Date().getFullYear()}
         </div>
         <div className={cn(styles.copyImg, 'flex items-center')}>
-          <Image width={36} height={36} alt='' src='icons/footer/heart.svg' />
+          <Image width={24} height={20} alt='' src='icons/footer/heart.svg' />
         </div>
         <div
           className={cn(styles.copyText, 'fonts flex items-center text-base')}
@@ -35,12 +35,7 @@ export function Footer() {
           Dapplets Project
         </div>
       </div>
-      <div
-        className={cn(
-          styles.links,
-          'max-sm:sm-padding-top-20 flex items-center justify-between'
-        )}
-      >
+      <div className={cn(styles.links, 'flex items-center justify-between')}>
         <Link target='_blank' href='https://github.com/dapplets'>
           <ThemeImage
             className={cn(styles.img, '')}

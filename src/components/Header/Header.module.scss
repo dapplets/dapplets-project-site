@@ -1,13 +1,17 @@
+// .wrapper{
+//   position: fixed;
+// }
 .linkBlock {
   flex: 1 1 auto;
   max-width: 30%;
+  padding: 10px 0 0 0;
 }
 
 .linkHover {
   transition: all 0.2s ease;
   &:hover {
     transition: all 0.2s ease;
-    transform: scale(1.2);
+    transform: scale(0.7);
   }
 }
 .mode {
