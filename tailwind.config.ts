@@ -18,7 +18,7 @@ const config: Config = {
         sm: '820px',
         md: '904px',
         lg: '1052px',
-        xl: '1300px',
+        xl: '1252px',
       },
       colors: {
         'dpl-white': '#e7ecef',
@@ -48,7 +48,7 @@ const config: Config = {
         '193': '193px',
       },
       gap: {
-        '40': '40px',
+        '40': '35px',
         '20': '20px',
       },
     },
