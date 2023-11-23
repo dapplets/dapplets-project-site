@@ -62,90 +62,21 @@ main {
     flex: 1 1 auto;
     padding: 0 10px;
   }
-
-  .container-lg {
-    width: auto;
-    max-width: 900px;
-    padding-left: 10px;
-    padding-right: 10px;
+  .container-lg{
+    max-width: none;
+    flex: 1 1 auto;
+    padding: 0 20px;
   }
-
-  .padding-global {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+  .logo-tab{
+width: 130px;
   }
-
-  .container-100 {
-    max-width: 100% !important;
+  .container-mob{
+    max-width: none;
+    flex: 1 1 auto;
+    padding: 0 10px;
   }
-  .container-max-auto {
-    max-width: none !important;
-  }
-
-  .container-auto {
-    width: auto !important;
-  }
-  .size-auto {
-    width: auto !important;
-    height: auto !important;
-  }
-  .padding-y {
-    padding-top: 0px;
-    padding: 50px 0 !important;
-  }
-
-  .padding-global-x-mobile {
-    padding: 0 !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  .fonts-title-mobile {
-    font-size: 56px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-
-  .left-auto {
-    margin-left: auto;
-  }
-  .width-100-mobile {
-    width: 100% !important;
-  }
-  .right-auto {
-    margin-right: auto;
-  }
-
-  .sm-padding-top-0 {
-    padding-top: 0 !important;
-  }
-  .sm-padding-top-20 {
-    padding-top: 20px;
-  }
-  .sm-padding-x {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-  }
-  .global-bottom {
-    padding-bottom: 10px;
-  }
-  .global-w-80 {
-    width: 80% !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .sm-global-w {
-    width: 70% !important;
-  }
-  .no-bg {
-    background: none !important;
-  }
-  .header-link-sm {
-    width: 50%;
-  }
-  .logo-sm {
-    width: 100px;
-  }
- .fonts-sm{
-font-size: 10px;
+  .fonts-mob{
+    font-size: 14px;
+    line-height: 149%;
   }
 }

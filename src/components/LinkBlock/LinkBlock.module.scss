@@ -50,3 +50,44 @@
 .linkContent {
   text-align: center;
 }
+
+@media (max-width: 1251px) {
+  .link {
+    width: 216px;
+    height: 256px;
+  }
+  .linkContent {
+    font-size: 16px;
+  }
+}
+@media (max-width: 719px) {
+  .link {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .linkIcon {
+    order: 1;
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
+    margin-right: -5px;
+    img{
+      transform: scale(1.2);
+    }
+  }
+  .linkTitle {
+    order: 0;
+  }
+  .linkContent {
+    order: 2;
+    width: 80%;
+    text-align: left;
+    font-size: 14px;
+    margin-top: -7px;
+  }
+ 
+}

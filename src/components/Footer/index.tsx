@@ -9,10 +9,10 @@ export function Footer() {
     <div
       className={cn(
         styles.wrapper,
-        'fonts container-xl  mx-auto flex justify-between '
+        'fonts container-xl  mx-auto flex justify-between max-xl:flex-col max-xl:items-center '
       )}
     >
-      <div className={cn(styles.copy, 'flex items-center justify-between')}>
+      <div className={cn(styles.copy, 'flex items-center justify-between max-xl:pt-20 max-xl:order-[1] max-lg:pt-10')}>
         <div
           className={cn(styles.copyText, 'fonts flex items-center text-base')}
         >
@@ -35,7 +35,7 @@ export function Footer() {
           Dapplets Project
         </div>
       </div>
-      <div className={cn(styles.links, 'flex items-center justify-between')}>
+      <div className={cn(styles.links, 'flex items-center justify-between max-xl:order-[0]')}>
         <Link target='_blank' href='https://github.com/dapplets'>
           <ThemeImage
             className={cn(styles.img, '')}

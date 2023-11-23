@@ -3,9 +3,6 @@
   text-decoration: none;
   width: 193px;
   height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .buttonDefault {
   display: flex;
@@ -44,5 +41,15 @@
 @media not all and (min-width: 720px) {
   .wrapper {
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 1251px) {
+  .wrapper{
+    width: 240px;
+  }
+}
+@media (max-width: 719px){
+  .wrapper{
+    width: 100%;
   }
 }

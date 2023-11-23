@@ -9,15 +9,10 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
-      // backgroundImage: {
-      //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-      //   'gradient-conic':
-      //     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      // },
       screens: {
         sm: '820px',
-        md: '904px',
-        lg: '1052px',
+        md: '640px',
+        lg: '719px',
         xl: '1252px',
       },
       colors: {
@@ -38,6 +33,9 @@ const config: Config = {
         '144': '36rem',
         '15': '15px',
         '20': '20px',
+        '40':'40px',
+        '10':'10px',
+        '30':'30px'
       },
       borderRadius: {
         '6xl': '10px',
@@ -51,8 +49,20 @@ const config: Config = {
       gap: {
         '40': '35px',
         '20': '20px',
-        '32':'32px'
+        '32': '32px',
+        '40tab':'40px',
+        '10':'10px'
       },
+      maxWidth: {
+        mwLg: '748px',
+        mwMobSub:'60%',
+        mw80:'80%'
+      },
+      order:{
+       '0':'0',
+       '1':'1',
+       '2':'2'
+      }
     },
   },
   plugins: [],

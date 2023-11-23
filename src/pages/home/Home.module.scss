@@ -6,6 +6,7 @@
   background: url('/themes/dark/icons/home/bg-title.svg');
   background-position-y: 70px;
   background-position-x: center;
+  // background-size: 140%;
 }
 
 :global(.light) .titleWrapper {
@@ -14,6 +15,7 @@
 
   background-position-x: center;
   background-position-y: 70px;
+  // background-size: 140%;
 }
 
 .titleBlock {
@@ -363,3 +365,5 @@
 .howImg {
   position: relative;
 }
+@import './adaptive';
+
