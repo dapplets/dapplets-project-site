@@ -208,7 +208,7 @@ function Home() {
                 width={570}
                 height={346}
                 alt='How it works?'
-                src='icons/home/bg-tablet.svg'
+                src='icons/home/tablet/home/how-big.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
               <div>
