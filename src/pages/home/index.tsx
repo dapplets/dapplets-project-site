@@ -211,7 +211,7 @@ function Home() {
                 src='icons/home/tablet/home/how-big.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
-              <div>
+              <div className={cn(styles.howItemWrapper)}>
                 {/* todo: tablet */}
                 {HowItWorksItems.map((x, i) => (
                   <div className={cn(styles.howItem, 'flex flex-col pt-40 pb-20 max-lg:pt-20')} key={i}>
@@ -476,7 +476,7 @@ function Home() {
         <div
           className={cn(styles.featureGet, '  mx-auto flex justify-between max-xl:flex-wrap')}
         >
-          <div className={cn('flex flex-col max-xl:w-full max-xl:pb-40 max-lg:pb-30')}>
+          <div className={cn('flex flex-col max-xl:w-full max-xl:pb-40 max-lg:pb-25')}>
             <div
               className={cn(styles.howTitle, styles.getTitle, 'flex flex-col')}
             >

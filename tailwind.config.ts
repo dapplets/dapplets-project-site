@@ -35,7 +35,8 @@ const config: Config = {
         '20': '20px',
         '40':'40px',
         '10':'10px',
-        '30':'30px'
+        '30':'30px',
+        '25':'25px'
       },
       borderRadius: {
         '6xl': '10px',
