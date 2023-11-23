@@ -20,6 +20,15 @@
     transform: scale(1.2);
   }
 }
+@media (max-width: 1185px) {
+  .img{
+    // transform: scale(0.9);
+    &:hover {
+      transition: all 0.2s ease;
+      transform: none;
+    }
+  }
+}
 @media (max-width: 719px) {
   .wrapper{
     padding: 10px 10px 15px 15px;
@@ -30,6 +39,10 @@
   }
   .img{
     transform: scale(0.9);
+    &:hover {
+      transition: all 0.2s ease;
+      transform: none;
+    }
   }
   .copyText{
     font-size: 14px;

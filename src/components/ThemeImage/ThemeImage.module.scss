@@ -19,6 +19,13 @@
       transform: none;
     }
   }
+  @media (max-width: 1185px) {
+    .imgLight {
+      &:hover {
+        transform: none;
+      }
+    }
+  }
 }
 
 :global(.dark) {
@@ -33,6 +40,13 @@
     &:hover {
       transition: all 0.2s ease;
       transform: scale(1.2);
+    }
+    @media (max-width: 1185px) {
+      .imgDark {
+        &:hover {
+          transform: none;
+        }
+      }
     }
   }
   .noTransition {

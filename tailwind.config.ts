@@ -13,7 +13,7 @@ const config: Config = {
         sm: '820px',
         md: '640px',
         lg: '719px',
-        xl: '1252px',
+        xl: '1185px',
       },
       colors: {
         'dpl-white': '#e7ecef',

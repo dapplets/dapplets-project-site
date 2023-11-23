@@ -20,7 +20,7 @@ import Image from 'next/image';
 function Home() {
   return (
     <Layout>
-      <div className='fonts container-xl max-xl:container-lg mx-auto flex flex-col max-lg:container-mob '>
+      <div className='fonts container-xl max-xl:container-lg max-lg:container-mob mx-auto flex flex-col '>
         <div className={cn(styles.titleWrapper, ' flex flex-col')}>
           <div
             className={cn(
@@ -176,12 +176,11 @@ function Home() {
                 src='icons/home/mobile/home/web3hack.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
-             
             </div>
           </div>
         </div>
         <div className={cn(styles.howWrapper, ' flex flex-col')}>
-          <div className='fonts mx-auto flex flex-col justify-center  max-lg:max-w-mw80'>
+          <div className='fonts max-lg:max-w-mw80 mx-auto flex flex-col  justify-center'>
             <div className={cn(styles.howTitle, 'fonts flex justify-center')}>
               {HowItWorks.title}
             </div>
@@ -214,7 +213,13 @@ function Home() {
               <div className={cn(styles.howItemWrapper)}>
                 {/* todo: tablet */}
                 {HowItWorksItems.map((x, i) => (
-                  <div className={cn(styles.howItem, 'flex flex-col pt-40 pb-20 max-lg:pt-20')} key={i}>
+                  <div
+                    className={cn(
+                      styles.howItem,
+                      'flex flex-col pb-20 pt-40 max-lg:pt-20'
+                    )}
+                    key={i}
+                  >
                     <div className={cn(styles.howItemTitle, 'flex')}>
                       {x.title}
                     </div>
@@ -245,20 +250,29 @@ function Home() {
           </div>
           <div className='flex justify-between max-xl:flex-col max-xl:gap-y-40 max-lg:gap-y-0'>
             {PowerDapplets.map((dapplet, i) => (
-              <div className={cn(styles.powerItem, ' flex flex-col max-xl:flex-row max-xl:gap-x-40 max-lg:flex-col')} key={i}>
+              <div
+                className={cn(
+                  styles.powerItem,
+                  ' flex flex-col max-xl:flex-row max-xl:gap-x-40 max-lg:flex-col'
+                )}
+                key={i}
+              >
                 <div className={cn(styles.powerImg, '')}>
                   <ThemeImage
                     className={cn('noTransition', '')}
-                    width={400}
-                    height={400}
+                    width={390}
+                    height={407}
                     alt='power'
                     src={dapplet.image}
                     style={{ transform: 'none', cursor: 'default' }}
                   />
                 </div>
-                <div className={cn(styles.powerTitle, 'fonts max-xl:hidden')}>
-                  {dapplet.title}
-                </div>
+                <Link href={dapplet.link} target='_blank'>
+                  <div className={cn(styles.powerTitle, 'fonts max-xl:hidden')}>
+                    {dapplet.title}
+                  </div>
+                </Link>
+
                 <div
                   className={cn(
                     styles.powerText,
@@ -267,7 +281,9 @@ function Home() {
                 >
                   {dapplet.text}
                 </div>
-                <div className={cn(styles.powerTextBlockTablet, 'fonts xl:hidden')}>
+                <div
+                  className={cn(styles.powerTextBlockTablet, 'fonts xl:hidden')}
+                >
                   <div className={cn(styles.powerTitle, 'fonts')}>
                     {dapplet.title}
                   </div>
@@ -285,7 +301,12 @@ function Home() {
           </div>
         </div>
         <div className={cn(styles.featureWrapper, ' mx-auto flex flex-col')}>
-          <div className={cn(styles.feature1, ' flex items-center max-xl:flex-col max-xl:items-start max-xl:gap-y-40 max-lg:gap-y-0 ')}>
+          <div
+            className={cn(
+              styles.feature1,
+              ' flex items-center max-xl:flex-col max-xl:items-start max-xl:gap-y-40 max-lg:gap-y-0 '
+            )}
+          >
             <div className={cn(styles.exampleTitle, 'fonts flex items-center')}>
               platform
               <div className={cn(styles.exampleTitleColor, 'fonts flex')}>
@@ -295,7 +316,7 @@ function Home() {
             <Link
               target='_blank'
               href='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
-              className={cn(styles.feature1Link,'flex')}
+              className={cn(styles.feature1Link, 'flex')}
             >
               <div
                 className={cn(
@@ -325,8 +346,8 @@ function Home() {
           >
             <div className={cn(styles.featureImg, 'flex ')}>
               <ThemeImage
-                width={405}
-                height={520}
+                width={395}
+                height={275}
                 alt='power'
                 src='icons/home/feature-1.svg'
                 className={'noTransition'}
@@ -336,7 +357,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                ' flex gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-y-20 max-xl:gap-x-40tab  max-lg:flex-col'
+                ' xxl:gap-x-10 max-xl:gap-x-40tab  flex justify-end gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-y-20  max-lg:flex-col'
               )}
             >
               <div className={cn(styles.featureId, 'fonts flex')}>
@@ -365,10 +386,15 @@ function Home() {
           <div
             className={cn(
               styles.feature3,
-              'flex items-center gap-x-40  gap-y-40 max-xl:flex-col max-xl:gap-y-40tab max-xl:gap-x-40tab max-lg:gap-y-20'
+              'max-xl:gap-y-40tab max-xl:gap-x-40tab flex  items-center gap-x-40 gap-y-40 max-xl:flex-col max-lg:gap-y-20'
             )}
           >
-            <div className={cn(styles.featureItemsBlock, ' flex gap-y-40 max-xl:justify-center  max-xl:gap-x-40tab max-lg:flex-col max-lg:gap-y-20 ')}>
+            <div
+              className={cn(
+                styles.featureItemsBlock,
+                ' max-xl:gap-x-40tab flex gap-y-40  max-xl:justify-center max-lg:flex-col max-lg:gap-y-20 '
+              )}
+            >
               <div className={cn(styles.featureId, 'fonts flex')}>
                 {PlatformFeatures[1].id}
               </div>
@@ -388,7 +414,9 @@ function Home() {
                 </div>
               </Link>
             </div>
-            <div className={cn(styles.featureImg, 'flex max-xl:justify-center')}>
+            <div
+              className={cn(styles.featureImg, 'flex max-xl:justify-center')}
+            >
               <ThemeImage
                 width={395}
                 height={275}
@@ -401,7 +429,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                ' flex gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-y-40tab max-xl:gap-x-40tab max-lg:flex-col max-lg:gap-y-10'
+                ' max-xl:gap-y-40tab max-xl:gap-x-40tab flex gap-x-40 gap-y-40 max-xl:justify-center max-lg:flex-col max-lg:gap-y-10'
               )}
             >
               {PlatformFeatures[1].features
@@ -431,10 +459,12 @@ function Home() {
           <div
             className={cn(
               styles.feature4,
-              'flex items-center gap-x-40  gap-y-40  max-xl:flex-col max-xl:gap-y-40tab max-xl:gap-x-40tab'
+              'max-xl:gap-y-40tab max-xl:gap-x-40tab flex  items-center  gap-x-40 gap-y-40 max-xl:flex-col'
             )}
           >
-            <div className={cn(styles.featureImg, 'flex max-xl:justify-center')}>
+            <div
+              className={cn(styles.featureImg, 'flex max-xl:justify-center')}
+            >
               <ThemeImage
                 width={395}
                 height={275}
@@ -447,7 +477,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                ' flex  gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-y-20 max-xl:gap-x-40tab max-lg:flex-col max-lg:gap-y-10 '
+                ' max-xl:gap-x-40tab flex  justify-end gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-y-20 max-lg:flex-col max-lg:gap-y-10 '
               )}
             >
               <div className={cn(styles.featureId, 'fonts flex')}>
@@ -474,9 +504,16 @@ function Home() {
           </div>
         </div>
         <div
-          className={cn(styles.featureGet, '  mx-auto flex justify-between max-xl:flex-wrap')}
+          className={cn(
+            styles.featureGet,
+            '  mx-auto flex justify-between max-xl:flex-wrap'
+          )}
         >
-          <div className={cn('flex flex-col max-xl:w-full max-xl:pb-40 max-lg:pb-25')}>
+          <div
+            className={cn(
+              'max-lg:pb-25 flex flex-col max-xl:w-full max-xl:pb-40'
+            )}
+          >
             <div
               className={cn(styles.howTitle, styles.getTitle, 'flex flex-col')}
             >

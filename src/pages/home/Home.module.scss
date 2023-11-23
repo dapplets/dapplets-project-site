@@ -81,25 +81,26 @@
 }
 
 .powerItem {
-  max-width: 407px;
+  width: 385px;
 }
 .powerImg {
   padding-bottom: 10px;
 }
 .powerTitle {
-  padding: 20px;
-  padding-top: 45px;
+  padding: 10px;
+  padding-top: 55px;
   padding-bottom: 10px;
   text-decoration: underline;
   font-size: 24px;
   font-weight: 600;
   line-height: 100%;
+  cursor: pointer;
 }
 .powerText {
   padding: 20px;
 }
 .feature1 {
-  padding-bottom: 45px;
+  padding-bottom: 55px;
   .exampleTitle {
     padding-bottom: 0;
   }
@@ -174,7 +175,26 @@
       transform: scale(1.2);
     }
   }
+  @media (max-width: 1185px) {
+    &:hover {
+      background: inherit;
+      backdrop-filter: none;
+      box-shadow: none;
+      border: none;
+      .featureLink {
+        transform: scale(1.5) translateY(5px) translateX(-5px);
+      }
+    }
+  }
+  @media (max-width: 719px) {
+    &:hover {
+      .featureLink {
+        transform: scale(1.5) translateY(10px) translateX(5px);
+      }
+    }
+  }
 }
+
 .featureId {
   width: 395px;
   padding: 20px;
@@ -231,14 +251,56 @@
     backdrop-filter: blur(20px);
   }
 }
+@media (max-width: 1185px){
+  .featureItem{
+    .featureItemTitle{
+      text-decoration: underline;
+    }
+      &:hover {
+    border: none;
+    background: inherit;
+    box-shadow: none;
+    backdrop-filter: none;
+
+  }
+  }
+
+}
 
 :global(.light) .featureItem {
   &:hover {
     border: 1px solid rgba(48, 48, 48, 0);
     background: #e3e8eb;
   }
+  @media (max-width: 1185px){
+    &:hover {
+      border: none;
+      background: none;
+    }
+  }
 }
-
+@media (max-width: 1185px) {
+  .featureTextBlock {
+    &:hover {
+      background: inherit;
+      backdrop-filter: none;
+      box-shadow: none;
+      border: none;
+      .featureLink {
+        transform: scale(1.5) translateY(5px) translateX(-5px);
+      }
+    }
+  }
+}
+@media (max-width: 719px) {
+  .featureTextBlock {
+    &:hover {
+      .featureLink {
+        transform: scale(1.5) translateY(10px) translateX(5px);
+      }
+    }
+  }
+}
 .featureItemTitle {
   font-size: 24px;
   font-weight: 600;
@@ -270,12 +332,11 @@
 }
 .feature2 {
   .featureItemsBlock {
-    width: 66%;
+    width: 80%;
   }
   .featureImg {
-    width: 34%;
-    margin-left: -30px;
-    height: 520px;
+    margin-left: -50px;
+    margin-top: -90px;
   }
 }
 .feature1 {
@@ -299,10 +360,10 @@
   padding-top: 40px;
 
   .featureItemsBlock {
-    width: 66%;
+    width: 95%;
   }
   .featureImg {
-    margin-right: 5px;
+    margin-left: 0px;
   }
 }
 
@@ -366,4 +427,3 @@
   position: relative;
 }
 @import './adaptive';
-

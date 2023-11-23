@@ -67,6 +67,7 @@ export const PowerDapplets = [
     image: 'images/power-1.png',
     title: 'Paywall',
     text: `Paywall Dapplet introduces a new feature to Twitter's UX giving any user the ability to sell their content.`,
+    link:'https://github.com/dapplets/paywall-dapplet'
   },
   {
     id: '2',
@@ -76,12 +77,14 @@ export const PowerDapplets = [
     on websites like Twitter and Github that reflect
     a person's rating and contributions within
     the NEAR community.`,
+    link:'https://github.com/dapplets/community-badges'
   },
   {
     id: '3',
     image: 'images/power-3.png',
     title: 'Swarm Search',
     text: `The set of modules augmenting Google and YouTube search pages with data from OpenSearch-compatible engines.`,
+    link:'https://github.com/dapplets/swarm-search'
   },
 ];
 
@@ -137,7 +140,8 @@ export const PlatformFeatures = [
       {
         link: 'https://docs.dapplets.org/docs/overlay-login',
         title: 'Registry on smart contracts',
-        text: `Get your application and adapters will all metadata needed from a decentralized false-proof registry built on the Ethereum blockchain.`,
+        text: `Get your application and adapters will
+        all metadata needed from a decentralized registry built on the Ethereum blockchain.`,
       },
       {
         link: 'https://docs.dapplets.org/docs/publishing',
