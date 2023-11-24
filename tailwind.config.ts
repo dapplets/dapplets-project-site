@@ -17,7 +17,7 @@ const config: Config = {
       },
       colors: {
         'dpl-white': '#e7ecef',
-        'dpl-black': '#1b1b1b',
+        'dpl-black': '#1D1D1D',
         'dark-bg': '#1B1B1B',
         content: '#FFFFFF',
         pureWhite: '#FFFFFF',

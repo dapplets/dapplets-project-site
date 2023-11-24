@@ -41,6 +41,7 @@
 }
 .supportedBlockIcon {
   object-fit: contain;
+
 }
 .titleButtons {
   width: 406px;
@@ -49,6 +50,13 @@
 }
 .supportedBlock {
   padding: 10px 30px;
+  .supportedBlockIcon:nth-child(4){
+    transform: scale(1.5)!important;
+  }
+  .supportedBlockIcon:nth-child(3){
+    transform: scale(1.6)!important;
+ }
+ 
 }
 .howWrapper {
   padding: 80px 0 43px 0;
@@ -98,6 +106,7 @@
 }
 .powerText {
   padding: 20px;
+  padding-left: 10px;
 }
 .feature1 {
   padding-bottom: 55px;
@@ -113,6 +122,7 @@
   width: 390px;
   margin-left: 70px;
   padding: 10px;
+box-sizing: border-box;
   &:hover {
     border-radius: 10px;
     border: 1px solid rgba(48, 48, 48, 0);
@@ -206,7 +216,7 @@
   line-height: 149%;
   height: 240px;
   border-radius: 10px;
-  border: 1px solid rgba(48, 48, 48, 0.8);
+  // border: 1px solid rgba(48, 48, 48, 0.8);
 }
 
 :global(.light) .featureId {
@@ -230,7 +240,8 @@
   padding: 20px;
   height: 240px;
   cursor: pointer;
-
+  box-sizing: border-box;
+  border-radius: 10px;
   &:hover {
     border-radius: 10px;
     border: 1px solid rgba(48, 48, 48, 0);
@@ -333,15 +344,18 @@
 .feature2 {
   .featureItemsBlock {
     width: 80%;
+    transform: translateX(-20px);
   }
   .featureImg {
     margin-left: -50px;
     margin-top: -90px;
+    transform: translateX(70px) translateY(-15px);
   }
 }
 .feature1 {
   .featureImg {
     margin-bottom: 110px;
+
   }
 }
 
@@ -353,6 +367,7 @@
   .featureImg {
     margin-top: 70px;
     padding-left: 20px;
+   
   }
 }
 
@@ -361,9 +376,36 @@
 
   .featureItemsBlock {
     width: 95%;
+    transform: translateX(-30px);
   }
   .featureImg {
     margin-left: 0px;
+    transform: translateY(-50px) translateX(45px) scale(1.2);
+  }
+}
+@media (max-width: 1257px){
+  .feature2 {
+    .featureItemsBlock {
+      width: 80%;
+      transform: translateX(-20px);
+    }
+    .featureImg {
+      margin-left: -50px;
+      margin-top: -90px;
+      transform: translateX(30px) translateY(-15px);
+    }
+  }
+  .feature4 {
+    padding-top: 40px;
+  
+    .featureItemsBlock {
+      width: 95%;
+      transform: translateX(0);
+    }
+    .featureImg {
+      margin-left: 0px;
+      transform: translateY(-50px) translateX(15px) scale(1.1);
+    }
   }
 }
 
@@ -396,6 +438,7 @@
 }
 
 @media not all and (min-width: 720px) {
+  
   .featureItem {
     width: 100%;
   }

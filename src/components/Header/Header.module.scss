@@ -4,7 +4,7 @@
 .linkBlock {
   flex: 1 1 auto;
   max-width: 30%;
-  padding: 10px 0 0 0;
+  // padding: 10px 0 0 0;
 }
 
 .linkHover {
@@ -18,7 +18,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   // transform: scale(1.2);
-  margin-right: 20px;
+  margin-right: 10px;
   &:hover {
     transition: all 0.2s ease;
     transform: scale(1.2);
@@ -84,6 +84,10 @@
   background: #e7ecef;
   z-index: 99;
   .mobileMenuWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .mobileMenuTop {
     .linkHover {
@@ -125,22 +129,32 @@
     }
   }
   .mode {
+    margin-right: 25px;
     &:hover {
       transform: none;
     }
   }
-  .mobileMenu{
+  .mobileMenu {
     .mode {
       &:hover {
         transform: translateX(-10px);
       }
     }
   }
- 
+
   .burger {
     &:hover {
       transform: none;
     }
   }
 }
-
+@media (max-width: 719px) {
+  .mobileMenu {
+    .mobileMenuWrapper {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
