@@ -30,7 +30,7 @@ function Home() {
           >
             <div className={cn(styles.titleBlockTitle, 'fonts   flex')}>
               The Home <br />
-              of Augmented Web
+              of Mutable Web
             </div>
             <div
               className={cn(
@@ -243,7 +243,7 @@ function Home() {
         </div>
         <div className={cn(styles.exampleWrapper, ' mx-auto flex flex-col')}>
           <div className={cn(styles.exampleTitle, 'fonts flex')}>
-            Dapplets{' '}
+            mutations{' '}
             <div className={cn(styles.exampleTitleColor, 'fonts flex')}>
               &nbsp;example
             </div>

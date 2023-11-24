@@ -67,6 +67,7 @@
   .link {
     width: 216px;
     height: 256px;
+    pointer-events: none;
     &:hover {
       border: none;
       background: inherit;

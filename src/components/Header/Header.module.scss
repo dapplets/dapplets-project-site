@@ -121,7 +121,11 @@
 :global(.dark) .mobileMenu {
   background: #1d1d1d;
 }
-
+@media (min-width: 1186px) {
+  .mobileMenu {
+    display: none;
+  }
+}
 @media (max-width: 1185px) {
   .linkHover {
     &:hover {

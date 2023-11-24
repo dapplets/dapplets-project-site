@@ -31,8 +31,8 @@ export const getStartedLinks = [
 
 export const HomeTitle = {
   title: `The Home
-   of Augmented Web`,
-  subtitle: `Dapplets - open-source platform which empowers developers to create a community-driven internet, giving users and developers the ability to take control of the UX/UI on any existing websites.`,
+   of Mutable Web`,
+  subtitle: `Dapplets - open-source platform which empowers developers to create a community-driven web, giving users and developers the ability to take control of the UX/UI on any existing websites.`,
 };
 
 export const HowItWorks = {
