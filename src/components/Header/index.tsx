@@ -3,7 +3,7 @@ import styles from './Header.module.scss';
 import cn from 'classnames';
 import { useTheme } from 'next-themes';
 import { ThemeImage } from '../ThemeImage';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function Header() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -11,7 +11,23 @@ export function Header() {
   function toggleDarkMode() {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   }
-
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (window.innerWidth < 1185) {
+      
+      } else {
+        setMobileMenu(false)
+      }
+    }
+    updateDimensions()
+    window.addEventListener('resize', updateDimensions)
+    return () => {
+      window.removeEventListener('resize', updateDimensions)
+      updateDimensions()
+    }
+  }, [isMobileMenu])
+  console.log(window.innerWidth );
+  
   return (
     <div
       className={cn(
