@@ -13,21 +13,21 @@ export function Header() {
   }
   useEffect(() => {
     const updateDimensions = () => {
-      if (window.innerWidth < 1185) {
-      
-      } else {
-        setMobileMenu(false)
+      if (typeof window !== 'undefined') {
+        if (window.innerWidth < 1185) {
+        } else {
+          setMobileMenu(false);
+        }
       }
-    }
-    updateDimensions()
-    window.addEventListener('resize', updateDimensions)
+    };
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
     return () => {
-      window.removeEventListener('resize', updateDimensions)
-      updateDimensions()
-    }
-  }, [isMobileMenu])
-  console.log(window.innerWidth );
-  
+      window.removeEventListener('resize', updateDimensions);
+      updateDimensions();
+    };
+  }, [isMobileMenu]);
+
   return (
     <div
       className={cn(
@@ -85,8 +85,13 @@ export function Header() {
       </div>
       {isMobileMenu && (
         <div className={cn(styles.mobileMenu, 'flex flex-col')}>
-          <div className={cn(styles.mobileMenuWrapper, 'flex w-full flex-col h-full p-10 items-center')}>
-            <div className={cn(styles.mobileMenuTop, 'flex w-full h-9 ')}>
+          <div
+            className={cn(
+              styles.mobileMenuWrapper,
+              'flex h-full w-full flex-col items-center p-10'
+            )}
+          >
+            <div className={cn(styles.mobileMenuTop, 'flex h-9 w-full ')}>
               <Link className={cn(styles.linkHover, ' text-base')} href='/'>
                 <ThemeImage
                   width={178}
@@ -118,13 +123,16 @@ export function Header() {
               </div>
             </div>
             <div
-              className={cn(styles.mobileMenuMedium, 'flex w-full flex-col h-full flex-auto')}
+              className={cn(
+                styles.mobileMenuMedium,
+                'flex h-full w-full flex-auto flex-col'
+              )}
             >
               <Link href='/' className='ml-auto'>
                 <div className={cn(styles.linkHover, 'text-base ')}>Home</div>
               </Link>
               {/* <Link href="/about" className='ml-auto w-full' > */}
-              <div className={cn(styles.linkHover, ' text-base ml-auto ')}>
+              <div className={cn(styles.linkHover, ' ml-auto text-base ')}>
                 About
               </div>
               {/* </Link> */}
@@ -138,66 +146,71 @@ export function Header() {
                 </div>
               </Link>
             </div>
-            <div  className={cn(styles.mobileMenuBottom, 'flex w-full mt-auto justify-between')}>
-            <Link target='_blank' href='https://github.com/dapplets'>
-          <ThemeImage
-            className={cn(styles.img, '')}
-            width={36}
-            height={36}
-            alt='GitHub'
-            src='icons/footer/github.svg'
-          />
-        </Link>
+            <div
+              className={cn(
+                styles.mobileMenuBottom,
+                'mt-auto flex w-full justify-between'
+              )}
+            >
+              <Link target='_blank' href='https://github.com/dapplets'>
+                <ThemeImage
+                  className={cn(styles.img, '')}
+                  width={36}
+                  height={36}
+                  alt='GitHub'
+                  src='icons/footer/github.svg'
+                />
+              </Link>
 
-        <Link target='_blank' href='https://discord.gg/YcxbkcyjMV'>
-          <ThemeImage
-            className={cn(styles.img, '')}
-            width={36}
-            height={36}
-            alt='Discord'
-            src='icons/footer/discord.svg'
-          />
-        </Link>
+              <Link target='_blank' href='https://discord.gg/YcxbkcyjMV'>
+                <ThemeImage
+                  className={cn(styles.img, '')}
+                  width={36}
+                  height={36}
+                  alt='Discord'
+                  src='icons/footer/discord.svg'
+                />
+              </Link>
 
-        <Link target='_blank' href='https://t.me/dapplets'>
-          <ThemeImage
-            className={cn(styles.img, '')}
-            width={36}
-            height={36}
-            alt='Telegram'
-            src='icons/footer/tg.svg'
-          />
-        </Link>
+              <Link target='_blank' href='https://t.me/dapplets'>
+                <ThemeImage
+                  className={cn(styles.img, '')}
+                  width={36}
+                  height={36}
+                  alt='Telegram'
+                  src='icons/footer/tg.svg'
+                />
+              </Link>
 
-        <Link target='_blank' href='https://medium.com/@dapplets'>
-          <ThemeImage
-            className={cn(styles.img, '')}
-            width={36}
-            height={36}
-            alt='Medium'
-            src='icons/footer/medium.svg'
-          />
-        </Link>
+              <Link target='_blank' href='https://medium.com/@dapplets'>
+                <ThemeImage
+                  className={cn(styles.img, '')}
+                  width={36}
+                  height={36}
+                  alt='Medium'
+                  src='icons/footer/medium.svg'
+                />
+              </Link>
 
-        <Link target='_blank' href='https://twitter.com/dapplets_org'>
-          <ThemeImage
-            className={cn(styles.img, '')}
-            width={36}
-            height={36}
-            alt='X (former Twitter)'
-            src='icons/footer/x.svg'
-          />
-        </Link>
+              <Link target='_blank' href='https://twitter.com/dapplets_org'>
+                <ThemeImage
+                  className={cn(styles.img, '')}
+                  width={36}
+                  height={36}
+                  alt='X (former Twitter)'
+                  src='icons/footer/x.svg'
+                />
+              </Link>
 
-        <Link target='_blank' href='mailto:business@dapplets.org'>
-          <ThemeImage
-            className={cn(styles.img, '')}
-            width={36}
-            height={36}
-            alt='Email'
-            src='icons/footer/email.svg'
-          />
-        </Link>
+              <Link target='_blank' href='mailto:business@dapplets.org'>
+                <ThemeImage
+                  className={cn(styles.img, '')}
+                  width={36}
+                  height={36}
+                  alt='Email'
+                  src='icons/footer/email.svg'
+                />
+              </Link>
             </div>
           </div>
         </div>
