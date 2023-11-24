@@ -284,9 +284,12 @@ function Home() {
                 <div
                   className={cn(styles.powerTextBlockTablet, 'fonts xl:hidden')}
                 >
-                  <div className={cn(styles.powerTitle, 'fonts')}>
-                    {dapplet.title}
-                  </div>
+                  <Link href={dapplet.link} target='_blank'>
+                    <div className={cn(styles.powerTitle, 'fonts')}>
+                      {dapplet.title}
+                    </div>
+                  </Link>
+
                   <div
                     className={cn(
                       styles.powerText,
