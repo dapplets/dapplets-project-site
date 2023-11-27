@@ -29,7 +29,6 @@
 }
 
 @media (max-width: 1185px) {
-
   .titleWrapper {
     padding: 240px 0 60px 0;
     background: none;
@@ -72,12 +71,13 @@
     max-width: 60%;
   }
   .powerTitle {
-    padding-left: 30px;
-    padding-top: 55px;
+ 
+      padding-left: 0px;
+      padding-top: 60px;
   }
   .powerText {
     max-width: 80%;
-    padding-left: 30px;
+    padding-left: 0px;
   }
   .featureWrapper {
     padding-top: 150px;
@@ -158,10 +158,11 @@
     flex: 1 1 auto;
     display: flex;
     padding-left: 10px;
+    // max-width: 47%;
   }
   .featureId {
     width: auto;
-    max-width: 45%;
+    max-width: 47%;
     flex: 1 1 auto;
     display: flex;
   }
@@ -176,22 +177,23 @@
 :global(.light) .titleWrapper {
   @media (max-width: 1185px) {
     padding: 240px 0 60px 0;
-    background: none;
+    // background: none;
   }
   @media (max-width: 719px) {
-    padding: 95px 0 0px 0;
+    padding: 110px 0 0px 0;
+    background: none;
   }
 }
 
 @media (max-width: 719px) {
-  .supportedBlock{
-      .supportedBlockIcon:nth-child(4){
-        transform: none!important;
-      }
-      .supportedBlockIcon:nth-child(3){
-        transform: none!important;
-     }
+  .supportedBlock {
+    .supportedBlockIcon:nth-child(4) {
+      transform: none !important;
     }
+    .supportedBlockIcon:nth-child(3) {
+      transform: none !important;
+    }
+  }
   .titleWrapper {
     padding: 95px 0 0px 0;
   }
@@ -200,7 +202,7 @@
     padding-bottom: 40px;
   }
   .titleBlock {
-    padding-bottom: 45px;
+    padding-bottom: 65px;
   }
   .supportedBlock {
     padding: 15px 5px;
@@ -248,7 +250,7 @@
       padding-bottom: 30px;
     }
     .howItem:nth-child(2) {
-      padding-bottom: 50px;
+      padding-bottom: 30px;
     }
   }
   .exampleTitle {
@@ -277,11 +279,11 @@
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    padding-bottom: 10px;
+    padding-bottom: 35px;
     img {
       margin-left: auto;
       margin-right: auto;
-      width: calc(100% - 20px)!important;
+      width: calc(100% - 20px) !important;
     }
   }
   .powerTextBlockTablet {
@@ -292,7 +294,8 @@
     margin-top: -20px;
   }
   .featureWrapper {
-    padding-top: 0px;
+    padding-top: 5px;
+    padding-bottom: 15px;
   }
   .exampleTitle {
     font-size: 24px;
@@ -390,7 +393,7 @@
     padding: 10px;
   }
   .featureGet {
-    padding: 37px 0 0px 0;
+    padding: 17px 0 0px 0;
     .howTitle {
       padding-bottom: 20px;
     }

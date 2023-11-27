@@ -140,8 +140,7 @@ export const PlatformFeatures = [
       {
         link: 'https://docs.dapplets.org/docs/overlay-login',
         title: 'Registry on smart contracts',
-        text: `Get your application and adapters will
-        all metadata needed from a decentralized registry built on the Ethereum blockchain.`,
+        text: `Get your application and adapters will all metadata needed from a decentralized false-proof registry built on the Ethereum blockchain.`,
       },
       {
         link: 'https://docs.dapplets.org/docs/publishing',

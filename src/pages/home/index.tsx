@@ -253,7 +253,7 @@ function Home() {
               <div
                 className={cn(
                   styles.powerItem,
-                  ' flex flex-col max-xl:flex-row max-xl:gap-x-40 max-lg:flex-col'
+                  ' flex flex-col max-xl:flex-row max-xl:gap-x-20 max-lg:flex-col'
                 )}
                 key={i}
               >
