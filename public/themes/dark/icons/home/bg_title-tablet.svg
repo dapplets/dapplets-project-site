@@ -1,0 +1,15 @@
+<svg width="768" height="584" viewBox="0 0 768 584" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="728.5" y1="20" x2="728.5" y2="574" stroke="#303030" stroke-dasharray="2 2"/>
+<line x1="40.5" y1="20" x2="40.5" y2="574" stroke="#303030" stroke-dasharray="2 2"/>
+<line x1="40" y1="225.5" y2="225.5" stroke="#303030" stroke-dasharray="2 2"/>
+<line x1="768" y1="225.5" x2="728" y2="225.5" stroke="#303030" stroke-dasharray="2 2"/>
+<line x1="728" y1="564.5" x2="40" y2="564.5" stroke="#303030" stroke-dasharray="2 2"/>
+<line x1="728" y1="20.5" x2="40" y2="20.5" stroke="#303030" stroke-dasharray="2 2"/>
+<line x1="728" y1="427.5" x2="40" y2="427.5" stroke="#303030" stroke-dasharray="2 2"/>
+<circle cx="40" cy="20" r="19.5" fill="#1D1D1D" stroke="#303030" stroke-dasharray="2 2"/>
+<circle cx="40" cy="564" r="19.5" fill="#1D1D1D" stroke="#303030" stroke-dasharray="2 2"/>
+<circle cx="40" cy="427" r="19.5" fill="#1D1D1D" stroke="#303030" stroke-dasharray="2 2"/>
+<circle cx="728" cy="564" r="19.5" fill="#1D1D1D" stroke="#303030" stroke-dasharray="2 2"/>
+<circle cx="728" cy="427" r="19.5" fill="#1D1D1D" stroke="#303030" stroke-dasharray="2 2"/>
+<circle cx="728" cy="20" r="19.5" fill="#1D1D1D" stroke="#303030" stroke-dasharray="2 2"/>
+</svg>

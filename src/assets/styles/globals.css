@@ -48,6 +48,8 @@
 body {
   font-family: Selawik, sans-serif;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
 }
 
 main {

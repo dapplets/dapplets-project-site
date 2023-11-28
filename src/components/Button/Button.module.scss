@@ -24,6 +24,12 @@
     background: #eb9dab;
   }
 }
+:global(.dark) .buttonPrimary{
+  &:hover {
+    transition: all 0.2s ease;
+    background: #a6253c;
+  }
+}
 .buttonOutline {
   background: inherit;
   border: 1px solid #7c43c5;
