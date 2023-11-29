@@ -1,6 +1,6 @@
 :global(.light) {
   .imgLight {
-    display: unset;
+    // display: unset;
     cursor: pointer;
     transition: all 0.2s ease;
 
@@ -19,6 +19,13 @@
       transform: none;
     }
   }
+  @media (max-width: 1185px) {
+    .imgLight {
+      &:hover {
+        transform: none;
+      }
+    }
+  }
 }
 
 :global(.dark) {
@@ -26,13 +33,20 @@
     display: none;
   }
   .imgDark {
-    display: unset;
+    // display: unset;
     cursor: pointer;
     transition: all 0.2s ease;
 
     &:hover {
       transition: all 0.2s ease;
       transform: scale(1.2);
+    }
+    @media (max-width: 1185px) {
+      .imgDark {
+        &:hover {
+          transform: none;
+        }
+      }
     }
   }
   .noTransition {

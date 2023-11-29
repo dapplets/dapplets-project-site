@@ -3,9 +3,6 @@
   text-decoration: none;
   width: 193px;
   height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .buttonDefault {
   display: flex;
@@ -27,6 +24,12 @@
     background: #eb9dab;
   }
 }
+:global(.dark) .buttonPrimary{
+  &:hover {
+    transition: all 0.2s ease;
+    background: #a6253c;
+  }
+}
 .buttonOutline {
   background: inherit;
   border: 1px solid #7c43c5;
@@ -41,8 +44,43 @@
   margin-right: 10px;
 }
 
-@media not all and (min-width: 720px) {
+// @media not all and (min-width: 720px) {
+//   .wrapper {
+//     margin-bottom: 20px;
+//   }
+// }
+@media (max-width: 1185px) {
   .wrapper {
-    margin-bottom: 20px;
+    width: 240px;
+  }
+  .buttonPrimary {
+    &:hover {
+      transition: all 0.2s ease;
+      background: initial;
+    }
+  }
+  .buttonOutline {
+    &:hover {
+      transition: all 0.2s ease;
+      background: initial;
+    }
+  }
+}
+@media (max-width: 719px) {
+  .wrapper {
+    width: 100%;
+  }
+  .buttonPrimary {
+    &:hover {
+      transition: all 0.2s ease;
+      background: initial;
+    }
+  }
+  .buttonOutline {
+    &:hover {
+      transition: all 0.2s ease;
+      background: initial;
+      opacity: 1;
+    }
   }
 }

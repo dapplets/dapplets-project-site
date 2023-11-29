@@ -12,16 +12,15 @@ interface LayoutProps extends PropsWithChildren {
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div
-      className={cn(styles.wrapper,
-        'min-h-screen bg-dpl-white dark:backgroundDark dark:bg-dpl-black xl:overflow-x-hidden max-xl:overflow-x-hidden')
-      }
+      className={cn(
+        styles.wrapper,
+        'dark:backgroundDark min-h-screen bg-dpl-white dark:bg-dpl-black max-xl:overflow-x-hidden xl:overflow-x-hidden'
+      )}
     >
       <div className={cn(styles.menu)}>
-         <Header />
+        <Header />
       </div>
-     
 
-      <div className={styles.delimeter}></div>
       {children}
       <div className={styles.delimeter}></div>
 

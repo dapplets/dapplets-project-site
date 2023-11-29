@@ -31,8 +31,8 @@ export const getStartedLinks = [
 
 export const HomeTitle = {
   title: `The Home
-   of Augmented Web`,
-  subtitle: `Dapplets - open-source platform which empowers developers to create a community-driven internet, giving users and developers the ability to take control of the UX/UI on any existing websites.`,
+   of Mutable Web`,
+  subtitle: `Dapplets - open-source platform which empowers developers to create a community-driven web, giving users and developers the ability to take control of the UX/UI on any existing websites.`,
 };
 
 export const HowItWorks = {
@@ -67,6 +67,7 @@ export const PowerDapplets = [
     image: 'images/power-1.png',
     title: 'Paywall',
     text: `Paywall Dapplet introduces a new feature to Twitter's UX giving any user the ability to sell their content.`,
+    link:'https://github.com/dapplets/paywall-dapplet'
   },
   {
     id: '2',
@@ -76,12 +77,14 @@ export const PowerDapplets = [
     on websites like Twitter and Github that reflect
     a person's rating and contributions within
     the NEAR community.`,
+    link:'https://github.com/dapplets/community-badges'
   },
   {
     id: '3',
     image: 'images/power-3.png',
     title: 'Swarm Search',
     text: `The set of modules augmenting Google and YouTube search pages with data from OpenSearch-compatible engines.`,
+    link:'https://github.com/dapplets/swarm-search'
   },
 ];
 

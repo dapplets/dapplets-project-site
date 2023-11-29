@@ -8,6 +8,7 @@ export interface ButtonProps {
   icon?: string;
   isPrimary?: boolean;
   isOutline?: boolean;
+  classNames?:string
 }
 
 export function Button({
@@ -16,9 +17,10 @@ export function Button({
   icon,
   isPrimary,
   isOutline,
+  classNames
 }: ButtonProps) {
   return (
-    <div className={cn(styles.wrapper)}>
+    <div className={cn(styles.wrapper,'flex items-center justify-center',classNames)}>
       {link ? (
         <a
           className={cn(styles.buttonDefault, 'fonts', {
