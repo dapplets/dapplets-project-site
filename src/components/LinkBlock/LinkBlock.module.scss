@@ -71,7 +71,13 @@
 .linkContent {
   text-align: center;
 }
+@media (max-width: 1300px) {
+  .link{
+  width: 265px;
+  height: 222px;
+  }
 
+}
 @media (max-width: 1185px) {
   .link {
     width: 216px;

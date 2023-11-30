@@ -20,7 +20,7 @@ import Image from 'next/image';
 function Home() {
   return (
     <Layout>
-      <div className='fonts container-xl max-xl:container-lg max-lg:container-mob mx-auto flex flex-col '>
+      <div className='fonts container-xl max-xl:container-lg max-lg:container-mob mx-auto flex flex-col overflow-x-hidden '>
         <div className={cn(styles.titleWrapper, ' flex flex-col')}>
           <div
             className={cn(
@@ -44,11 +44,11 @@ function Home() {
           <div
             className={cn(
               styles.titleButtons,
-              'mx-auto flex justify-between max-xl:justify-center '
+              'mx-auto flex justify-between  '
             )}
           >
             <Button
-              classNames='max-xl:hidden'
+              classNames=''
               link='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
               text='Get started'
               isPrimary
@@ -64,7 +64,7 @@ function Home() {
           <div
             className={cn(
               styles.supportedLableBlock,
-              'max-xl:max-w-mwLg flex flex-col max-xl:ml-auto max-xl:mr-auto max-xl:flex-auto  max-lg:w-80 '
+              'flex flex-col max-xl:ml-auto max-xl:mr-auto max-xl:max-w-mwLg max-xl:flex-auto  max-lg:w-80 '
             )}
           >
             <div
@@ -180,7 +180,7 @@ function Home() {
           </div>
         </div>
         <div className={cn(styles.howWrapper, ' flex flex-col')}>
-          <div className='fonts max-lg:max-w-mw80 mx-auto flex flex-col  justify-center'>
+          <div className='fonts mx-auto flex flex-col justify-center  max-lg:max-w-mw80'>
             <div className={cn(styles.howTitle, 'fonts flex justify-center')}>
               {HowItWorks.title}
             </div>
@@ -199,15 +199,15 @@ function Home() {
             <div
               className={cn(
                 styles.howTablet,
-                'max-xl:flex max-xl:flex-col xl:hidden'
+                'max-xl:mx-auto max-xl:flex max-xl:flex-col xl:hidden'
               )}
             >
               <ThemeImage
                 className={cn('noTransition , max-xl: mx-auto')}
-                width={570}
-                height={346}
+                width={425}
+                height={354}
                 alt='How it works?'
-                src='icons/home/tablet/home/how-big.svg'
+                src='icons/home/tablet/home/how-tab.svg'
                 style={{ transform: 'none', cursor: 'default' }}
               />
               <div className={cn(styles.howItemWrapper)}>
@@ -220,7 +220,13 @@ function Home() {
                     )}
                     key={i}
                   >
-                    <div className={cn(styles.howItemTitle, 'flex')}>
+                    <div
+                      className={cn(
+                        styles.howItemTitle,
+                        { [styles.howItemTitleColor]: i == 1 },
+                        'flex'
+                      )}
+                    >
                       {x.title}
                     </div>
                     <div className={cn(styles.howItemText, 'flex')}>
@@ -231,7 +237,7 @@ function Home() {
               </div>
             </div>
             <ThemeImage
-              className={cn('noTransition', 'max-xl:hidden')}
+              className={cn(styles.howImgDesk, 'noTransition', 'max-xl:hidden')}
               width={1300}
               height={511}
               alt='How it works?'
@@ -360,7 +366,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                ' xxl:gap-x-10 max-xl:gap-x-40tab  flex justify-end gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-y-20  max-lg:flex-col'
+                ' xxl:gap-x-10 flex  justify-end gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-x-40tab max-xl:gap-y-20  max-lg:flex-col'
               )}
             >
               <div className={cn(styles.featureId, 'fonts flex')}>
@@ -389,13 +395,13 @@ function Home() {
           <div
             className={cn(
               styles.feature3,
-              'max-xl:gap-y-40tab max-xl:gap-x-40tab flex  items-center gap-x-40 gap-y-40 max-xl:flex-col max-lg:gap-y-20'
+              'flex items-center gap-x-40  gap-y-40 max-xl:flex-col max-xl:gap-x-40tab max-xl:gap-y-40tab max-lg:gap-y-20'
             )}
           >
             <div
               className={cn(
                 styles.featureItemsBlock,
-                ' max-xl:gap-x-40tab flex gap-y-40  max-xl:justify-center max-lg:flex-col max-lg:gap-y-20 '
+                ' flex gap-y-40 max-xl:justify-center  max-xl:gap-x-40tab max-lg:flex-col max-lg:gap-y-20 '
               )}
             >
               <div className={cn(styles.featureId, 'fonts flex')}>
@@ -432,7 +438,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                ' max-xl:gap-y-40tab max-xl:gap-x-40tab flex gap-x-40 gap-y-40 max-xl:justify-center max-lg:flex-col max-lg:gap-y-10'
+                ' flex gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-x-40tab max-xl:gap-y-40tab max-lg:flex-col max-lg:gap-y-10'
               )}
             >
               {PlatformFeatures[1].features
@@ -462,7 +468,7 @@ function Home() {
           <div
             className={cn(
               styles.feature4,
-              'max-xl:gap-y-40tab max-xl:gap-x-40tab flex  items-center  gap-x-40 gap-y-40 max-xl:flex-col'
+              'flex items-center gap-x-40  gap-y-40  max-xl:flex-col max-xl:gap-x-40tab max-xl:gap-y-40tab'
             )}
           >
             <div
@@ -480,7 +486,7 @@ function Home() {
             <div
               className={cn(
                 styles.featureItemsBlock,
-                ' max-xl:gap-x-40tab flex  justify-end gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-y-20 max-lg:flex-col max-lg:gap-y-10 '
+                ' flex justify-end  gap-x-40 gap-y-40 max-xl:justify-center max-xl:gap-x-40tab max-xl:gap-y-20 max-lg:flex-col max-lg:gap-y-10 '
               )}
             >
               <div className={cn(styles.featureId, 'fonts flex')}>
@@ -514,7 +520,7 @@ function Home() {
         >
           <div
             className={cn(
-              'max-lg:pb-25 flex flex-col max-xl:w-full max-xl:pb-40'
+              'flex flex-col max-xl:w-full max-xl:pb-40 max-lg:pb-25'
             )}
           >
             <div

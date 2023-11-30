@@ -206,15 +206,18 @@
   font-size: 48px;
   font-weight: 600;
   line-height: 100%;
-  padding-bottom: 26px;
+  padding-bottom: 20px;
 }
 .howSubitle {
   flex: 1 1 auto;
   max-width: 600px;
 }
+.howImgDesk{
+  transform: translateY(25px)!important;
+}
 
 .exampleWrapper {
-  padding: 100px 0;
+  padding: 85px 0 100px 0;
   width: 100%;
 }
 .exampleTitle {
@@ -327,10 +330,10 @@
     border: none;
     outline: none;
     border-style: unset;
-    .featureLink {
-      transition: all 0.2s ease;
-      transform: scale(1.2);
-    }
+    // .featureLink {
+    //   transition: all 0.2s ease;
+    //   transform: scale(1.2);
+    // }
   }
   @media (max-width: 1185px) {
     &:hover {
