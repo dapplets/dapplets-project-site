@@ -107,7 +107,7 @@ export function Header() {
         <div className={cn(styles.burgerMedium)}> </div>
       </div>
       {isMobileMenu && (
-        <div className={cn(styles.mobileMenu, 'flex flex-col')}>
+        <div id='mobile' className={cn(styles.mobileMenu, 'flex flex-col')}>
           <div
             className={cn(
               styles.mobileMenuWrapper,
