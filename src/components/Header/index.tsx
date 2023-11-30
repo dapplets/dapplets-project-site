@@ -17,7 +17,7 @@ export function Header() {
   useEffect(() => {
     const updateDimensions = () => {
       if (typeof window !== 'undefined') {
-        if (window.innerWidth < 1185) {
+        if (window.innerWidth < 1025) {
         } else {
           setMobileMenu(false);
         }
@@ -30,12 +30,13 @@ export function Header() {
       updateDimensions();
     };
   }, [isMobileMenu]);
+console.log(window.innerWidth);
 
   return (
     <div
       className={cn(
         styles.wrapper,
-        'fonts container-xl  mx-auto flex items-center justify-between py-15 max-xl:px-20 max-lg:px-10 max-lg:py-10'
+        'fonts container-xl  mx-auto flex items-center justify-between py-15 max-mob:px-20 max-lg:px-10 max-lg:py-10'
       )}
     >
       <Link className={cn(styles.linkHover, ' text-base')} href='/'>
@@ -44,13 +45,13 @@ export function Header() {
           height={50}
           alt='logo'
           src='icons/header/logo.svg'
-          className='max-xl:logo-tab'
+          className='max-mob:logo-tab'
         />
       </Link>
       <div
         className={cn(
           styles.linkBlock,
-          'grow-1  flex justify-between max-xl:hidden '
+          'grow-1  flex justify-between max-mob:hidden '
         )}
       >
         <Link href='/'>
@@ -87,7 +88,7 @@ export function Header() {
       </div>
 
       <div
-        className={cn(styles.mode, 'max-xl:ml-auto max-xl:mr-5')}
+        className={cn(styles.mode, 'max-mob:ml-auto max-mob:mr-5')}
         onClick={toggleDarkMode}
       >
         <ThemeImage
@@ -101,7 +102,7 @@ export function Header() {
         onClick={() => setMobileMenu(!isMobileMenu)}
         className={cn(
           styles.burger,
-          'max-xl:flex max-xl:flex-col max-xl:items-center  max-xl:justify-center xl:hidden'
+          'max-mob:flex max-mob:flex-col max-xl:items-center  max-mob:justify-center xl:hidden mob:hidden'
         )}
       >
         <div className={cn(styles.burgerMedium)}> </div>
@@ -121,11 +122,11 @@ export function Header() {
                   height={50}
                   alt='logo'
                   src='icons/header/logo.svg'
-                  className='max-xl:logo-tab'
+                  className='max-mob:logo-tab'
                 />
               </Link>
               <div
-                className={cn(styles.mode, 'max-xl:ml-auto max-xl:mr-5')}
+                className={cn(styles.mode, 'max-mob:ml-auto max-mob:mr-5')}
                 onClick={toggleDarkMode}
               >
                 <ThemeImage
@@ -139,7 +140,7 @@ export function Header() {
                 onClick={() => setMobileMenu(!isMobileMenu)}
                 className={cn(
                   styles.burger,
-                  'max-xl:flex max-xl:flex-col max-xl:items-center  max-xl:justify-center xl:hidden'
+                  'max-mob:flex max-mob:flex-col max-mob:items-center  max-mob:justify-center xl:hidden mob:hidden'
                 )}
               >
                 <div className={cn(styles.burgerMedium)}> </div>

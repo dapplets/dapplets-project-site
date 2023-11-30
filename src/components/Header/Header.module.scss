@@ -131,12 +131,15 @@
 :global(.dark) .mobileMenu {
   background: #1d1d1d;
 }
-@media (min-width: 1186px) {
+@media (min-width: 1026px) {
   .mobileMenu {
     display: none;
   }
+  .burger{
+    display: none;
+  }
 }
-@media (max-width: 1185px) {
+@media (max-width: 1025px) {
   .linkHover {
     &:hover {
       transform: none;
