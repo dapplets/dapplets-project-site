@@ -30,7 +30,7 @@ export function Header() {
       updateDimensions();
     };
   }, [isMobileMenu]);
-console.log(window.innerWidth);
+
 
   return (
     <div
