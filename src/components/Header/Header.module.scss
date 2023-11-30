@@ -3,12 +3,19 @@
 }
 .linkBlock {
   flex: 1 1 auto;
-  max-width: 30%;
-  // padding: 10px 0 0 0;
+    max-width: 21%;
+    padding-top: 3px;
 }
 
 .linkHover {
   transition: all 0.2s ease;
+  &:hover {
+    transition: all 0.2s ease;
+    transform: scale(0.7);
+  }
+}
+.active{
+  color: #DB504A;
   &:hover {
     transition: all 0.2s ease;
     transform: scale(0.7);
@@ -91,6 +98,9 @@
   }
   .mobileMenuTop {
     .linkHover {
+      margin-top: 0;
+    }
+    .active{
       margin-top: 0;
     }
     .burgerMedium {

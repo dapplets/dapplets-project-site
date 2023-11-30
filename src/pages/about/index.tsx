@@ -1,28 +1,161 @@
 import Link from 'next/link';
 import styles from './About.module.scss';
 import { Layout } from '@/components/Layout';
+import cn from 'classnames';
+import { brand, mission, problem, title } from '@/constants/constantsTextAbout';
+import { Button } from '@/components/Button';
+import { ThemeImage } from '@/components/ThemeImage';
 
 function About() {
   return (
     <Layout>
-      <div className={styles.wrapper}>
-        <Link href='/home'>
-          {' '}
-          <div>Logo</div>
-        </Link>
-        <div>Logo</div>
-        <Link href='/about'>
-          {' '}
-          <div>About</div>
-        </Link>
+      <div className={cn(styles.wrapper, 'fonts  mx-auto flex flex-col ')}>
+        <div
+          className={cn(
+            styles.titleWrapper,
+            'container-xl max-xl:container-lg max-lg:container-mob mx-auto flex justify-between max-xl:flex-col max-xl:items-center'
+          )}
+        >
+          <div
+            className={cn(
+              styles.titleBlock,
+              'flex w-6/12 flex-col max-xl:w-full max-xl:items-center'
+            )}
+          >
+            <div className={cn(styles.titleTitle, '')}> {title.title}</div>
+            <div className={cn(styles.titleMessage, '')}> {title.message}</div>
+            <div className={cn(styles.titleButtons, 'flex justify-between')}>
+              <Button
+                classNames=''
+                link='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
+                text='Get started'
+                isPrimary
+                icon='icons/button/download.svg'
+              />
+              <Button
+                text='Visit Github'
+                isOutline
+                icon='icons/button/github.svg'
+                link='https://github.com/dapplets'
+              />
+            </div>
+          </div>
+          <div
+            className={cn(
+              styles.iconBlock,
+              'flex w-6/12 items-center justify-center'
+            )}
+          >
+            <ThemeImage
+              className={cn(styles.supportedBlockIcon, 'noTransition')}
+              width={439}
+              height={411}
+              alt='About'
+              src='icons/about/bg-title.svg'
+              style={{ transform: 'none', cursor: 'default' }}
+            />
+          </div>
+        </div>
+        <div
+          className={cn(
+            styles.problemWrapper,
+            'container-xl max-xl:container-lg max-lg:container-mob mx-auto flex gap-x-40tab max-xl:flex-col'
+          )}
+        >
+          <div className={cn(styles.problemDelimeter, '')}></div>
+          <div className={cn(styles.problemTitle, 'flex items-center')}>
+            problem statement
+          </div>
+          <div
+            className={cn(
+              styles.problemText,
+              'max-xl:gap-y-17 flex flex-col gap-y-20'
+            )}
+          >
+            {problem.map((x, i) => (
+              <p className={cn(styles.problemTextItem, 'flex')} key={i}>
+                {x.message}
+              </p>
+            ))}
+          </div>
+        </div>
+        <div className={cn(styles.missionBg)}>
+          <div
+            className={cn(
+              styles.missionWrapper,
+              'container-xl max-xl:container-lg max-lg:container-mob mx-auto flex gap-x-40tab max-xl:flex-col'
+            )}
+          >
+            <div className={cn(styles.missionTitleBlock, 'flex flex-col')}>
+              <div className={cn(styles.missionTitle, 'flex')}>
+                our&nbsp;{' '}
+                <div className={cn(styles.missionHilight, '')}>mission</div>
+              </div>
+              <div className={cn(styles.missionMessage, '')}>
+                {mission[0].message}
+              </div>
+            </div>
+            <div
+              className={cn(
+                styles.missionText,
+                'gap-y-45 flex flex-wrap gap-x-40tab max-xl:gap-y-40'
+              )}
+            >
+              {mission
+                .filter((x, i) => i !== 0)
+                .map((x, i) => (
+                  <div
+                    key={i}
+                    className={cn(styles.missionItem, 'flex flex-col')}
+                  >
+                    <div className={cn(styles.missionItemTitle, 'flex')}>
+                      {x.title}
+                    </div>
+                    <div className={cn(styles.missionItemMessage, 'flex')}>
+                      {x.message}
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
 
-        <Link href='/'>
-          {' '}
-          <div>Home</div>
-        </Link>
-        <div>Documentation</div>
-        <div>Search</div>
-        <div>DarkMode</div>
+        <div
+          className={cn(
+            styles.brandWrapper,
+            'container-xl max-xl:container-lg max-lg:container-mob mx-auto flex gap-x-40tab max-xl:flex-col'
+          )}
+        >
+          <div className={cn(styles.brandTitleBlock, 'flex flex-col')}>
+            <div className={cn(styles.brandTitle, 'flex')}>brand assets</div>
+            <Button
+              classNames='max-xl:hidden'
+              link='https://dapplets.org/brand'
+              text='Watch Files'
+              isPrimary
+              icon='icons/button/download.svg'
+            />
+          </div>
+          <div
+            className={cn(
+              styles.brandMessageBlock,
+              'flex justify-between max-xl:flex-col'
+            )}
+          >
+            {brand.map((x, i) => (
+              <div key={i} className={cn(styles.brandMessage, 'flex')}>
+                {x.message}
+              </div>
+            ))}
+          </div>
+          <Button
+            classNames={cn(styles.btnBrandMedia, 'xl:hidden')}
+            link='https://dapplets.org/brand'
+            text='Watch Files'
+            isPrimary
+            icon='icons/button/download.svg'
+          />
+        </div>
       </div>
     </Layout>
   );

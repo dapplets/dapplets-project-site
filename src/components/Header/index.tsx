@@ -4,9 +4,12 @@ import cn from 'classnames';
 import { useTheme } from 'next-themes';
 import { ThemeImage } from '../ThemeImage';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 export function Header() {
   const { resolvedTheme, setTheme } = useTheme();
+  const router = useRouter();
+
   const [isMobileMenu, setMobileMenu] = useState(false);
   function toggleDarkMode() {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
@@ -51,11 +54,31 @@ export function Header() {
         )}
       >
         <Link href='/'>
-          <div className={cn(styles.linkHover, 'text-base ')}>Home</div>
+          <div
+            className={cn(
+              styles.linkHover,
+              {
+                [styles.active]: router.asPath === '/home',
+              },
+              'text-base '
+            )}
+          >
+            Home
+          </div>
         </Link>
-        {/* <Link href="/about"> */}
-        <div className={cn(styles.linkHover, 'text-base ')}>About</div>
-        {/* </Link> */}
+        <Link href='/about'>
+          <div
+            className={cn(
+              styles.linkHover,
+              {
+                [styles.active]: router.asPath === '/about',
+              },
+              'text-base '
+            )}
+          >
+            About
+          </div>
+        </Link>
         <Link target='_blank' href='https://docs.dapplets.org/docs/'>
           <div className={cn(styles.linkHover, 'text-base ')}>
             Documentation
@@ -129,13 +152,31 @@ export function Header() {
               )}
             >
               <Link href='/' className='ml-auto'>
-                <div className={cn(styles.linkHover, 'text-base ')}>Home</div>
+                <div
+                  className={cn(
+                    styles.linkHover,
+                    {
+                      [styles.active]: router.asPath === '/home',
+                    },
+                    'text-base '
+                  )}
+                >
+                  Home
+                </div>
               </Link>
-              {/* <Link href="/about" className='ml-auto w-full' > */}
-              <div className={cn(styles.linkHover, ' ml-auto text-base ')}>
-                About
-              </div>
-              {/* </Link> */}
+              <Link href='/about' className='ml-auto'>
+                <div
+                  className={cn(
+                    styles.linkHover,
+                    {
+                      [styles.active]: router.asPath === '/about',
+                    },
+                    ' ml-auto text-base '
+                  )}
+                >
+                  About
+                </div>
+              </Link>
               <Link
                 target='_blank'
                 href='https://docs.dapplets.org/docs/'

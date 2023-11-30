@@ -1,4 +1,5 @@
 .wrapper {
+  overflow-x: hidden;
 }
 
 .titleWrapper {
@@ -537,7 +538,7 @@
   .feature2 {
     .featureItemsBlock {
       width: 80%;
-      transform: translateX(-20px);
+      transform: translateX(-5px);
     }
     .featureImg {
       margin-left: -50px;

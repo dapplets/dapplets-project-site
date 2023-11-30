@@ -32,33 +32,28 @@ export const getStartedLinks = [
 export const HomeTitle = {
   title: `The Home
    of Mutable Web`,
-  subtitle: `Dapplets - open-source platform which empowers developers to create a community-driven web, giving users and developers the ability to take control of the UX/UI on any existing websites.`,
+  subtitle: `Dapplets Project - open-source platform which empowers developers to create a community-driven web, giving users and developers the ability to take control of the UX/UI on any existing websites.`,
 };
 
 export const HowItWorks = {
   title: 'how it works?',
   subtitle:
-    'your gateway to embedding Web3 applications seamlessly into any web page, without requiring permission.',
+    'Mutable Web is a customization layer built on top of the existing web:',
 };
 
 export const HowItWorksItems = [
   {
     id: '1',
-    title: 'Augmentation',
-    text: `Dapplets can insert useful widgets, buttons, add new functionality, create absolutely new user experience.
-    These dapplets are stored in decentralized repositories and are unstoppable — no one can remove or disable them`,
+    title: 'Mutations',
+    text: `Mutations are customized versions of the original websites, enhanced with sets of applications (dapplets).
+    Communities control and manage mutations, which are used by their members as default versions instead the original ones.`,
   },
   {
     id: '2',
-    title: 'Content-analysys',
-    text: `The adapter defines the set of available augmentations and inserts them into the website at predefined places at the dapplet’s request.`,
-  },
-  {
-    id: '3',
-    title: 'Legacy site',
-    text: `The Core determines a context (usually a website URL) and loads adapters for the context. 
-  Connectors - allowing to connect web2 site accounts with crypto wallets, any crypto addresses between each other.`,
-  },
+    title: 'Mutable Web Engine',
+    text: `It uses Adapters to parse and expose the live semantic structure of legacy webpages on the fly.
+    The Mutable Web Engine attaches dapplets to the elements of the semantic structure and executes them.`,
+  }
 ];
 
 export const PowerDapplets = [
