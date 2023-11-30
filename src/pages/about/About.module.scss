@@ -27,6 +27,7 @@
     width: 670px;
     height: 40px;
     background: url('/themes/dark/icons/about/title-icon.svg');
+    background-repeat: no-repeat;
     bottom: 25px;
     left: -20px;
   }
@@ -172,6 +173,7 @@
       background: url('/themes/light/icons/about/title-icon.svg');
       bottom: 25px;
       left: -20px;
+      background-repeat: no-repeat;
     }
     @media (max-width: 1185px) {
       &::before {

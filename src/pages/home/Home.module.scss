@@ -17,7 +17,7 @@
     display: flex;
     background: url('/themes/dark/icons/home/bg-title.svg');
     background-position-y: 150px;
-    background-position-x: -360px;
+    background-position-x: -355px;
     background-repeat: no-repeat;
     background-size: 1990px 710px;
     transform: translateX(-20px);
@@ -39,18 +39,19 @@
     transform: scale(-1, 1) translateX(-20px);
     z-index: 1;
   }
-  @media (max-width: 1255px) {
-    &::before {
-      display: none;
-    }
-    &:after {
-      display: none;
-    }
-  }
+  // @media (max-width: 1255px) {
+  //   &::before {
+  //     display: none;
+  //   }
+  //   &:after {
+  //     display: none;
+  //   }
+  // }
   @media (max-width: 1185px) {
     background: url('/themes/dark/icons/home/bg-title-tablet-bottom.svg');
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: 668px;
     &::before {
       display: flex;
       left: 20px;
@@ -70,6 +71,9 @@
     &:after {
       display: none;
     }
+    &::before{
+      display: none;
+    }
   }
 }
 
@@ -86,7 +90,7 @@
     display: flex;
     background: url('/themes/light/icons/home/bg-title.svg');
     background-position-y: 150px;
-    background-position-x: -360px;
+    background-position-x: -355px;
     background-repeat: no-repeat;
     background-size: 1990px 710px;
     transform: translateX(-20px);
@@ -108,20 +112,21 @@
     transform: scale(-1, 1) translateX(-20px);
     z-index: 1;
   }
-  @media (max-width: 1255px) {
-    &::before {
-      display: none;
-      // background: url('/themes/light/icons/home/bg_title-tablet.svg');
-    }
-    &:after {
-      // background: url('/themes/light/icons/home/bg-title-tablet-bottom.svg');
-      display: none;
-    }
-  }
+  // @media (max-width: 1255px) {
+  //   &::before {
+  //     display: none;
+  //     // background: url('/themes/light/icons/home/bg_title-tablet.svg');
+  //   }
+  //   &:after {
+  //     // background: url('/themes/light/icons/home/bg-title-tablet-bottom.svg');
+  //     display: none;
+  //   }
+  // }
   @media (max-width: 1185px) {
     background: url('/themes/light/icons/home/bg-title-tablet-bottom.svg');
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: 668px;
     &::before {
       display: flex;
       left: 20px;
@@ -139,6 +144,9 @@
   }
   @media (max-width: 719px) {
     &:after {
+      display: none;
+    }
+    &::before{
       display: none;
     }
   }

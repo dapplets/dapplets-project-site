@@ -59,14 +59,14 @@ export const HowItWorksItems = [
 export const PowerDapplets = [
   {
     id: '1',
-    image: 'images/power-1.png',
+    image: 'images/power-1.svg',
     title: 'Paywall',
     text: `Paywall Dapplet introduces a new feature to Twitter's UX giving any user the ability to sell their content.`,
     link:'https://github.com/dapplets/paywall-dapplet'
   },
   {
     id: '2',
-    image: 'images/power-2.png',
+    image: 'images/power-2.svg',
     title: 'Community Tools',
     text: `This Dapplet adds badges to profiles and avatars
     on websites like Twitter and Github that reflect
@@ -76,7 +76,7 @@ export const PowerDapplets = [
   },
   {
     id: '3',
-    image: 'images/power-3.png',
+    image: 'images/power-3.svg',
     title: 'Swarm Search',
     text: `The set of modules augmenting Google and YouTube search pages with data from OpenSearch-compatible engines.`,
     link:'https://github.com/dapplets/swarm-search'
