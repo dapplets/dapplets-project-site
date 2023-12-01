@@ -130,7 +130,7 @@ function About() {
             <div className={cn(styles.brandTitle, 'flex')}>brand assets</div>
             <Button
               classNames='max-xl:hidden'
-              link='https://dapplets.org/brand'
+              link='https://www.figma.com/community/file/1123896455146409779/dapplets-project-brand-assets'
               text='Watch Files'
               isPrimary
               icon='icons/button/download.svg'
@@ -150,7 +150,7 @@ function About() {
           </div>
           <Button
             classNames={cn(styles.btnBrandMedia, 'xl:hidden')}
-            link='https://dapplets.org/brand'
+            link='https://www.figma.com/community/file/1123896455146409779/dapplets-project-brand-assets'
             text='Watch Files'
             isPrimary
             icon='icons/button/download.svg'

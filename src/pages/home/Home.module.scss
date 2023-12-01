@@ -68,6 +68,7 @@
     }
   }
   @media (max-width: 719px) {
+    background: none;
     &:after {
       display: none;
     }
@@ -143,6 +144,7 @@
     }
   }
   @media (max-width: 719px) {
+    background: none;
     &:after {
       display: none;
     }
@@ -202,7 +204,7 @@
     transform: scale(1.5) !important;
   }
   .supportedBlockIcon:nth-child(3) {
-    transform: scale(1.6) !important;
+    transform: scale(1.5) !important;
   }
 }
 .howWrapper {
@@ -538,7 +540,7 @@
   transition: 0.5s ease all;
   .featureItemsBlock {
     width: 95%;
-    transform: translateX(-15px);
+    transform: translateX(-12px);
   }
   .featureImg {
     margin-left: 0px;
@@ -574,14 +576,11 @@
 .featureGet {
   padding: 110px 0 100px 0;
   width: 100%;
-  // background: url('/themes/dark/icons/home/bg-get.svg');
+ 
 }
 
 :global(.light) .featureGet {
-  background: url('/themes/light/icons/home/bg-get.svg');
-  background-size: 100%;
-  background-position-x: -20px;
-  background-position-y: -180px;
+
 }
 
 .getTitle {
