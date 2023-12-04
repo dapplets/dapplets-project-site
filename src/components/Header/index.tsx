@@ -5,6 +5,20 @@ import { useTheme } from 'next-themes';
 import { ThemeImage } from '../ThemeImage';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+const menuItems = [
+  {
+    title: 'Home',
+    path: '/',
+  },
+  {
+    title: 'About',
+    path: '/about',
+  },
+  {
+    title: 'Documentation',
+    path: 'https://docs.dapplets.org/docs/',
+  },
+];
 
 export function Header() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -53,37 +67,21 @@ export function Header() {
           'grow-1  max-mob:hidden flex justify-between '
         )}
       >
-        <Link href='/'>
-          <div
-            className={cn(
-              styles.linkHover,
-              {
-                [styles.active]: pathname === '/',
-              },
-              'text-base '
-            )}
-          >
-            Home
-          </div>
-        </Link>
-        <Link href='/about'>
-          <div
-            className={cn(
-              styles.linkHover,
-              {
-                [styles.active]: pathname === '/about',
-              },
-              'text-base '
-            )}
-          >
-            About
-          </div>
-        </Link>
-        <Link target='_blank' href='https://docs.dapplets.org/docs/'>
-          <div className={cn(styles.linkHover, 'text-base ')}>
-            Documentation
-          </div>
-        </Link>
+        {menuItems.map((menuItem, i) => (
+          <Link key={i} href={menuItem.path}>
+            <div
+              className={cn(
+                styles.linkHover,
+                {
+                  [styles.active]: pathname === menuItem.path,
+                },
+                'text-base'
+              )}
+            >
+              {menuItem.title}
+            </div>
+          </Link>
+        ))}
       </div>
 
       <div
@@ -151,41 +149,22 @@ export function Header() {
                 'flex h-full w-full flex-auto flex-col'
               )}
             >
-              <Link href='/' className='ml-auto'>
-                <div
-                  className={cn(
-                    styles.linkHover,
-                    {
-                      [styles.active]: pathname === '/',
-                    },
-                    'text-base '
-                  )}
-                >
-                  Home
-                </div>
-              </Link>
-              <Link href='/about' className='ml-auto'>
-                <div
-                  className={cn(
-                    styles.linkHover,
-                    {
-                      [styles.active]: pathname === '/about',
-                    },
-                    ' ml-auto text-base '
-                  )}
-                >
-                  About
-                </div>
-              </Link>
-              <Link
-                target='_blank'
-                href='https://docs.dapplets.org/docs/'
-                className='ml-auto'
-              >
-                <div className={cn(styles.linkHover, 'text-base ')}>
-                  Documentation
-                </div>
-              </Link>
+             { menuItems.map((menuItem, i) => (
+               <Link key={i} href={menuItem.path} className='ml-auto'>
+               <div
+                 className={cn(
+                   styles.linkHover,
+                   {
+                    [styles.active]: pathname === menuItem.path,
+                   },
+                   'text-base '
+                 )}
+               >
+                 {menuItem.title}
+               </div>
+             </Link>
+             ))}
+            
             </div>
             <div
               className={cn(
