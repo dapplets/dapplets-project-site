@@ -30,7 +30,6 @@ export function Header() {
       updateDimensions();
     };
   }, [isMobileMenu]);
-console.log(router);
 
   return (
     <div
@@ -59,7 +58,7 @@ console.log(router);
             className={cn(
               styles.linkHover,
               {
-                [styles.active]: router.asPath !== '/about',
+                [styles.active]: router.asPath === '/',
               },
               'text-base '
             )}
@@ -157,7 +156,7 @@ console.log(router);
                   className={cn(
                     styles.linkHover,
                     {
-                      [styles.active]: router.asPath !== '/about',
+                      [styles.active]: router.asPath === '/',
                     },
                     'text-base '
                   )}
