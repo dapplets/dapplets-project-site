@@ -34,13 +34,13 @@ export const mission = [
     message: `to provide you with a comprehensive set of tools that give you full control over your digital environments and enable curated, personalised systems based on your preferences and interests.`,
   },
   {
-    title: `Enabling New Workflows`,
+    title: `Enabling New Bussines Cases`,
     message: `by harnessing the power of decentralisation, Dapplets aims to revolutionise traditional online activities and introduce fundamentally
-  new workflows to popular websites.`,
+  new bussines to popular websites.`,
   },
   {
     title: `Bridging gaps`,
-    message: `Ultimately, the project aims to bridge the gap between legacy systems and emerging Web3 technologies, promoting greater transparency, autonomy and efficiency throughout cyberspace.`,
+    message: `ultimately, the project aims to bridge the gap between legacy systems and emerging Web3 technologies, promoting greater transparency, autonomy and efficiency throughout cyberspace.`,
   },
 ];
 
