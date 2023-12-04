@@ -30,13 +30,13 @@ export function Header() {
       updateDimensions();
     };
   }, [isMobileMenu]);
-
+console.log(router);
 
   return (
     <div
       className={cn(
         styles.wrapper,
-        'fonts container-xl  mx-auto flex items-center justify-between py-15 max-mob:px-20 max-lg:px-10 max-lg:py-10'
+        'fonts container-xl  max-mob:px-20 mx-auto flex items-center justify-between py-15 max-lg:px-10 max-lg:py-10'
       )}
     >
       <Link className={cn(styles.linkHover, ' text-base')} href='/'>
@@ -51,7 +51,7 @@ export function Header() {
       <div
         className={cn(
           styles.linkBlock,
-          'grow-1  flex justify-between max-mob:hidden '
+          'grow-1  max-mob:hidden flex justify-between '
         )}
       >
         <Link href='/'>
@@ -59,7 +59,7 @@ export function Header() {
             className={cn(
               styles.linkHover,
               {
-                [styles.active]: router.asPath === '/home',
+                [styles.active]: router.asPath !== '/about',
               },
               'text-base '
             )}
@@ -102,7 +102,7 @@ export function Header() {
         onClick={() => setMobileMenu(!isMobileMenu)}
         className={cn(
           styles.burger,
-          'max-mob:flex max-mob:flex-col max-xl:items-center  max-mob:justify-center xl:hidden mob:hidden'
+          'max-mob:flex max-mob:flex-col max-mob:justify-center  mob:hidden max-xl:items-center xl:hidden'
         )}
       >
         <div className={cn(styles.burgerMedium)}> </div>
@@ -140,7 +140,7 @@ export function Header() {
                 onClick={() => setMobileMenu(!isMobileMenu)}
                 className={cn(
                   styles.burger,
-                  'max-mob:flex max-mob:flex-col max-mob:items-center  max-mob:justify-center xl:hidden mob:hidden'
+                  'max-mob:flex max-mob:flex-col max-mob:items-center  max-mob:justify-center mob:hidden xl:hidden'
                 )}
               >
                 <div className={cn(styles.burgerMedium)}> </div>
@@ -157,7 +157,7 @@ export function Header() {
                   className={cn(
                     styles.linkHover,
                     {
-                      [styles.active]: router.asPath === '/home',
+                      [styles.active]: router.asPath !== '/about',
                     },
                     'text-base '
                   )}
