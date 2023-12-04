@@ -4,9 +4,12 @@ import cn from 'classnames';
 import { useTheme } from 'next-themes';
 import { ThemeImage } from '../ThemeImage';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 export function Header() {
   const { resolvedTheme, setTheme } = useTheme();
+  const router = useRouter();
+
   const [isMobileMenu, setMobileMenu] = useState(false);
   function toggleDarkMode() {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
@@ -14,7 +17,7 @@ export function Header() {
   useEffect(() => {
     const updateDimensions = () => {
       if (typeof window !== 'undefined') {
-        if (window.innerWidth < 1185) {
+        if (window.innerWidth < 1025) {
         } else {
           setMobileMenu(false);
         }
@@ -28,11 +31,12 @@ export function Header() {
     };
   }, [isMobileMenu]);
 
+
   return (
     <div
       className={cn(
         styles.wrapper,
-        'fonts container-xl  mx-auto flex items-center justify-between py-15 max-xl:px-20 max-lg:px-10 max-lg:py-10'
+        'fonts container-xl  mx-auto flex items-center justify-between py-15 max-mob:px-20 max-lg:px-10 max-lg:py-10'
       )}
     >
       <Link className={cn(styles.linkHover, ' text-base')} href='/'>
@@ -41,21 +45,41 @@ export function Header() {
           height={50}
           alt='logo'
           src='icons/header/logo.svg'
-          className='max-xl:logo-tab'
+          className='max-mob:logo-tab'
         />
       </Link>
       <div
         className={cn(
           styles.linkBlock,
-          'grow-1  flex justify-between max-xl:hidden '
+          'grow-1  flex justify-between max-mob:hidden '
         )}
       >
         <Link href='/'>
-          <div className={cn(styles.linkHover, 'text-base ')}>Home</div>
+          <div
+            className={cn(
+              styles.linkHover,
+              {
+                [styles.active]: router.asPath === '/home',
+              },
+              'text-base '
+            )}
+          >
+            Home
+          </div>
         </Link>
-        {/* <Link href="/about"> */}
-        <div className={cn(styles.linkHover, 'text-base ')}>About</div>
-        {/* </Link> */}
+        <Link href='/about'>
+          <div
+            className={cn(
+              styles.linkHover,
+              {
+                [styles.active]: router.asPath === '/about',
+              },
+              'text-base '
+            )}
+          >
+            About
+          </div>
+        </Link>
         <Link target='_blank' href='https://docs.dapplets.org/docs/'>
           <div className={cn(styles.linkHover, 'text-base ')}>
             Documentation
@@ -64,7 +88,7 @@ export function Header() {
       </div>
 
       <div
-        className={cn(styles.mode, 'max-xl:ml-auto max-xl:mr-5')}
+        className={cn(styles.mode, 'max-mob:ml-auto max-mob:mr-5')}
         onClick={toggleDarkMode}
       >
         <ThemeImage
@@ -78,13 +102,13 @@ export function Header() {
         onClick={() => setMobileMenu(!isMobileMenu)}
         className={cn(
           styles.burger,
-          'max-xl:flex max-xl:flex-col max-xl:items-center  max-xl:justify-center xl:hidden'
+          'max-mob:flex max-mob:flex-col max-xl:items-center  max-mob:justify-center xl:hidden mob:hidden'
         )}
       >
         <div className={cn(styles.burgerMedium)}> </div>
       </div>
       {isMobileMenu && (
-        <div className={cn(styles.mobileMenu, 'flex flex-col')}>
+        <div id='mobile' className={cn(styles.mobileMenu, 'flex flex-col')}>
           <div
             className={cn(
               styles.mobileMenuWrapper,
@@ -98,11 +122,11 @@ export function Header() {
                   height={50}
                   alt='logo'
                   src='icons/header/logo.svg'
-                  className='max-xl:logo-tab'
+                  className='max-mob:logo-tab'
                 />
               </Link>
               <div
-                className={cn(styles.mode, 'max-xl:ml-auto max-xl:mr-5')}
+                className={cn(styles.mode, 'max-mob:ml-auto max-mob:mr-5')}
                 onClick={toggleDarkMode}
               >
                 <ThemeImage
@@ -116,7 +140,7 @@ export function Header() {
                 onClick={() => setMobileMenu(!isMobileMenu)}
                 className={cn(
                   styles.burger,
-                  'max-xl:flex max-xl:flex-col max-xl:items-center  max-xl:justify-center xl:hidden'
+                  'max-mob:flex max-mob:flex-col max-mob:items-center  max-mob:justify-center xl:hidden mob:hidden'
                 )}
               >
                 <div className={cn(styles.burgerMedium)}> </div>
@@ -129,13 +153,31 @@ export function Header() {
               )}
             >
               <Link href='/' className='ml-auto'>
-                <div className={cn(styles.linkHover, 'text-base ')}>Home</div>
+                <div
+                  className={cn(
+                    styles.linkHover,
+                    {
+                      [styles.active]: router.asPath === '/home',
+                    },
+                    'text-base '
+                  )}
+                >
+                  Home
+                </div>
               </Link>
-              {/* <Link href="/about" className='ml-auto w-full' > */}
-              <div className={cn(styles.linkHover, ' ml-auto text-base ')}>
-                About
-              </div>
-              {/* </Link> */}
+              <Link href='/about' className='ml-auto'>
+                <div
+                  className={cn(
+                    styles.linkHover,
+                    {
+                      [styles.active]: router.asPath === '/about',
+                    },
+                    ' ml-auto text-base '
+                  )}
+                >
+                  About
+                </div>
+              </Link>
               <Link
                 target='_blank'
                 href='https://docs.dapplets.org/docs/'

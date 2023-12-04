@@ -14,7 +14,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
     <div
       className={cn(
         styles.wrapper,
-        'dark:backgroundDark min-h-screen bg-dpl-white dark:bg-dpl-black max-xl:overflow-x-hidden xl:overflow-x-hidden'
+        'dark:backgroundDark min-h-screen bg-dpl-white dark:bg-dpl-black'
       )}
     >
       <div className={cn(styles.menu)}>

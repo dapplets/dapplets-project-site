@@ -13,6 +13,7 @@ const config: Config = {
         sm: '820px',
         md: '640px',
         lg: '719px',
+        mob:'1025px',
         xl: '1185px',
       },
       colors: {
@@ -33,10 +34,10 @@ const config: Config = {
         '144': '36rem',
         '15': '15px',
         '20': '20px',
-        '40':'40px',
-        '10':'10px',
-        '30':'30px',
-        '25':'25px'
+        '40': '40px',
+        '10': '10px',
+        '30': '30px',
+        '25': '25px',
       },
       borderRadius: {
         '6xl': '10px',
@@ -51,19 +52,21 @@ const config: Config = {
         '40': '35px',
         '20': '20px',
         '32': '32px',
-        '40tab':'40px',
-        '10':'10px'
+        '40tab': '40px',
+        '10': '10px',
+        '45': '45px',
+        '17': '17px',
       },
       maxWidth: {
         mwLg: '748px',
-        mwMobSub:'60%',
-        mw80:'80%'
+        mwMobSub: '60%',
+        mw80: '80%',
       },
-      order:{
-       '0':'0',
-       '1':'1',
-       '2':'2'
-      }
+      order: {
+        '0': '0',
+        '1': '1',
+        '2': '2',
+      },
     },
   },
   plugins: [],

@@ -3,12 +3,19 @@
 }
 .linkBlock {
   flex: 1 1 auto;
-  max-width: 30%;
-  // padding: 10px 0 0 0;
+    max-width: 21%;
+    padding-top: 3px;
 }
 
 .linkHover {
   transition: all 0.2s ease;
+  &:hover {
+    transition: all 0.2s ease;
+    transform: scale(0.7);
+  }
+}
+.active{
+  color: #DB504A;
   &:hover {
     transition: all 0.2s ease;
     transform: scale(0.7);
@@ -93,6 +100,9 @@
     .linkHover {
       margin-top: 0;
     }
+    .active{
+      margin-top: 0;
+    }
     .burgerMedium {
       transform: rotate(-45deg);
       &::after {
@@ -121,12 +131,15 @@
 :global(.dark) .mobileMenu {
   background: #1d1d1d;
 }
-@media (min-width: 1186px) {
+@media (min-width: 1026px) {
   .mobileMenu {
     display: none;
   }
+  .burger{
+    display: none;
+  }
 }
-@media (max-width: 1185px) {
+@media (max-width: 1025px) {
   .linkHover {
     &:hover {
       transform: none;
@@ -145,6 +158,11 @@
       }
     }
   }
+  .mobileMenu{
+    -ms-overflow-style: none;
+  }
+
+
 
   .burger {
     &:hover {
