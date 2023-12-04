@@ -4,11 +4,11 @@ import cn from 'classnames';
 import { useTheme } from 'next-themes';
 import { ThemeImage } from '../ThemeImage';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 export function Header() {
   const { resolvedTheme, setTheme } = useTheme();
-  const router = useRouter();
+  const pathname = usePathname();
 
   const [isMobileMenu, setMobileMenu] = useState(false);
   function toggleDarkMode() {
@@ -58,7 +58,7 @@ export function Header() {
             className={cn(
               styles.linkHover,
               {
-                [styles.active]: router.asPath !== '/about',
+                [styles.active]: pathname === '/',
               },
               'text-base '
             )}
@@ -71,7 +71,7 @@ export function Header() {
             className={cn(
               styles.linkHover,
               {
-                [styles.active]: router.asPath === '/about',
+                [styles.active]: pathname === '/about',
               },
               'text-base '
             )}
@@ -156,7 +156,7 @@ export function Header() {
                   className={cn(
                     styles.linkHover,
                     {
-                      [styles.active]: router.asPath !== '/about',
+                      [styles.active]: pathname === '/',
                     },
                     'text-base '
                   )}
@@ -169,7 +169,7 @@ export function Header() {
                   className={cn(
                     styles.linkHover,
                     {
-                      [styles.active]: router.asPath === '/about',
+                      [styles.active]: pathname === '/about',
                     },
                     ' ml-auto text-base '
                   )}
