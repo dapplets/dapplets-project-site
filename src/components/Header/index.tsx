@@ -4,16 +4,33 @@ import cn from 'classnames';
 import { useTheme } from 'next-themes';
 import { ThemeImage } from '../ThemeImage';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
+
+const menuItems = [
+  {
+    title: 'Home',
+    path: '/',
+  },
+  {
+    title: 'About',
+    path: '/about',
+  },
+  {
+    title: 'Documentation',
+    path: 'https://docs.dapplets.org/docs/',
+  },
+];
 
 export function Header() {
   const { resolvedTheme, setTheme } = useTheme();
-  const router = useRouter();
+  const pathname = usePathname();
 
   const [isMobileMenu, setMobileMenu] = useState(false);
+
   function toggleDarkMode() {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   }
+
   useEffect(() => {
     const updateDimensions = () => {
       if (typeof window !== 'undefined') {
@@ -30,7 +47,6 @@ export function Header() {
       updateDimensions();
     };
   }, [isMobileMenu]);
-
 
   return (
     <div
@@ -54,37 +70,21 @@ export function Header() {
           'grow-1  flex justify-between max-mob:hidden '
         )}
       >
-        <Link href='/'>
-          <div
-            className={cn(
-              styles.linkHover,
-              {
-                [styles.active]: router.asPath === '/home',
-              },
-              'text-base '
-            )}
-          >
-            Home
-          </div>
-        </Link>
-        <Link href='/about'>
-          <div
-            className={cn(
-              styles.linkHover,
-              {
-                [styles.active]: router.asPath === '/about',
-              },
-              'text-base '
-            )}
-          >
-            About
-          </div>
-        </Link>
-        <Link target='_blank' href='https://docs.dapplets.org/docs/'>
-          <div className={cn(styles.linkHover, 'text-base ')}>
-            Documentation
-          </div>
-        </Link>
+        {menuItems.map((menuItem, i) => (
+          <Link key={i} href={menuItem.path}>
+            <div
+              className={cn(
+                styles.linkHover,
+                {
+                  [styles.active]: pathname === menuItem.path,
+                },
+                'text-base'
+              )}
+            >
+              {menuItem.title}
+            </div>
+          </Link>
+        ))}
       </div>
 
       <div
@@ -102,7 +102,7 @@ export function Header() {
         onClick={() => setMobileMenu(!isMobileMenu)}
         className={cn(
           styles.burger,
-          'max-mob:flex max-mob:flex-col max-xl:items-center  max-mob:justify-center xl:hidden mob:hidden'
+          'max-xl:items-center max-mob:flex max-mob:flex-col  max-mob:justify-center mob:hidden xl:hidden'
         )}
       >
         <div className={cn(styles.burgerMedium)}> </div>
@@ -140,7 +140,7 @@ export function Header() {
                 onClick={() => setMobileMenu(!isMobileMenu)}
                 className={cn(
                   styles.burger,
-                  'max-mob:flex max-mob:flex-col max-mob:items-center  max-mob:justify-center xl:hidden mob:hidden'
+                  'max-mob:flex max-mob:flex-col max-mob:items-center  max-mob:justify-center mob:hidden xl:hidden'
                 )}
               >
                 <div className={cn(styles.burgerMedium)}> </div>
@@ -152,41 +152,21 @@ export function Header() {
                 'flex h-full w-full flex-auto flex-col'
               )}
             >
-              <Link href='/' className='ml-auto'>
-                <div
-                  className={cn(
-                    styles.linkHover,
-                    {
-                      [styles.active]: router.asPath === '/home',
-                    },
-                    'text-base '
-                  )}
-                >
-                  Home
-                </div>
-              </Link>
-              <Link href='/about' className='ml-auto'>
-                <div
-                  className={cn(
-                    styles.linkHover,
-                    {
-                      [styles.active]: router.asPath === '/about',
-                    },
-                    ' ml-auto text-base '
-                  )}
-                >
-                  About
-                </div>
-              </Link>
-              <Link
-                target='_blank'
-                href='https://docs.dapplets.org/docs/'
-                className='ml-auto'
-              >
-                <div className={cn(styles.linkHover, 'text-base ')}>
-                  Documentation
-                </div>
-              </Link>
+              {menuItems.map((menuItem, i) => (
+                <Link key={i} href={menuItem.path} className='ml-auto'>
+                  <div
+                    className={cn(
+                      styles.linkHover,
+                      {
+                        [styles.active]: pathname === menuItem.path,
+                      },
+                      'text-base '
+                    )}
+                  >
+                    {menuItem.title}
+                  </div>
+                </Link>
+              ))}
             </div>
             <div
               className={cn(
