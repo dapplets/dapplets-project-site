@@ -3,8 +3,8 @@
 }
 .linkBlock {
   flex: 1 1 auto;
-    max-width: 21%;
-    padding-top: 3px;
+  max-width: 21%;
+  padding-top: 3px;
 }
 
 .linkHover {
@@ -14,8 +14,8 @@
     transform: scale(0.7);
   }
 }
-.active{
-  color: #DB504A;
+.active {
+  color: #db504a;
   &:hover {
     transition: all 0.2s ease;
     transform: scale(0.7);
@@ -100,7 +100,7 @@
     .linkHover {
       margin-top: 0;
     }
-    .active{
+    .active {
       margin-top: 0;
     }
     .burgerMedium {
@@ -135,7 +135,7 @@
   .mobileMenu {
     display: none;
   }
-  .burger{
+  .burger {
     display: none;
   }
 }
@@ -158,11 +158,9 @@
       }
     }
   }
-  .mobileMenu{
+  .mobileMenu {
     -ms-overflow-style: none;
   }
-
-
 
   .burger {
     &:hover {

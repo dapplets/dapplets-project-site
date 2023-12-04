@@ -5,8 +5,7 @@
   width: 100%;
   background: inherit;
   z-index: 100;
-  border-bottom: 1px solid  #C1C6CE;
-
+  border-bottom: 1px solid #c1c6ce;
 }
 .delimeter {
   display: block;
@@ -16,14 +15,11 @@
 }
 
 :global(.dark) {
-
   .delimeter {
     background: #303030;
   }
 }
 
 :global(.dark) .menu {
-  border-bottom: 1px solid  #303030;
- 
+  border-bottom: 1px solid #303030;
 }
-

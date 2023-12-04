@@ -83,20 +83,20 @@ main {
     flex: 1 1 auto;
     padding: 0 10px;
   }
-  .container-lg{
+  .container-lg {
     max-width: none;
     flex: 1 1 auto;
     padding: 0 20px;
   }
-  .logo-tab{
-width: 130px;
+  .logo-tab {
+    width: 130px;
   }
-  .container-mob{
+  .container-mob {
     max-width: none;
     flex: 1 1 auto;
     padding: 0 10px;
   }
-  .fonts-mob{
+  .fonts-mob {
     font-size: 14px;
     line-height: 149%;
   }

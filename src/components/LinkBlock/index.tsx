@@ -9,7 +9,12 @@ export interface LinkBlockProps {
 
 export function LinkBlock({ content }: LinkBlockProps) {
   return (
-    <Link className='flex max-lg:w-full' href={content.link} target='_blank' rel='noopener noreferrer'>
+    <Link
+      className='flex max-lg:w-full'
+      href={content.link}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
       <div
         className={cn(
           styles.link,

@@ -53,7 +53,7 @@ export const HowItWorksItems = [
     title: 'Mutable Web Engine',
     text: `It uses Adapters to parse and expose the live semantic structure of legacy webpages on the fly.
     The Mutable Web Engine attaches dapplets to the elements of the semantic structure and executes them.`,
-  }
+  },
 ];
 
 export const PowerDapplets = [
@@ -62,7 +62,7 @@ export const PowerDapplets = [
     image: 'images/power-1.svg',
     title: 'Paywall',
     text: `Paywall Dapplet introduces a new feature to Twitter's UX giving any user the ability to sell their content.`,
-    link:'https://github.com/dapplets/paywall-dapplet'
+    link: 'https://github.com/dapplets/paywall-dapplet',
   },
   {
     id: '2',
@@ -72,14 +72,14 @@ export const PowerDapplets = [
     on websites like Twitter and Github that reflect
     a person's rating and contributions within
     the NEAR community.`,
-    link:'https://github.com/dapplets/community-badges'
+    link: 'https://github.com/dapplets/community-badges',
   },
   {
     id: '3',
     image: 'images/power-3.svg',
     title: 'Swarm Search',
     text: `The set of modules augmenting Google and YouTube search pages with data from OpenSearch-compatible engines.`,
-    link:'https://github.com/dapplets/swarm-search'
+    link: 'https://github.com/dapplets/swarm-search',
   },
 ];
 

@@ -19,7 +19,6 @@
     border-radius: 50%;
     background-color: #db504a;
   }
- 
 }
 .howItemTitleColor {
   &::before {
@@ -213,7 +212,7 @@
     background: none;
   }
 }
-:global(.light){
+:global(.light) {
   @media (max-width: 1185px) {
     .howItemTitleColor {
       &::before {
@@ -228,7 +227,6 @@
         background-color: #222;
       }
     }
- 
   }
 }
 
@@ -240,7 +238,6 @@
     .howItemWrapper {
       margin-top: 65px;
     }
- 
   }
 }
 
@@ -272,7 +269,7 @@
   .titleButtons {
     width: 100%;
     padding-bottom: 10px;
-    div{
+    div {
       margin-bottom: 10px;
     }
   }
@@ -339,7 +336,7 @@
     max-width: 100%;
     padding-bottom: 40px;
   }
-  .powerText:nth-child(3){
+  .powerText:nth-child(3) {
     padding-bottom: 30px;
   }
   .powerImg {
@@ -474,11 +471,11 @@
 }
 :global(.dark) {
   @media (max-width: 719px) {
-   .howSubitle{
-    padding-bottom: 0;
-   }
- .howItemWrapper{
-  margin-top: 17px;
- }
+    .howSubitle {
+      padding-bottom: 0;
+    }
+    .howItemWrapper {
+      margin-top: 17px;
+    }
   }
 }

@@ -13,7 +13,7 @@ const config: Config = {
         sm: '820px',
         md: '640px',
         lg: '719px',
-        mob:'1025px',
+        mob: '1025px',
         xl: '1185px',
       },
       colors: {

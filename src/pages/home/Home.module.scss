@@ -72,7 +72,7 @@
     &:after {
       display: none;
     }
-    &::before{
+    &::before {
       display: none;
     }
   }
@@ -148,7 +148,7 @@
     &:after {
       display: none;
     }
-    &::before{
+    &::before {
       display: none;
     }
   }
@@ -222,8 +222,8 @@
   flex: 1 1 auto;
   max-width: 600px;
 }
-.howImgDesk{
-  transform: translateY(25px)!important;
+.howImgDesk {
+  transform: translateY(25px) !important;
 }
 
 .exampleWrapper {
@@ -576,11 +576,9 @@
 .featureGet {
   padding: 110px 0 100px 0;
   width: 100%;
- 
 }
 
 :global(.light) .featureGet {
-
 }
 
 .getTitle {

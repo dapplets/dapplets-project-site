@@ -69,7 +69,7 @@ function About() {
           <div
             className={cn(
               styles.problemText,
-              'max-xl:gap-y-17 flex flex-col gap-y-20'
+              'flex flex-col gap-y-20 max-xl:gap-y-17'
             )}
           >
             {problem.map((x, i) => (
@@ -98,7 +98,7 @@ function About() {
             <div
               className={cn(
                 styles.missionText,
-                'gap-y-45 flex flex-wrap gap-x-40tab max-xl:gap-y-40'
+                'flex flex-wrap gap-x-40tab gap-y-45 max-xl:gap-y-40'
               )}
             >
               {mission

@@ -4,8 +4,8 @@
   height: 222px;
   border: 1px solid rgba(48, 48, 48, 0.8);
   background: #1b1b1b;
-  &:hover{
-    .linkIcon{
+  &:hover {
+    .linkIcon {
       transform: translateX(10px);
     }
   }
@@ -35,7 +35,7 @@
         0px 7px 2px 0px rgba(0, 0, 0, 0.01),
         0px 1px 1px 0px rgba(0, 0, 0, 0);
       backdrop-filter: blur(20px);
-      .linkIcon{
+      .linkIcon {
         transform: translateX(10px);
       }
     }
@@ -73,11 +73,10 @@
   text-align: center;
 }
 @media (max-width: 1300px) {
-  .link{
-  width: 265px;
-  height: 222px;
+  .link {
+    width: 265px;
+    height: 222px;
   }
-
 }
 @media (max-width: 1185px) {
   .link {

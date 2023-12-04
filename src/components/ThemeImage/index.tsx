@@ -16,7 +16,7 @@ export const ThemeImage = (props: Props) => {
         {...rest}
         src={'/themes/light/' + src}
         alt={alt}
-        className={cn(styles.imgLight,'unset', className, {
+        className={cn(styles.imgLight, 'unset', className, {
           [styles.noTransition]: className == 'noTransition',
         })}
       />
@@ -25,8 +25,8 @@ export const ThemeImage = (props: Props) => {
         src={'/themes/dark/' + src}
         alt={alt}
         className={cn(styles.imgDark, 'unset', className, {
-          [styles.noTransition]: className == 'noTransition',}
-        )}
+          [styles.noTransition]: className == 'noTransition',
+        })}
       />
     </>
   );
