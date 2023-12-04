@@ -58,7 +58,7 @@ export function Header() {
             className={cn(
               styles.linkHover,
               {
-                [styles.active]: router.asPath === '/',
+                [styles.active]: router.asPath !== '/about',
               },
               'text-base '
             )}
@@ -156,7 +156,7 @@ export function Header() {
                   className={cn(
                     styles.linkHover,
                     {
-                      [styles.active]: router.asPath === '/',
+                      [styles.active]: router.asPath !== '/about',
                     },
                     'text-base '
                   )}
