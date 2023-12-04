@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import { ThemeImage } from '../ThemeImage';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+
 const menuItems = [
   {
     title: 'Home',
@@ -25,9 +26,11 @@ export function Header() {
   const pathname = usePathname();
 
   const [isMobileMenu, setMobileMenu] = useState(false);
+
   function toggleDarkMode() {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   }
+
   useEffect(() => {
     const updateDimensions = () => {
       if (typeof window !== 'undefined') {
@@ -49,7 +52,7 @@ export function Header() {
     <div
       className={cn(
         styles.wrapper,
-        'fonts container-xl  max-mob:px-20 mx-auto flex items-center justify-between py-15 max-lg:px-10 max-lg:py-10'
+        'fonts container-xl  mx-auto flex items-center justify-between py-15 max-mob:px-20 max-lg:px-10 max-lg:py-10'
       )}
     >
       <Link className={cn(styles.linkHover, ' text-base')} href='/'>
@@ -64,7 +67,7 @@ export function Header() {
       <div
         className={cn(
           styles.linkBlock,
-          'grow-1  max-mob:hidden flex justify-between '
+          'grow-1  flex justify-between max-mob:hidden '
         )}
       >
         {menuItems.map((menuItem, i) => (
@@ -99,7 +102,7 @@ export function Header() {
         onClick={() => setMobileMenu(!isMobileMenu)}
         className={cn(
           styles.burger,
-          'max-mob:flex max-mob:flex-col max-mob:justify-center  mob:hidden max-xl:items-center xl:hidden'
+          'max-xl:items-center max-mob:flex max-mob:flex-col  max-mob:justify-center mob:hidden xl:hidden'
         )}
       >
         <div className={cn(styles.burgerMedium)}> </div>
@@ -149,22 +152,21 @@ export function Header() {
                 'flex h-full w-full flex-auto flex-col'
               )}
             >
-             { menuItems.map((menuItem, i) => (
-               <Link key={i} href={menuItem.path} className='ml-auto'>
-               <div
-                 className={cn(
-                   styles.linkHover,
-                   {
-                    [styles.active]: pathname === menuItem.path,
-                   },
-                   'text-base '
-                 )}
-               >
-                 {menuItem.title}
-               </div>
-             </Link>
-             ))}
-            
+              {menuItems.map((menuItem, i) => (
+                <Link key={i} href={menuItem.path} className='ml-auto'>
+                  <div
+                    className={cn(
+                      styles.linkHover,
+                      {
+                        [styles.active]: pathname === menuItem.path,
+                      },
+                      'text-base '
+                    )}
+                  >
+                    {menuItem.title}
+                  </div>
+                </Link>
+              ))}
             </div>
             <div
               className={cn(

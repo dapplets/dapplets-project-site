@@ -5,9 +5,9 @@ const nextConfig = {
   output: 'standalone',
   redirects: async () => [
     {
-      source: '/',
-      destination: '/home',
-      permanent: false,
+      source: '/home',
+      destination: '/',
+      permanent: true,
     },
   ],
   eslint: {
