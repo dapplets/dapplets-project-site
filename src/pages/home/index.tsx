@@ -19,7 +19,7 @@ import Image from 'next/image';
 
 function Home() {
   return (
-    <Layout>
+    <Layout title='Home'>
       <div className='fonts container-xl max-xl:container-lg max-lg:container-mob mx-auto flex flex-col overflow-x-hidden '>
         <div className={cn(styles.titleWrapper, ' flex flex-col')}>
           <div
@@ -268,7 +268,7 @@ function Home() {
                     className={cn('noTransition', '')}
                     width={390}
                     height={407}
-                    alt='power'
+                    alt={dapplet.title}
                     src={dapplet.image}
                     style={{ transform: 'none', cursor: 'default' }}
                   />
@@ -341,7 +341,7 @@ function Home() {
                   className={cn(styles.featureLink, '')}
                   width={50}
                   height={50}
-                  alt='power'
+                  alt='arrow'
                   src='icons/link/arrow.svg'
                 />
               </div>{' '}
@@ -357,7 +357,7 @@ function Home() {
               <ThemeImage
                 width={395}
                 height={275}
-                alt='power'
+                alt='feature'
                 src='icons/home/feature-1.svg'
                 className={'noTransition'}
                 style={{ transform: 'none', cursor: 'default' }}
@@ -429,7 +429,7 @@ function Home() {
               <ThemeImage
                 width={395}
                 height={275}
-                alt='power'
+                alt='feature'
                 src='icons/home/feature-2.svg'
                 className={'noTransition'}
                 style={{ transform: 'none', cursor: 'default' }}
@@ -477,7 +477,7 @@ function Home() {
               <ThemeImage
                 width={395}
                 height={275}
-                alt='power'
+                alt='feature'
                 src='icons/home/feature-3.svg'
                 className={'noTransition'}
                 style={{ transform: 'none', cursor: 'default' }}

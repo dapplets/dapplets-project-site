@@ -8,7 +8,7 @@ import { ThemeImage } from '@/components/ThemeImage';
 
 function About() {
   return (
-    <Layout>
+    <Layout title='About'>
       <div className={cn(styles.wrapper, 'fonts  mx-auto flex flex-col ')}>
         <div
           className={cn(

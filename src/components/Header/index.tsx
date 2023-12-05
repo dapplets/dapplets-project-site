@@ -59,7 +59,7 @@ export function Header() {
         <ThemeImage
           width={178}
           height={50}
-          alt='logo'
+          alt='Dapplets'
           src='icons/header/logo.svg'
           className='max-mob:logo-tab'
         />
@@ -120,7 +120,7 @@ export function Header() {
                 <ThemeImage
                   width={178}
                   height={50}
-                  alt='logo'
+                  alt='Dapplets'
                   src='icons/header/logo.svg'
                   className='max-mob:logo-tab'
                 />
