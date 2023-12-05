@@ -1,14 +1,17 @@
 import styles from './ThemeImage.module.scss';
-import Image, { ImageProps, StaticImageData } from 'next/image';
+import Image, { ImageProps } from 'next/image';
 import cn from 'classnames';
 
 type Props = Omit<ImageProps, 'src' | 'priority' | 'loading'> & {
+  width: number;
+  height: number;
   src?: string;
   className?: string;
+  priority?: boolean;
 };
 
 export const ThemeImage = (props: Props) => {
-  const { src, alt, className, ...rest } = props;
+  const { src, alt, className, priority,width,height, ...rest } = props;
 
   return (
     <>
@@ -19,14 +22,20 @@ export const ThemeImage = (props: Props) => {
         className={cn(styles.imgLight, 'unset', className, {
           [styles.noTransition]: className == 'noTransition',
         })}
+        priority={priority}
+        width={width}
+        height={height}
       />
       <Image
         {...rest}
+        width={width}
+        height={height}
         src={'/themes/dark/' + src}
         alt={alt}
         className={cn(styles.imgDark, 'unset', className, {
           [styles.noTransition]: className == 'noTransition',
         })}
+        priority={priority}
       />
     </>
   );

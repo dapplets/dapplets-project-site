@@ -77,8 +77,6 @@ main {
 
 @layer components {
   .container-xl {
-    /* width: 1320px;
-    padding: 0 10px; */
     max-width: 1320px;
     flex: 1 1 auto;
     padding: 0 10px;

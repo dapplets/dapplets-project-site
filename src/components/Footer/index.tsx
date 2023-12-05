@@ -31,7 +31,7 @@ export function Footer() {
         >
           by
         </div>
-        <Link href='/'>
+        <Link prefetch={false} href='/'>
           <div
             className={cn(
               styles.copyUnderline,
@@ -48,7 +48,7 @@ export function Footer() {
           'flex items-center justify-between max-xl:order-[0]'
         )}
       >
-        <Link target='_blank' href='https://github.com/dapplets'>
+        <Link prefetch={false} target='_blank' href='https://github.com/dapplets'>
           <ThemeImage
             className={cn(styles.img, '')}
             width={36}
@@ -58,7 +58,7 @@ export function Footer() {
           />
         </Link>
 
-        <Link target='_blank' href='https://discord.gg/YcxbkcyjMV'>
+        <Link prefetch={false} target='_blank' href='https://discord.gg/YcxbkcyjMV'>
           <ThemeImage
             className={cn(styles.img, '')}
             width={36}
@@ -68,7 +68,7 @@ export function Footer() {
           />
         </Link>
 
-        <Link target='_blank' href='https://t.me/dapplets'>
+        <Link prefetch={false} target='_blank' href='https://t.me/dapplets'>
           <ThemeImage
             className={cn(styles.img, '')}
             width={36}
@@ -78,7 +78,7 @@ export function Footer() {
           />
         </Link>
 
-        <Link target='_blank' href='https://medium.com/@dapplets'>
+        <Link prefetch={false} target='_blank' href='https://medium.com/@dapplets'>
           <ThemeImage
             className={cn(styles.img, '')}
             width={36}
@@ -88,7 +88,7 @@ export function Footer() {
           />
         </Link>
 
-        <Link target='_blank' href='https://twitter.com/dapplets_org'>
+        <Link prefetch={false} target='_blank' href='https://twitter.com/dapplets_org'>
           <ThemeImage
             className={cn(styles.img, '')}
             width={36}
@@ -98,7 +98,7 @@ export function Footer() {
           />
         </Link>
 
-        <Link target='_blank' href='mailto:business@dapplets.org'>
+        <Link prefetch={false} target='_blank' href='mailto:business@dapplets.org'>
           <ThemeImage
             className={cn(styles.img, '')}
             width={36}

@@ -193,9 +193,8 @@ function Home() {
               {HowItWorks.subtitle}
             </div>
           </div>
-          {/* todo: remove whem will animation */}
+
           <div className={cn(styles.howImg, 'flex')}>
-            {/* todo: unimported image */}
             <div
               className={cn(
                 styles.howTablet,
@@ -209,9 +208,9 @@ function Home() {
                 alt='How it works?'
                 src='icons/home/tablet/home/how-tab.svg'
                 style={{ transform: 'none', cursor: 'default' }}
+                priority
               />
               <div className={cn(styles.howItemWrapper)}>
-                {/* todo: tablet */}
                 {HowItWorksItems.map((x, i) => (
                   <div
                     className={cn(
@@ -243,9 +242,9 @@ function Home() {
               alt='How it works?'
               src='icons/home/big-how.svg'
               style={{ transform: 'none', cursor: 'default' }}
+              priority
             />
           </div>
-          {/* <div>points</div> */}
         </div>
         <div className={cn(styles.exampleWrapper, ' mx-auto flex flex-col')}>
           <div className={cn(styles.exampleTitle, 'fonts flex')}>
@@ -273,7 +272,7 @@ function Home() {
                     style={{ transform: 'none', cursor: 'default' }}
                   />
                 </div>
-                <Link href={dapplet.link} target='_blank'>
+                <Link prefetch={false} href={dapplet.link} target='_blank'>
                   <div className={cn(styles.powerTitle, 'fonts max-xl:hidden')}>
                     {dapplet.title}
                   </div>
@@ -290,7 +289,7 @@ function Home() {
                 <div
                   className={cn(styles.powerTextBlockTablet, 'fonts xl:hidden')}
                 >
-                  <Link href={dapplet.link} target='_blank'>
+                  <Link prefetch={false} href={dapplet.link} target='_blank'>
                     <div className={cn(styles.powerTitle, 'fonts')}>
                       {dapplet.title}
                     </div>
@@ -323,6 +322,7 @@ function Home() {
               </div>
             </div>
             <Link
+            prefetch={false}
               target='_blank'
               href='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
               className={cn(styles.feature1Link, 'flex')}
@@ -374,7 +374,7 @@ function Home() {
               </div>
 
               {PlatformFeatures[0].features.map((x, i) => (
-                <Link key={i} target='_blank' href={x.link}>
+                <Link prefetch={false} key={i} target='_blank' href={x.link}>
                   <div className={cn(styles.featureItem, 'flex flex-col')}>
                     <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                       {x.title}
@@ -407,7 +407,7 @@ function Home() {
               <div className={cn(styles.featureId, 'fonts flex')}>
                 {PlatformFeatures[1].id}
               </div>
-              <Link target='_blank' href={PlatformFeatures[1].features[0].link}>
+              <Link prefetch={false} target='_blank' href={PlatformFeatures[1].features[0].link}>
                 <div className={cn(styles.featureItem, 'flex flex-col ')}>
                   <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                     {PlatformFeatures[1].features[0].title}
@@ -444,8 +444,7 @@ function Home() {
               {PlatformFeatures[1].features
                 .filter((x, i) => i !== 0)
                 .map((x, i) => (
-                  <Link key={i} target='_blank' href={x.link}>
-                    {' '}
+                  <Link prefetch={false} key={i} target='_blank' href={x.link}>
                     <div className={cn(styles.featureItem, 'flex flex-col')}>
                       <div
                         className={cn(styles.featureItemTitle, 'fonts flex')}
@@ -493,7 +492,7 @@ function Home() {
                 {PlatformFeatures[2].id}
               </div>
               {PlatformFeatures[2].features.map((x, i) => (
-                <Link key={i} target='_blank' href={x.link}>
+                <Link prefetch={false} key={i} target='_blank' href={x.link}>
                   <div className={cn(styles.featureItem, 'flex flex-col ')}>
                     <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                       {x.title}

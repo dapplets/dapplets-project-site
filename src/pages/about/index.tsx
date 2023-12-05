@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styles from './About.module.scss';
 import { Layout } from '@/components/Layout';
 import cn from 'classnames';
