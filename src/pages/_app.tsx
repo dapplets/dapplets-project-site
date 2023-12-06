@@ -23,7 +23,6 @@ const MyApp: FC<AppProps> = ({ Component, ...rest }) => {
       defaultTheme='system'
       enableSystem
       disableTransitionOnChange
-      
     >
       <Component {...rest} />
     </ThemeProvider>

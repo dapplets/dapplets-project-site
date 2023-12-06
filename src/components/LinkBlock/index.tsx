@@ -10,7 +10,7 @@ export interface LinkBlockProps {
 export function LinkBlock({ content }: LinkBlockProps) {
   return (
     <Link
-    prefetch={false}
+      prefetch={false}
       className='flex max-lg:w-full'
       href={content.link}
       target='_blank'

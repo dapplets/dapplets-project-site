@@ -11,7 +11,7 @@ type Props = Omit<ImageProps, 'src' | 'priority' | 'loading'> & {
 };
 
 export const ThemeImage = (props: Props) => {
-  const { src, alt, className, priority,width,height, ...rest } = props;
+  const { src, alt, className, priority, width, height, ...rest } = props;
 
   return (
     <>

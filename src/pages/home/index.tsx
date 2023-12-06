@@ -19,7 +19,12 @@ import Image from 'next/image';
 
 function Home() {
   return (
-    <Layout title='Home'>
+    <Layout
+      title='Mutable Web is a customization layer built on top of the existing web.
+    '
+      description='Dapplets and the Mutable Web enable communities to create a custom version (Mutation) of an existing website by enhancing it with add-on applications. Dapplets run in the user’s browser and allowing them to take control of UX/UI on any website.
+    '
+    >
       <div className='fonts container-xl max-xl:container-lg max-lg:container-mob mx-auto flex flex-col overflow-x-hidden '>
         <div className={cn(styles.titleWrapper, ' flex flex-col')}>
           <div
@@ -322,7 +327,7 @@ function Home() {
               </div>
             </div>
             <Link
-            prefetch={false}
+              prefetch={false}
               target='_blank'
               href='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
               className={cn(styles.feature1Link, 'flex')}
@@ -407,7 +412,11 @@ function Home() {
               <div className={cn(styles.featureId, 'fonts flex')}>
                 {PlatformFeatures[1].id}
               </div>
-              <Link prefetch={false} target='_blank' href={PlatformFeatures[1].features[0].link}>
+              <Link
+                prefetch={false}
+                target='_blank'
+                href={PlatformFeatures[1].features[0].link}
+              >
                 <div className={cn(styles.featureItem, 'flex flex-col ')}>
                   <div className={cn(styles.featureItemTitle, 'fonts flex')}>
                     {PlatformFeatures[1].features[0].title}

@@ -10,52 +10,53 @@ interface LayoutProps extends PropsWithChildren {
   setTitle?: any;
   description?: string;
 }
+const links = [
+  {
+    rel: 'apple-touch-icon',
+    type: '',
+    sizes: '180x180',
+    href: 'favicon/apple-touch-icon.png',
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '32x32',
+    href: 'favicon/favicon-32x32.png',
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '16x16',
+    href: 'favicon/favicon-16x16.png',
+  },
+  {
+    rel: 'icon',
+    type: '',
+    sizes: '<generated>',
+    href: 'favicon/favicon.ico',
+  },
+];
 
 export const Layout: FC<LayoutProps> = ({ children, title, description }) => {
   const { theme } = useTheme();
 
   return (
     <>
-      <Head> 
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href={
-            theme === 'dark'
-              ? '/themes/dark/favicon/apple-touch-icon.png'
-              : '/themes/light/favicon/apple-touch-icon.png'
-          }
-        />
+      <Head>
+        {links.map((link, i) => (
+          <link
+            key={i}
+            rel={link.rel}
+            type={link.type}
+            sizes={link.sizes}
+            href={
+              theme === 'dark'
+                ? '/themes/dark/' + link.href
+                : '/themes/light/' + link.href
+            }
+          />
+        ))}
 
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href={
-            theme === 'dark'
-              ? '/themes/dark/favicon/favicon-32x32.png'
-              : '/themes/light/favicon/favicon-32x32.png'
-          }
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href={
-            theme === 'dark'
-              ? '/themes/dark/favicon/favicon-16x16.png'
-              : '/themes/light/favicon/favicon-16x16.png'
-          }
-        />
-        <link
-          rel='icon'
-          href={
-            theme === 'dark'
-              ? '/themes/dark/favicon/favicon.ico'
-              : '/themes/light/favicon/favicon.ico'
-          }
-          sizes='<generated>'
-        />
         <link rel='manifest' href='/manifest.json'></link>
         <meta name='theme-color' content='#e7ecef' />
         <title>{title}</title>
