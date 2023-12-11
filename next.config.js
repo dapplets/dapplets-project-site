@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
-const withDotenv = require('next-runtime-dotenv');
 
-const nextConfig = withDotenv({
+const nextConfig = {
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
@@ -10,9 +9,7 @@ const nextConfig = withDotenv({
   reactStrictMode: false,
   swcMinify: true,
   output: 'standalone',
-  publicRuntimeConfig: {
-    NEXT_PUBLIC_ROBOTS_TXT: process.env.NEXT_PUBLIC_ROBOTS_TXT,
-  },
+
   redirects: async () => [
     {
       source: '/home',
@@ -23,6 +20,6 @@ const nextConfig = withDotenv({
   eslint: {
     dirs: ['/'],
   },
-});
+};
 
 module.exports = nextConfig;
