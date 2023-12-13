@@ -51,11 +51,6 @@
   margin-right: 10px;
 }
 
-// @media not all and (min-width: 720px) {
-//   .wrapper {
-//     margin-bottom: 20px;
-//   }
-// }
 @media (max-width: 1185px) {
   .wrapper {
     width: 240px;
@@ -63,13 +58,11 @@
   .buttonPrimary {
     &:hover {
       transition: all 0.2s ease;
-      // background: initial;
     }
   }
   .buttonOutline {
     &:hover {
       transition: all 0.2s ease;
-      // background: initial;
     }
   }
 }
@@ -80,13 +73,12 @@
   .buttonPrimary {
     &:hover {
       transition: all 0.2s ease;
-      // background: initial;
     }
   }
   .buttonOutline {
     &:hover {
       transition: all 0.2s ease;
-      // background: initial;
+
       opacity: 1;
     }
   }

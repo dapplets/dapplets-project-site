@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styles from './About.module.scss';
 import { Layout } from '@/components/Layout';
 import cn from 'classnames';
@@ -8,7 +7,11 @@ import { ThemeImage } from '@/components/ThemeImage';
 
 function About() {
   return (
-    <Layout>
+    <Layout
+      title='Empowering Web Communities with Dapplets and Mutable Web: Solving Centralization Issues.'
+      description='Enhance web experiences with Dapplets and Mutable Web. Empowering web communities, fostering freedom, and enabling new business possibilities. Join us in building a more connected digital world.
+    '
+    >
       <div className={cn(styles.wrapper, 'fonts  mx-auto flex flex-col ')}>
         <div
           className={cn(

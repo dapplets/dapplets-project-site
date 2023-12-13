@@ -55,11 +55,15 @@ export function Header() {
         'fonts container-xl  mx-auto flex items-center justify-between py-15 max-mob:px-20 max-lg:px-10 max-lg:py-10'
       )}
     >
-      <Link className={cn(styles.linkHover, ' text-base')} href='/'>
+      <Link
+        prefetch={false}
+        className={cn(styles.linkHover, ' text-base')}
+        href='/'
+      >
         <ThemeImage
           width={178}
           height={50}
-          alt='logo'
+          alt='Dapplets'
           src='icons/header/logo.svg'
           className='max-mob:logo-tab'
         />
@@ -71,7 +75,7 @@ export function Header() {
         )}
       >
         {menuItems.map((menuItem, i) => (
-          <Link key={i} href={menuItem.path}>
+          <Link prefetch={false} key={i} href={menuItem.path}>
             <div
               className={cn(
                 styles.linkHover,
@@ -116,11 +120,15 @@ export function Header() {
             )}
           >
             <div className={cn(styles.mobileMenuTop, 'flex h-9 w-full ')}>
-              <Link className={cn(styles.linkHover, ' text-base')} href='/'>
+              <Link
+                prefetch={false}
+                className={cn(styles.linkHover, ' text-base')}
+                href='/'
+              >
                 <ThemeImage
                   width={178}
                   height={50}
-                  alt='logo'
+                  alt='Dapplets'
                   src='icons/header/logo.svg'
                   className='max-mob:logo-tab'
                 />
@@ -153,7 +161,12 @@ export function Header() {
               )}
             >
               {menuItems.map((menuItem, i) => (
-                <Link key={i} href={menuItem.path} className='ml-auto'>
+                <Link
+                  prefetch={false}
+                  key={i}
+                  href={menuItem.path}
+                  className='ml-auto'
+                >
                   <div
                     className={cn(
                       styles.linkHover,
@@ -174,7 +187,11 @@ export function Header() {
                 'mt-auto flex w-full justify-between'
               )}
             >
-              <Link target='_blank' href='https://github.com/dapplets'>
+              <Link
+                prefetch={false}
+                target='_blank'
+                href='https://github.com/dapplets'
+              >
                 <ThemeImage
                   className={cn(styles.img, '')}
                   width={36}
@@ -184,7 +201,11 @@ export function Header() {
                 />
               </Link>
 
-              <Link target='_blank' href='https://discord.gg/YcxbkcyjMV'>
+              <Link
+                prefetch={false}
+                target='_blank'
+                href='https://discord.gg/YcxbkcyjMV'
+              >
                 <ThemeImage
                   className={cn(styles.img, '')}
                   width={36}
@@ -194,7 +215,11 @@ export function Header() {
                 />
               </Link>
 
-              <Link target='_blank' href='https://t.me/dapplets'>
+              <Link
+                prefetch={false}
+                target='_blank'
+                href='https://t.me/dapplets'
+              >
                 <ThemeImage
                   className={cn(styles.img, '')}
                   width={36}
@@ -204,7 +229,11 @@ export function Header() {
                 />
               </Link>
 
-              <Link target='_blank' href='https://medium.com/@dapplets'>
+              <Link
+                prefetch={false}
+                target='_blank'
+                href='https://medium.com/@dapplets'
+              >
                 <ThemeImage
                   className={cn(styles.img, '')}
                   width={36}
@@ -214,7 +243,11 @@ export function Header() {
                 />
               </Link>
 
-              <Link target='_blank' href='https://twitter.com/dapplets_org'>
+              <Link
+                prefetch={false}
+                target='_blank'
+                href='https://twitter.com/dapplets_org'
+              >
                 <ThemeImage
                   className={cn(styles.img, '')}
                   width={36}
@@ -224,7 +257,11 @@ export function Header() {
                 />
               </Link>
 
-              <Link target='_blank' href='mailto:business@dapplets.org'>
+              <Link
+                prefetch={false}
+                target='_blank'
+                href='mailto:business@dapplets.org'
+              >
                 <ThemeImage
                   className={cn(styles.img, '')}
                   width={36}

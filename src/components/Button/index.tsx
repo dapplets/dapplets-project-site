@@ -42,7 +42,7 @@ export function Button({
               className={cn(styles.img)}
               width={24}
               height={24}
-              alt=''
+              alt='button'
               src={icon}
             />
           ) : null}
@@ -60,7 +60,7 @@ export function Button({
               className={cn(styles.img)}
               width={24}
               height={24}
-              alt=''
+              alt='button'
               src={icon}
             />
           ) : null}
