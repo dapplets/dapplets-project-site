@@ -20,10 +20,8 @@ import Image from 'next/image';
 function Home() {
   return (
     <Layout
-      title='Mutable Web is a customization layer built on top of the existing web.
-    '
-      description='Dapplets and the Mutable Web enable communities to create a custom version (Mutation) of an existing website by enhancing it with add-on applications. Dapplets run in the user’s browser and allowing them to take control of UX/UI on any website.
-    '
+      title='Mutable Web is a customization layer built on top of the existing web'
+      description='Dapplets and the Mutable Web enable communities to create a custom version (Mutation) of an existing website by enhancing it with add-on applications. Dapplets run in the user’s browser and allowing them to take control of UX/UI on any website'
     >
       <div className='fonts container-xl max-xl:container-lg max-lg:container-mob mx-auto flex flex-col overflow-x-hidden '>
         <div className={cn(styles.titleWrapper, ' flex flex-col')}>
