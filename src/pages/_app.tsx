@@ -5,16 +5,15 @@ import init from '@socialgouv/matomo-next';
 
 import '@/assets/styles/globals.css';
 
-const { NEXT_PUBLIC_MATOMO_URL, NEXT_PUBLIC_MATOMO_SITE_ID } = process.env;
+const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
+const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID;
 
 const MyApp: FC<AppProps> = ({ Component, ...rest }) => {
-  // Initialize Matomo Analytics
   useEffect(() => {
-    if (!NEXT_PUBLIC_MATOMO_URL || !NEXT_PUBLIC_MATOMO_SITE_ID) return;
-    init({
-      url: NEXT_PUBLIC_MATOMO_URL,
-      siteId: NEXT_PUBLIC_MATOMO_SITE_ID,
-    });
+    // Initialize Matomo Analytics
+    if (MATOMO_URL && MATOMO_SITE_ID) {
+      init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID });
+    }
   }, []);
 
   return (
