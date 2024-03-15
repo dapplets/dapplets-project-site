@@ -26,7 +26,7 @@ export function Modal({}: ModalProps) {
               <h2 className={cn(styles.title)}>
                 MWM - the Mutable Web Manifesto
               </h2>
-              <Link href={pathname}>
+              <Link href={pathname+'/#mvm'}>
                 <ThemeImage
                   className={cn(styles.close)}
                   width={24}
@@ -89,7 +89,7 @@ export function Modal({}: ModalProps) {
                 future of web3 we are building.
               </p>
             </div>
-            <Link href={pathname}>
+            <Link href={pathname+'/#mvm'}>
               <Button text='Join us' isPrimary />
             </Link>
           </div>
