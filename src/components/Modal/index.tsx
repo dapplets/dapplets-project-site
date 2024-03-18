@@ -4,10 +4,9 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../Button';
-import { Layout } from '../Layout';
 
 import { useSearchParams, usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+
 import { ThemeImage } from '../ThemeImage';
 
 export interface ModalProps {}
@@ -26,7 +25,7 @@ export function Modal({}: ModalProps) {
               <h2 className={cn(styles.title)}>
                 MWM - the Mutable Web Manifesto
               </h2>
-              <Link href={pathname+'/#mvm'}>
+              <Link href={pathname}>
                 <ThemeImage
                   className={cn(styles.close)}
                   width={24}
@@ -60,9 +59,9 @@ export function Modal({}: ModalProps) {
                 <strong>&nbsp;No matter who the owner is.</strong>
               </p>
               <p className={cn(styles.text)}>
-                Currently, the user agent (the browser) displays the website
-                exactly as specified by the owner. The website owner can reject
-                any request from the community and enforce any change.
+                Currently, the browser displays the website exactly as specified
+                by the owner. The website owner can reject any request from the
+                community and enforce any change.
                 <strong>
                   &nbsp; This monopoly over the UX layer is the root cause of
                   the owner&apos;s power.&nbsp;
@@ -89,7 +88,7 @@ export function Modal({}: ModalProps) {
                 future of web3 we are building.
               </p>
             </div>
-            <Link href={pathname+'/#mvm'}>
+            <Link href={pathname}>
               <Button text='Join us' isPrimary />
             </Link>
           </div>

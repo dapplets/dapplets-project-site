@@ -6,7 +6,6 @@ import { ThemeImage } from '../ThemeImage';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Button } from '../Button';
-import { useRouter } from 'next/router';
 
 const menuItems = [
   {
@@ -22,25 +21,18 @@ const menuItems = [
     path: 'https://docs.dapplets.org/docs/',
   },
 ];
-export interface HeaderProps {
-  // setModal?: (val: boolean) => void;
-}
+export interface HeaderProps {}
 
 export function Header({}: HeaderProps) {
   const { resolvedTheme, setTheme } = useTheme();
   const pathname = usePathname();
-  const router = useRouter();
-  const id = router.asPath;
-  const [mounted, setMounted] = useState(false);
 
   const [isMobileMenu, setMobileMenu] = useState(false);
 
   function toggleDarkMode() {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   }
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+
   useEffect(() => {
     const updateDimensions = () => {
       if (typeof window !== 'undefined') {
@@ -112,11 +104,10 @@ export function Header({}: HeaderProps) {
           src='icons/header/theme-switcher.svg'
         />
       </div>
-      {mounted && id && (id.includes('MWM') || id.includes('mvm')) ? (
-        <Link href='?modal=true'>
-          <Button classNames={styles.mvm} text='MWM' isPrimary />
-        </Link>
-      ) : null}
+
+      <Link href='?modal=true'>
+        <Button classNames={styles.mvm} text='MWM' isPrimary />
+      </Link>
 
       <div
         onClick={() => setMobileMenu(!isMobileMenu)}

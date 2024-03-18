@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import styles from './Home.module.scss';
 import {
@@ -17,8 +18,21 @@ import { Layout } from '@/components/Layout';
 import cn from 'classnames';
 import Image from 'next/image';
 import { Modal } from '@/components/Modal';
+import { useEffect, useState } from 'react';
+import { redirect, usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 function Home() {
+  const router = useRouter();
+  const id = router.asPath;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    if (mounted && id && (id.includes('MWM') || id.includes('mvm'))) {
+      router.push('/?modal=true');
+    }
+  });
   return (
     <Layout
       title='Mutable Web is a customization layer built on top of the existing web'
