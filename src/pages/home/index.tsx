@@ -29,7 +29,7 @@ function Home() {
 
   useEffect(() => {
     setMounted(true);
-    if (mounted && id && (id.includes('MWM') || id.includes('mvm'))) {
+    if (mounted && id && (id.includes('MWM') || id.includes('mwm'))) {
       router.push('/?modal=true');
     }
   });
