@@ -50,7 +50,7 @@ export function Modal({}: ModalProps) {
                 </strong>
                 what <strong>the community</strong> can see, say, and use. The
                 current Web3 paradigm hopes to solve the problem by making the
-                owner resilient, decentralized, and inclusive. Nevertheless,it
+                owner resilient, decentralized, and inclusive. Nevertheless, it
                 changes nothing in the owner&apos;s ability to control the user
                 experience and, thereby, the community. Still, in the end, it
                 only makes the owner&apos;s role even more resilient and
