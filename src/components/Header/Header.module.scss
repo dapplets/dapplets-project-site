@@ -131,6 +131,11 @@
 :global(.dark) .mobileMenu {
   background: #1d1d1d;
 }
+.mvm{
+  height: 34px;
+  width: 84px;
+
+}
 @media (min-width: 1026px) {
   .mobileMenu {
     display: none;
@@ -166,6 +171,10 @@
     &:hover {
       transform: none;
     }
+  }
+  .mvm{
+  
+    margin-right: 10px;
   }
 }
 @media (max-width: 719px) {

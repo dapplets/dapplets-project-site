@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import { ThemeImage } from '../ThemeImage';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { Button } from '../Button';
 
 const menuItems = [
   {
@@ -20,8 +21,9 @@ const menuItems = [
     path: 'https://docs.dapplets.org/docs/',
   },
 ];
+export interface HeaderProps {}
 
-export function Header() {
+export function Header({}: HeaderProps) {
   const { resolvedTheme, setTheme } = useTheme();
   const pathname = usePathname();
 
@@ -102,6 +104,11 @@ export function Header() {
           src='icons/header/theme-switcher.svg'
         />
       </div>
+
+      <Link href='?modal=true'>
+        <Button classNames={styles.mvm} text='MWM' isPrimary />
+      </Link>
+
       <div
         onClick={() => setMobileMenu(!isMobileMenu)}
         className={cn(

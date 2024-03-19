@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { brand, mission, problem, title } from '@/constants/constantsTextAbout';
 import { Button } from '@/components/Button';
 import { ThemeImage } from '@/components/ThemeImage';
+import { Modal } from '@/components/Modal';
 
 function About() {
   return (
@@ -12,6 +13,7 @@ function About() {
       description='Enhance web experiences with Dapplets and Mutable Web. Empowering web communities, fostering freedom, and enabling new business possibilities. Join us in building a more connected digital world.
     '
     >
+      <Modal />
       <div className={cn(styles.wrapper, 'fonts  mx-auto flex flex-col ')}>
         <div
           className={cn(
