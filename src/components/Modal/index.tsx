@@ -76,16 +76,19 @@ export function Modal({}: ModalProps) {
                 <strong>&nbsp;new user-centric web paradigm&nbsp;</strong> where
                 every sub-community can customize the website to fit their
                 specific needs and, at the same time, stay in the whole
-                community. Communities become self-sovereign and resilient, can
-                earn their own money, and set their own rules.
+                community.{' '}
+                <strong>&nbsp;Communities become self-sovereign&nbsp;</strong>{' '}
+                and resilient,{' '}
+                <strong>&nbsp;can earn their own money&nbsp;</strong>, and set
+                their own rules.
                 <strong>
                   &nbsp; No owner can enforce rules against the community will
-                  in the long term anymore.&nbsp;
+                  &nbsp;
                 </strong>
-                Website owners can now focus on the main functionality and
-                don&apos;t need to bother with the feature requests -
-                communities will take care of themselves. Mutable Web is the
-                future of web3 we are building.
+                in the long term anymore. Website owners can now focus on the
+                main functionality and don&apos;t need to bother with the
+                feature requests - communities will take care of themselves.
+                Mutable Web is the future of web3 we are building.
               </p>
             </div>
             <Link href={pathname}>
