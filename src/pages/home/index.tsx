@@ -32,7 +32,7 @@ function Home() {
     if (mounted && id && (id.toLowerCase().includes('mwm'))) {
       router.push('/?modal=true');
     }
-  });
+  },[id, mounted, router]);
   return (
     <Layout
       title='Mutable Web is a customization layer built on top of the existing web'
