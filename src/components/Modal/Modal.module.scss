@@ -79,6 +79,7 @@ display: none;
   }
   .titleBlock {
     flex-direction: column-reverse;
+    padding-top: 20px;
     a {
       margin-left: auto;
     }
@@ -88,7 +89,7 @@ display: none;
     font-weight: 700;
     line-height: 32.78px;
     text-align: center;
-    padding-top: 10px;
+
   }
   .textBlock {
     div {
