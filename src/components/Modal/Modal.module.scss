@@ -73,35 +73,38 @@
   .content {
     width: 90%;
     height: 90%;
+    padding: 20px;
+    padding-top: 0;
   }
   .titleBr {
     display: initial;
   }
   .titleBlock {
     align-items: flex-start;
+    padding-top: 30px;
     a {
       margin-left: auto;
-   
+      margin-right: -5px;
     }
   }
   .title {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 32.78px;
-    text-align: center;
-    margin: 0 auto;
-    margin-right: -24px;
+    line-height: 149%;
+    text-align: left;
+
+    width: 100%;
   }
 
   .textBlock {
     div {
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 700;
       line-height: 26.82px;
       text-align: justified;
     }
     p {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 400;
       line-height: 20.86px;
       text-align: justified;
