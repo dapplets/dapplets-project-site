@@ -23,7 +23,7 @@ export function Modal({}: ModalProps) {
           <div className={cn(styles.content)}>
             <div className={cn(styles.titleBlock)}>
               <h2 className={cn(styles.title)}>
-                MWM - the&nbsp;Mutable&nbsp;Web
+                MWM - the Mutable Web
                 <br className={cn(styles.titleBr)} /> Manifesto
               </h2>
               <Link href={pathname}>
