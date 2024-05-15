@@ -1,6 +1,7 @@
 import styles from './Button.module.scss';
 import Image from 'next/image';
 import cn from 'classnames';
+import { ThemeImage } from '../ThemeImage';
 
 export interface ButtonProps {
   text: string;
@@ -38,7 +39,7 @@ export function Button({
           href={link}
         >
           {icon ? (
-            <Image
+            <ThemeImage
               className={cn(styles.img)}
               width={24}
               height={24}

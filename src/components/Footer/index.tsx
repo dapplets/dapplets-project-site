@@ -24,7 +24,12 @@ export function Footer() {
           © 2019—{new Date().getFullYear()}
         </div>
         <div className={cn(styles.copyImg, 'flex items-center')}>
-          <Image width={24} height={20} alt='' src='icons/footer/heart.svg' />
+          <ThemeImage
+            width={24}
+            height={20}
+            alt=''
+            src='icons/footer/heart.svg'
+          />
         </div>
         <div
           className={cn(styles.copyText, 'fonts flex items-center text-base')}
