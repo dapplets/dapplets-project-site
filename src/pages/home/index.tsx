@@ -29,10 +29,10 @@ function Home() {
 
   useEffect(() => {
     setMounted(true);
-    if (mounted && id && (id.toLowerCase().includes('mwm'))) {
+    if (mounted && id && id.toLowerCase().includes('mwm')) {
       router.push('/?modal=true');
     }
-  },[id, mounted, router]);
+  }, [id, mounted, router]);
   return (
     <Layout
       title='Mutable Web is a customization layer built on top of the existing web'
@@ -68,7 +68,7 @@ function Home() {
           >
             <Button
               classNames=''
-              link='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
+              link='https://chromewebstore.google.com/detail/mutable-web/cnahdmdbhkphpbpbjjbfdnmbphbenglc'
               text='Get started'
               isPrimary
               icon='icons/button/download.svg'

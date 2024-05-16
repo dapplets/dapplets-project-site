@@ -71,11 +71,21 @@
 
 @media (max-width: 719px) {
   .content {
-    width: 90%;
-    height: 90%;
+    width: 90dvw;
+    height: 90dvh;
     padding: 20px;
     padding-top: 0;
   }
+  .content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
   .titleBr {
     display: initial;
   }

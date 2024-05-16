@@ -14,7 +14,7 @@ const menuItems = [
   },
   {
     title: 'About',
-    path: '/about',
+    path: '/about/',
   },
   {
     title: 'Documentation',
@@ -173,6 +173,7 @@ export function Header({}: HeaderProps) {
                   key={i}
                   href={menuItem.path}
                   className='ml-auto'
+                  onClick={() => setMobileMenu(false)}
                 >
                   <div
                     className={cn(
