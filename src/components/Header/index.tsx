@@ -14,16 +14,18 @@ const menuItems = [
   },
   {
     title: 'About',
-    path: '/about',
+    path: '/about/',
   },
   {
     title: 'Documentation',
     path: 'https://docs.dapplets.org/docs/',
   },
 ];
-export interface HeaderProps {}
+export interface HeaderProps {
+  setModalOpen: (x: boolean) => void;
+}
 
-export function Header({}: HeaderProps) {
+export function Header({ setModalOpen }: HeaderProps) {
   const { resolvedTheme, setTheme } = useTheme();
   const pathname = usePathname();
 
@@ -105,9 +107,12 @@ export function Header({}: HeaderProps) {
         />
       </div>
 
-      <Link href='?modal=true'>
-        <Button classNames={styles.mvm} text='MWM' isPrimary />
-      </Link>
+      <Button
+        onClick={() => setModalOpen(true)}
+        classNames={styles.mvm}
+        text='MWM'
+        isPrimary
+      />
 
       <div
         onClick={() => setMobileMenu(!isMobileMenu)}
@@ -173,6 +178,7 @@ export function Header({}: HeaderProps) {
                   key={i}
                   href={menuItem.path}
                   className='ml-auto'
+                  onClick={() => setMobileMenu(false)}
                 >
                   <div
                     className={cn(
