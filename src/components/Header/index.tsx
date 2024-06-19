@@ -59,7 +59,7 @@ export function Header({}: HeaderProps) {
     >
       <Link
         prefetch={false}
-        className={cn(styles.linkHover, ' text-base')}
+        className={cn(styles.linkHover, styles.hoverLogo, ' text-base')}
         href='/'
       >
         <ThemeImage

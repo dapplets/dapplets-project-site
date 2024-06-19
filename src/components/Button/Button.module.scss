@@ -28,13 +28,13 @@
     0px 84px 23px 0px rgba(255, 64, 0, 0);
   &:hover {
     transition: all 0.2s ease;
-    background: #eb9dab;
+    background: #ff827c;
   }
 }
 :global(.dark) .buttonPrimary {
   &:hover {
     transition: all 0.2s ease;
-    background: #a6253c;
+    background: #ff827c;
   }
 }
 .buttonOutline {
@@ -44,7 +44,11 @@
   transition: all 0.2s ease;
   &:hover {
     transition: all 0.2s ease;
-    opacity: 0.5;
+    color: #fff;
+    background: #7c43c5;
+    img {
+      filter: brightness(0) invert(1);
+    }
   }
 }
 .img {

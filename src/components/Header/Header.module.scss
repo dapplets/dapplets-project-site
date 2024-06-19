@@ -11,14 +11,14 @@
   transition: all 0.2s ease;
   &:hover {
     transition: all 0.2s ease;
-    transform: scale(0.7);
+    color: #ff827c;
   }
 }
 .active {
   color: #db504a;
   &:hover {
     transition: all 0.2s ease;
-    transform: scale(0.7);
+    color: #ff827c;
   }
 }
 .mode {
@@ -29,6 +29,17 @@
   &:hover {
     transition: all 0.2s ease;
     transform: scale(0.7);
+  }
+}
+
+.hoverLogo {
+  &:hover {
+    transform: none !important;
+    img {
+      transform: none !important;
+      filter: invert(61%) sepia(91%) saturate(407%) hue-rotate(310deg)
+        brightness(79%) contrast(114%);
+    }
   }
 }
 
@@ -131,10 +142,9 @@
 :global(.dark) .mobileMenu {
   background: #1d1d1d;
 }
-.mvm{
+.mvm {
   height: 34px;
   width: 84px;
-
 }
 @media (min-width: 1026px) {
   .mobileMenu {
@@ -172,8 +182,7 @@
       transform: none;
     }
   }
-  .mvm{
-  
+  .mvm {
     margin-right: 10px;
   }
 }
