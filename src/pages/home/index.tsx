@@ -291,11 +291,11 @@ function Home() {
                     style={{ transform: 'none', cursor: 'default' }}
                   />
                 </div>
-                <Link prefetch={false} href={dapplet.link} target='_blank'>
+
+                <Link className={styles.powerItemLink} prefetch={false} href={dapplet.link} target='_blank'>
                   <div className={cn(styles.powerTitle, 'fonts max-xl:hidden')}>
                     {dapplet.title}
                   </div>
-                </Link>
 
                 <div
                   className={cn(
@@ -305,6 +305,8 @@ function Home() {
                 >
                   {dapplet.text}
                 </div>
+                </Link>
+
                 <div
                   className={cn(styles.powerTextBlockTablet, 'fonts xl:hidden')}
                 >
