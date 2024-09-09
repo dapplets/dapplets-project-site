@@ -10,6 +10,7 @@ export interface ButtonProps {
   isPrimary?: boolean;
   isOutline?: boolean;
   classNames?: string;
+  onClick?: (x: any) => void;
 }
 
 export function Button({
@@ -19,9 +20,11 @@ export function Button({
   isPrimary,
   isOutline,
   classNames,
+  onClick,
 }: ButtonProps) {
   return (
     <div
+      onClick={onClick}
       className={cn(
         styles.wrapper,
         'flex items-center justify-center',

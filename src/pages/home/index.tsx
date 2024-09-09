@@ -17,28 +17,13 @@ import { Button } from '@/components/Button';
 import { Layout } from '@/components/Layout';
 import cn from 'classnames';
 import Image from 'next/image';
-import { Modal } from '@/components/Modal';
-import { useEffect, useState } from 'react';
-import { redirect, usePathname } from 'next/navigation';
-import { useRouter } from 'next/router';
 
 function Home() {
-  const router = useRouter();
-  const id = router.asPath;
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    if (mounted && id && (id.toLowerCase().includes('mwm'))) {
-      router.push('/?modal=true');
-    }
-  },[id, mounted, router]);
   return (
     <Layout
       title='Mutable Web is a customization layer built on top of the existing web'
       description='Dapplets and the Mutable Web enable communities to create a custom version (Mutation) of an existing website by enhancing it with add-on applications. Dapplets run in the user’s browser and allowing them to take control of UX/UI on any website'
     >
-      <Modal />
       <div className='fonts container-xl max-xl:container-lg max-lg:container-mob mx-auto flex flex-col overflow-x-hidden '>
         <div className={cn(styles.titleWrapper, ' flex flex-col')}>
           <div
@@ -68,7 +53,7 @@ function Home() {
           >
             <Button
               classNames=''
-              link='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
+              link='https://chromewebstore.google.com/detail/mutable-web/cnahdmdbhkphpbpbjjbfdnmbphbenglc'
               text='Get started'
               isPrimary
               icon='icons/button/download.svg'
