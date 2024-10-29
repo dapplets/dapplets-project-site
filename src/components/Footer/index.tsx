@@ -47,6 +47,11 @@ export function Footer() {
           </div>
         </Link>
       </div>
+           <Link prefetch={false} href='/privacy-policy'>
+       
+      Privacy Policy
+    
+        </Link>
       <div
         className={cn(
           styles.links,
