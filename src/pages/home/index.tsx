@@ -135,7 +135,7 @@ function Home() {
                 height={63}
                 alt='Encode x NEAR Horizon Hackathon'
                 src='icons/home/encode-near-horizon.svg'
-                style={{ transform: 'none', cursor: 'default' }}
+                style={{ transform: 'none', cursor: 'pointer' }}
               /></Link>
 
              
