@@ -19,7 +19,6 @@ export const Layout: FC<LayoutProps> = ({ children, title, description }) => {
   const router = useRouter();
   const id = router.asPath;
   const [mounted, setMounted] = useState(false);
-
   const [isModalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
@@ -34,6 +33,7 @@ export const Layout: FC<LayoutProps> = ({ children, title, description }) => {
       document.body.style.overflowY = 'auto';
     }
   }, [isModalOpen, id, mounted, router]);
+
   return (
     <>
       <Head>
@@ -44,7 +44,7 @@ export const Layout: FC<LayoutProps> = ({ children, title, description }) => {
         />
         <link
           rel='icon'
-          href={`/themes/${theme}/favicon/favicon.\svg`}
+          href={`/themes/${theme}/favicon/favicon.svg`}
           type='image/svg+xml'
         />
         <link
@@ -56,13 +56,8 @@ export const Layout: FC<LayoutProps> = ({ children, title, description }) => {
         <title>{title}</title>
         <meta name='description' content={description} />
       </Head>
-      <div
-        className={cn(
-          styles.wrapper,
-          'dark:backgroundDark min-h-screen bg-dpl-white dark:bg-dpl-black'
-        )}
-      >
-        <div className={cn(styles.menu)}>
+      <div className={cn(styles.wrapper, styles.layoutContainer)}>
+        <div className={styles.menu}>
           <Header setModalOpen={setModalOpen} />
         </div>
 
