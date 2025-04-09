@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import { FC, useEffect } from 'react';
 import { ThemeProvider } from 'next-themes';
 import init from '@socialgouv/matomo-next';
-
+import '@/assets/styles/global.scss';
 import '@/assets/styles/globals.css';
 
 const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
