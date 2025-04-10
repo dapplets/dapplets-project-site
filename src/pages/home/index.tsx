@@ -158,7 +158,7 @@ function Home() {
               <Link
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://1t-agents.devpost.com/submissions/search?utf8=%E2%9C%93&terms=Aigency&sort='
+                href='https://devpost.com/software/aigency'
               >
                 {' '}
                 <ThemeImage
