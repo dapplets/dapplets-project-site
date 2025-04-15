@@ -1,19 +1,40 @@
 .wrapper {
-  z-index: 2;
+  max-width: 75rem;
+  width: 100%;
+  margin: 4.375rem auto 0;
+  padding: 0 1.5rem;
 }
 
 .linkBlock,
 .linkBlockMobile {
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 1.5rem;
   opacity: 0.7;
 
+  img,
   a {
-    transition: all 0.2s ease;
-    cursor: pointer !important;
+    max-width: 9.375rem;
+    width: 100%;
+    height: auto;
+    flex: 0 0 9.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  a img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  a {
+    transition: transform 0.2s ease;
 
     &:hover {
       transform: scale(1.05);
@@ -25,13 +46,19 @@
   display: none;
 }
 
-.img {
-  object-fit: contain;
+@media (max-width: 1185px) {
+  .wrapper {
+    margin-top: 4.6875rem;
+  }
+
+  .linkBlock {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 719px) {
-  .lable {
-    padding-bottom: 5px;
+  .wrapper {
+    margin-top: 0.625rem;
   }
 
   .linkBlock {
@@ -41,5 +68,25 @@
   .linkBlockMobile {
     display: flex;
     padding: 15px 5px;
+    margin-top: 0.3125rem;
+
+    img,
+    a {
+      max-width: max-content;
+      width: 100%;
+      height: auto;
+      flex: 0 0 9.375rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    a img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+    }
   }
 }

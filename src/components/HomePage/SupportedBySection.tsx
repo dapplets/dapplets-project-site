@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ThemeImage } from '@/components/ThemeImage';
 import { DESKTOP_SUPPORTERS, MOBILE_SUPPORTERS } from './supporters';
-import styles from './Home.module.scss';
+import styles from './SupportedBySection.module.scss';
 
 const SupportedBySection = () => {
   return (

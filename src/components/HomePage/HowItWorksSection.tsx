@@ -2,18 +2,15 @@ import React, { FC } from 'react';
 import styles from './HowItWorksSection.module.scss';
 import { ThemeImage } from '../ThemeImage';
 import cn from 'classnames';
-import { HowItWorksItems } from '@/constants/constantsText';
+import { HowItWorks, HowItWorksItems } from '@/constants/constantsText';
 
-const HowItWorksSection: FC<{
-  title: string;
-  subtitle: string;
-}> = ({ title, subtitle }) => {
+const HowItWorksSection = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.header}>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.subtitle}>{subtitle}</div>
-      </div>
+    <section className={styles.wrapper}>
+      <header className={styles.header}>
+        <h2 className={styles.title}>{HowItWorks.title}</h2>
+        <p className={styles.subtitle}>{HowItWorks.subtitle}</p>
+      </header>
       <div className={styles.imgBlock}>
         <div className={styles.tablet}>
           <ThemeImage
@@ -43,7 +40,7 @@ const HowItWorksSection: FC<{
           priority
         />
       </div>
-    </div>
+    </section>
   );
 };
 
