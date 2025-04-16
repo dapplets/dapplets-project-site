@@ -56,6 +56,7 @@
     --fs-24-48: calc(24px + 24 * ((100vw - 375px) / 1065));
     --fs-18-24: calc(18px + 6 * ((100vw - 375px) / 1065));
     --fs-24-36: calc(24px + 12 * ((100vw - 375px) / 1065));
+    --fs-36-96: calc(36px + 60 * ((100vw - 375px) / 1065));
   }
 
   @media screen and (min-width: 1440px) {

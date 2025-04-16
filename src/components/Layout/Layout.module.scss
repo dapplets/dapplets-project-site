@@ -35,6 +35,7 @@
 }
 
 @media (max-width: 768px) {
-  .menu {
+  .delimeter {
+    transform: translate3d(0, 2.5rem, 0);
   }
 }

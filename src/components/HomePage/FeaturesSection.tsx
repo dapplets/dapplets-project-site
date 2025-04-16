@@ -55,38 +55,15 @@ function FeatureBlock({
   feature: (typeof PlatformFeatures)[0];
   index: number;
 }) {
+  const isSecondFeature = index === 1;
+
   return (
     <div
-      className={cn(styles.featureBlock, styles[`featureBlock--${index + 1}`])}
+      className={cn(styles.featureBlock, styles[`featureBlock--${index + 1}`], {
+        [styles.featureBlockSpecial]: isSecondFeature,
+      })}
     >
-      {index === 1 ? (
-        <>
-          <div className={styles.textColumnLeft}>
-            <div className={cn(styles.featureItem, styles.featureId)}>
-              {feature.id}
-            </div>
-            {feature.features.slice(0, 1).map((item, i) => (
-              <FeatureItem key={i} item={item} />
-            ))}
-          </div>
-
-          <div className={styles.featureImageContainer}>
-            <ThemeImage
-              width={395}
-              height={275}
-              alt={`Feature ${index + 1}`}
-              src={`icons/home/feature-${index + 1}.svg`}
-              className={styles.featureImage}
-            />
-          </div>
-
-          <div className={styles.textColumnRight}>
-            {feature.features.slice(1).map((item, i) => (
-              <FeatureItem key={i} item={item} />
-            ))}
-          </div>
-        </>
-      ) : (
+      {!isSecondFeature ? (
         <>
           <div className={styles.featureImageContainer}>
             <ThemeImage
@@ -97,7 +74,6 @@ function FeatureBlock({
               className={styles.featureImage}
             />
           </div>
-
           <div className={styles.featureContent}>
             <div className={styles.featureItems}>
               <div className={cn(styles.featureItem, styles.featureId)}>
@@ -107,6 +83,33 @@ function FeatureBlock({
                 <FeatureItem key={i} item={item} />
               ))}
             </div>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={styles.featureContentLeft}>
+            {feature.features.slice(0, 2).map((item, i) => (
+              <FeatureItem key={i} item={item} />
+            ))}
+          </div>
+
+          <div className={styles.featureImageContainer}>
+            <ThemeImage
+              width={395}
+              height={275}
+              alt={`Feature ${index + 1}`}
+              src={`icons/home/feature-${index + 1}.svg`}
+              className={styles.featureImage}
+            />
+          </div>
+
+          <div className={styles.featureContentRight}>
+            <div className={cn(styles.featureItem, styles.featureId)}>
+              {feature.id}
+            </div>
+            {feature.features.slice(2, 4).map((item, i) => (
+              <FeatureItem key={i} item={item} />
+            ))}
           </div>
         </>
       )}

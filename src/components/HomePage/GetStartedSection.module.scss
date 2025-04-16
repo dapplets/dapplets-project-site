@@ -3,9 +3,10 @@
   width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   max-width: 75rem;
   margin: 0 auto;
+  gap: 2.5rem;
 }
 
 .container {
@@ -31,8 +32,14 @@
 
 @media (max-width: 1185px) {
   .wrapper {
-    padding: 4.0625rem 0.625rem 2.5rem;
+    padding: 4.0625rem 1.25rem 2.5rem;
     flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: calc(50% - 1.25rem);
   }
 
   .text {
@@ -43,10 +50,10 @@
 @media (max-width: 719px) {
   .wrapper {
     padding: 1.0625rem 0.625rem 0;
+  }
 
-    a {
-      max-width: 45%;
-    }
+  .container {
+    max-width: 100%;
   }
 
   .text {

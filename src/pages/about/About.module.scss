@@ -223,7 +223,6 @@
   opacity: 0.7;
 }
 
-// Light theme styles
 :global(.light) {
   .titleMessage::before {
     background: url('/themes/light/icons/about/title-icon.svg');
@@ -234,7 +233,6 @@
   }
 }
 
-// Media Queries
 @media (max-width: 1185px) {
   .titleWrapper {
     padding: 6.25rem 0.625rem 2.8125rem 0.625rem;

@@ -106,7 +106,6 @@
   display: none;
 }
 
-/* Dark Theme */
 :global(.dark) {
   .wrapper {
     background: var(--white-t2);
@@ -123,7 +122,6 @@
   }
 }
 
-/* Responsive Styles */
 @media (max-width: 1185px) {
   .content {
     width: 70%;
