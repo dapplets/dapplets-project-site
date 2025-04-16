@@ -1,10 +1,10 @@
 .wrapper {
-  padding: 5.3125rem 1.25rem 6.25rem;
+  padding: 0 1.25rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   max-width: 75rem;
-  margin: 0 auto;
+  margin: 8.5rem auto 0;
 }
 
 .title {
@@ -22,6 +22,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 2.5rem;
+  column-gap: 2.5rem;
 }
 
 .item {
@@ -56,7 +57,7 @@
 }
 
 .itemTitle {
-  padding: 0 0.625rem 0.625rem;
+  padding: 0 0.625rem;
   margin-top: 3.4375rem;
   text-decoration: underline;
   font-size: var(--fs-18-24);
@@ -77,13 +78,9 @@
   display: none;
 }
 
-.img {
-  margin-bottom: 0.625rem;
-}
-
 @media (max-width: 1185px) {
   .wrapper {
-    padding: 1.25rem 0.625rem 0;
+    margin-top: 4rem;
   }
 
   .container {
@@ -121,7 +118,6 @@
     width: 100%;
     max-width: 15rem;
     height: 15rem;
-    margin-bottom: 0;
   }
 }
 
@@ -162,7 +158,6 @@
   .img {
     width: 100%;
     height: auto;
-    margin-bottom: 2.1875rem;
 
     img {
       width: calc(100% - 1.25rem) !important;

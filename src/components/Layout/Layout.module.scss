@@ -1,6 +1,6 @@
 .wrapper {
   min-height: 100vh;
-  background: var(--white);
+  background: var(--bg);
 }
 
 .menu {
@@ -22,7 +22,7 @@
 
 :global(.dark) {
   .wrapper {
-    background: var(--black);
+    background: var(--black-1d);
   }
 
   .delimeter {

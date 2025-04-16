@@ -5,15 +5,15 @@ import { LinkBlock } from '../LinkBlock';
 
 const GetStartedSection = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.container}>
-        <div className={styles.title}>{getStartedMessage.title}</div>
-        <div className={styles.text}>{getStartedMessage.content}</div>
-      </div>
+    <section className={styles.wrapper}>
+      <header className={styles.container}>
+        <h2 className={styles.title}>{getStartedMessage.title}</h2>
+        <p className={styles.text}>{getStartedMessage.content}</p>
+      </header>
       {getStartedLinks.map((x, i) => (
         <LinkBlock key={i} content={x} />
       ))}
-    </div>
+    </section>
   );
 };
 

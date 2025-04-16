@@ -1,29 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './FeaturesSection.module.scss';
+import cn from 'classnames';
+import { ThemeImage } from '@/components/ThemeImage';
 import {
   PlatformFeatures,
   PlatformFeaturesMessage,
 } from '@/constants/constantsText';
-import { ThemeImage } from '../ThemeImage';
-import cn from 'classnames';
+import styles from './FeaturesSection.module.scss';
 
 const FeaturesSection = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={cn(styles.feature, styles['feature--1'])}>
+    <section className={styles.wrapper}>
+      <header className={styles.header}>
         <h2 className={styles.title}>
           platform
-          <span className={cn(styles.title, styles['title--color'])}>
-            &nbsp;features
-          </span>
+          <span className={styles.titleAccent}>&nbsp;features</span>
         </h2>
         <FeatureLink />
-      </div>
+      </header>
+
       {PlatformFeatures.map((feature, index) => (
         <FeatureBlock key={index} feature={feature} index={index} />
       ))}
-    </div>
+    </section>
   );
 };
 
@@ -33,16 +32,16 @@ const FeatureLink = () => {
       prefetch={false}
       target='_blank'
       href='https://chrome.google.com/webstore/detail/dapplets/pjjnaojpjhgbhpfffnjleidmdbajagdj'
-      className={styles.link}
+      className={styles.featureLink}
     >
-      <div className={styles.linkBlock}>
-        <div className={styles.linkText}>{PlatformFeaturesMessage}</div>
+      <div className={styles.linkContent}>
+        <p className={styles.linkText}>{PlatformFeaturesMessage}</p>
         <ThemeImage
-          className={styles.link}
           width={50}
           height={50}
           alt='arrow'
-          src='icons/link/arrow.svg'
+          src='icons/link/arrow-dark.svg'
+          className={styles.linkIcon}
         />
       </div>
     </Link>
@@ -56,35 +55,61 @@ function FeatureBlock({
   feature: (typeof PlatformFeatures)[0];
   index: number;
 }) {
-  const isEven = index % 2 === 0;
-
   return (
-    <div className={cn(styles.feature, styles[`feature--${index + 2}`])}>
-      {isEven && <FeatureImage src={`icons/home/feature-${index + 1}.svg`} />}
+    <div
+      className={cn(styles.featureBlock, styles[`featureBlock--${index + 1}`])}
+    >
+      {index === 1 ? (
+        <>
+          <div className={styles.textColumnLeft}>
+            <div className={cn(styles.featureItem, styles.featureId)}>
+              {feature.id}
+            </div>
+            {feature.features.slice(0, 1).map((item, i) => (
+              <FeatureItem key={i} item={item} />
+            ))}
+          </div>
 
-      <div className={styles.itemsBlock}>
-        <div className={styles.itemContainer}>{feature.id}</div>
-        {feature.features.map((item, i) => (
-          <FeatureItem key={i} item={item} />
-        ))}
-      </div>
+          <div className={styles.featureImageContainer}>
+            <ThemeImage
+              width={395}
+              height={275}
+              alt={`Feature ${index + 1}`}
+              src={`icons/home/feature-${index + 1}.svg`}
+              className={styles.featureImage}
+            />
+          </div>
 
-      {!isEven && <FeatureImage src={`icons/home/feature-${index + 1}.svg`} />}
-    </div>
-  );
-}
+          <div className={styles.textColumnRight}>
+            {feature.features.slice(1).map((item, i) => (
+              <FeatureItem key={i} item={item} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={styles.featureImageContainer}>
+            <ThemeImage
+              width={395}
+              height={275}
+              alt={`Feature ${index + 1}`}
+              src={`icons/home/feature-${index + 1}.svg`}
+              className={styles.featureImage}
+            />
+          </div>
 
-function FeatureImage({ src }: { src: string }) {
-  return (
-    <div className={styles.imgContainer}>
-      <ThemeImage
-        width={395}
-        height={275}
-        alt='feature'
-        src={src}
-        className={styles.img}
-        style={{ transform: 'none', cursor: 'default' }}
-      />
+          <div className={styles.featureContent}>
+            <div className={styles.featureItems}>
+              <div className={cn(styles.featureItem, styles.featureId)}>
+                {feature.id}
+              </div>
+              {feature.features.map((item, i) => (
+                <FeatureItem key={i} item={item} />
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
@@ -95,11 +120,14 @@ function FeatureItem({
   item: (typeof PlatformFeatures)[0]['features'][0];
 }) {
   return (
-    <Link prefetch={false} target='_blank' href={item.link}>
-      <div className={styles.item}>
-        <div className={styles.itemTitle}>{item.title}</div>
-        <div className={styles.text}>{item.text}</div>
-      </div>
+    <Link
+      prefetch={false}
+      target='_blank'
+      href={item.link}
+      className={styles.featureItem}
+    >
+      <h3 className={styles.itemTitle}>{item.title}</h3>
+      <p className={styles.itemText}>{item.text}</p>
     </Link>
   );
 }

@@ -9,7 +9,7 @@ const ExamplesSection = () => {
   return (
     <section className={styles.wrapper}>
       <h2 className={styles.title}>
-        mutations{' '}
+        mutations
         <span className={cn(styles.title, styles['title--color'])}>
           &nbsp;example
         </span>
