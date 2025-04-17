@@ -49,7 +49,7 @@
 }
 
 .mvmButton {
-  height: 2.125rem;
+  height: 2.125rem !important;
   width: 5.25rem;
 }
 
@@ -97,6 +97,18 @@
   }
 }
 
+:global(.dark) {
+  .burgerLinesActive {
+    &::after {
+      background: var(--white);
+    }
+
+    &::before {
+      background: var(--white);
+    }
+  }
+}
+
 .burgerLinesActive {
   transform: translate(-50%, -50%) rotate(-45deg);
 
@@ -139,6 +151,10 @@
   display: flex;
   flex-direction: column;
   padding-top: 1.25rem;
+
+  a {
+    margin-left: auto;
+  }
 
   .linkHover {
     font-size: 1.5rem;
@@ -195,6 +211,7 @@
 
   .themeSwitcher {
     margin-right: 1.5625rem;
+    margin-left: auto;
 
     &:hover {
       transform: none;
@@ -220,15 +237,5 @@
 
   .mobileMenuContent {
     padding: 0.625rem;
-  }
-}
-
-@media (min-width: 1025px) {
-  .mobileMenu {
-    display: none;
-  }
-
-  .burger {
-    display: none;
   }
 }

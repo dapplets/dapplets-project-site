@@ -7,9 +7,7 @@ export function Footer() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.copy}>
-        <div className={styles.copyText}>
-          © 2019—{new Date().getFullYear()}
-        </div>
+        <div className={styles.copyText}>© {new Date().getFullYear()}</div>
         <div className={styles.copyImg}>
           <ThemeImage
             width={24}
