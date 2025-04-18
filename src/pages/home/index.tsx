@@ -154,6 +154,21 @@ function Home() {
                   style={{ transform: 'none', cursor: 'pointer' }}
                 />
               </Link>
+              <Link
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://devpost.com/software/aigency'
+              >
+                {' '}
+                <ThemeImage
+                  className={cn(styles.supportedBlockIcon, 'noTransition')}
+                  width={119}
+                  height={63}
+                  alt='One Trillion Agents Hackathon'
+                  src='icons/home/onetrillion.svg'
+                  style={{ transform: 'none', cursor: 'pointer' }}
+                />
+              </Link>
             </div>
             <div
               className={cn(
