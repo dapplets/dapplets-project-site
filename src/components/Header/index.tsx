@@ -27,9 +27,9 @@ export function Header({ setModalOpen }: HeaderProps) {
   const pathname = usePathname();
   const [isMobileMenu, setMobileMenu] = useState(false);
 
-  function toggleDarkMode() {
+  const toggleDarkMode = () => {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
-  }
+  };
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -37,7 +37,9 @@ export function Header({ setModalOpen }: HeaderProps) {
         setMobileMenu(false);
       }
     };
+
     updateDimensions();
+
     window.addEventListener('resize', updateDimensions);
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
